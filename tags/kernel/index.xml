@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>kernel on Wonux - Bolg</title>
-    <link>https://wonux.gitee.io/tags/kernel/</link>
+    <link>https://wonux.github.io/tags/kernel/</link>
     <description>Recent content in kernel on Wonux - Bolg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 04 May 2014 17:10:00 +0000</lastBuildDate><atom:link href="https://wonux.gitee.io/tags/kernel/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 04 May 2014 17:10:00 +0000</lastBuildDate><atom:link href="https://wonux.github.io/tags/kernel/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Gentoo安装详解（二）-- 编译内核</title>
-      <link>https://wonux.gitee.io/post/gentoo-handbook-kernel/</link>
+      <link>https://wonux.github.io/post/gentoo-handbook-kernel/</link>
       <pubDate>Sun, 04 May 2014 17:10:00 +0000</pubDate>
       
-      <guid>https://wonux.gitee.io/post/gentoo-handbook-kernel/</guid>
+      <guid>https://wonux.github.io/post/gentoo-handbook-kernel/</guid>
       <description>编译内核： 安装内核源码： 选择内核：如gentoo-sources 1 2 emerge gentoo-sources ls -l /usr/src/linux 手动编译内核： 1 2 cd /usr/src/linux make menuconfig 必须启用的选项： Most information can be gathered by emerging sys-apps/pciutils which contains</description>
     </item>
     

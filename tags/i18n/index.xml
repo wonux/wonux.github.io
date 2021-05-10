@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>i18n on Wonux - Bolg</title>
-    <link>https://wonux.gitee.io/tags/i18n/</link>
+    <link>https://wonux.github.io/tags/i18n/</link>
     <description>Recent content in i18n on Wonux - Bolg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 10 Dec 2015 09:30:00 +0000</lastBuildDate><atom:link href="https://wonux.gitee.io/tags/i18n/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 10 Dec 2015 09:30:00 +0000</lastBuildDate><atom:link href="https://wonux.github.io/tags/i18n/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Gentoo解决windows txt文件中文乱码问题 -- 文件编码介绍</title>
-      <link>https://wonux.gitee.io/post/gentoo-file-encode/</link>
+      <link>https://wonux.github.io/post/gentoo-file-encode/</link>
       <pubDate>Thu, 10 Dec 2015 09:30:00 +0000</pubDate>
       
-      <guid>https://wonux.gitee.io/post/gentoo-file-encode/</guid>
+      <guid>https://wonux.github.io/post/gentoo-file-encode/</guid>
       <description>Linux与Windows系统语言编码区别 在Linux操作系统下，我们有时打开在windows下的txt文件，发现在windows下能正常显</description>
     </item>
     

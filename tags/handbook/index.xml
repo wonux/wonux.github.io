@@ -2,62 +2,62 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>handbook on Wonux - Bolg</title>
-    <link>https://wonux.gitee.io/tags/handbook/</link>
+    <link>https://wonux.github.io/tags/handbook/</link>
     <description>Recent content in handbook on Wonux - Bolg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 10 Oct 2014 13:18:00 +0000</lastBuildDate><atom:link href="https://wonux.gitee.io/tags/handbook/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 10 Oct 2014 13:18:00 +0000</lastBuildDate><atom:link href="https://wonux.github.io/tags/handbook/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ArchLinux安装详解</title>
-      <link>https://wonux.gitee.io/post/arch-handbook/</link>
+      <link>https://wonux.github.io/post/arch-handbook/</link>
       <pubDate>Fri, 10 Oct 2014 13:18:00 +0000</pubDate>
       
-      <guid>https://wonux.gitee.io/post/arch-handbook/</guid>
+      <guid>https://wonux.github.io/post/arch-handbook/</guid>
       <description>选择安装方式 CD/USB Arch启动盘安装 使用Arch启动盘比较简单方便，没有额外设置，直接阅读下一步。 USB flash installation media 启动盘制作： USB flash installation media 从已经存在的Lin</description>
     </item>
     
     <item>
       <title>Gentoo安装详解（五）--声卡设置</title>
-      <link>https://wonux.gitee.io/post/gentoo-handbook-alsa/</link>
+      <link>https://wonux.github.io/post/gentoo-handbook-alsa/</link>
       <pubDate>Mon, 05 May 2014 15:40:00 +0000</pubDate>
       
-      <guid>https://wonux.gitee.io/post/gentoo-handbook-alsa/</guid>
+      <guid>https://wonux.github.io/post/gentoo-handbook-alsa/</guid>
       <description>硬件检测 To choose the right driver, first detect the used audio controller. You can use lspci for this task: 1 lspci | grep -i audio 内核配置 You need to activate the following kernel options: 1 2 3 4 5 6 7 8 9 10 11 12 13 Device Drivers ---&amp;gt; Sound ---&amp;gt; &amp;lt;*&amp;gt; Sound card Support &amp;lt;*&amp;gt; Advanced Linux Sound Architecture ---&amp;gt; [*] PCI</description>
     </item>
     
     <item>
       <title>Gentoo安装详解（四）-- 安装X桌面环境</title>
-      <link>https://wonux.gitee.io/post/gentoo-handbook-xorg/</link>
+      <link>https://wonux.github.io/post/gentoo-handbook-xorg/</link>
       <pubDate>Mon, 05 May 2014 10:20:00 +0000</pubDate>
       
-      <guid>https://wonux.gitee.io/post/gentoo-handbook-xorg/</guid>
+      <guid>https://wonux.github.io/post/gentoo-handbook-xorg/</guid>
       <description>安装X桌面环境： 安装Xorg： 检测显卡信息： 1 2 dmesg | grep video lspci | grep -i VGA 配置INPUT_DEVICE、VIDEO_CARDS变量： 在安装Xorg之</description>
     </item>
     
     <item>
       <title>Gentoo安装详解（三）-- 配置系统</title>
-      <link>https://wonux.gitee.io/post/gentoo-handbook-configure/</link>
+      <link>https://wonux.github.io/post/gentoo-handbook-configure/</link>
       <pubDate>Sun, 04 May 2014 17:40:00 +0000</pubDate>
       
-      <guid>https://wonux.gitee.io/post/gentoo-handbook-configure/</guid>
+      <guid>https://wonux.github.io/post/gentoo-handbook-configure/</guid>
       <description>配置系统 系统信息： 文件系统信息： 创建/etc/fstab 1 nano -w /etc/fstab 网络信息： Host name, Domainname, etc 1 nano -w /etc/conf.d/hostname Configuring Network 1 nano -w /etc/conf.d/net 系统信息： Gentoo uses /etc/rc.conf to configure the services, startup, and shutdown of your system. 1</description>
     </item>
     
     <item>
       <title>Gentoo安装详解（二）-- 编译内核</title>
-      <link>https://wonux.gitee.io/post/gentoo-handbook-kernel/</link>
+      <link>https://wonux.github.io/post/gentoo-handbook-kernel/</link>
       <pubDate>Sun, 04 May 2014 17:10:00 +0000</pubDate>
       
-      <guid>https://wonux.gitee.io/post/gentoo-handbook-kernel/</guid>
+      <guid>https://wonux.github.io/post/gentoo-handbook-kernel/</guid>
       <description>编译内核： 安装内核源码： 选择内核：如gentoo-sources 1 2 emerge gentoo-sources ls -l /usr/src/linux 手动编译内核： 1 2 cd /usr/src/linux make menuconfig 必须启用的选项： Most information can be gathered by emerging sys-apps/pciutils which contains</description>
     </item>
     
     <item>
       <title>Gentoo安装详解（一）-- 安装基本系统</title>
-      <link>https://wonux.gitee.io/post/gentoo-handbook-base/</link>
+      <link>https://wonux.github.io/post/gentoo-handbook-base/</link>
       <pubDate>Sun, 04 May 2014 16:48:00 +0000</pubDate>
       
-      <guid>https://wonux.gitee.io/post/gentoo-handbook-base/</guid>
+      <guid>https://wonux.github.io/post/gentoo-handbook-base/</guid>
       <description>前期准备 远程登录： 开启ssh服务： 1 /etc/init.d/sshd start 设置密码： 1 passwd 以便使用putty、ssh client远程登录上传stage等（有时在线下载很慢，而局</description>
     </item>
     

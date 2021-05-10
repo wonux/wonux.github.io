@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>gcc on Wonux - Bolg</title>
-    <link>https://wonux.gitee.io/tags/gcc/</link>
+    <link>https://wonux.github.io/tags/gcc/</link>
     <description>Recent content in gcc on Wonux - Bolg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 02 Sep 2014 16:32:00 +0000</lastBuildDate><atom:link href="https://wonux.gitee.io/tags/gcc/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 02 Sep 2014 16:32:00 +0000</lastBuildDate><atom:link href="https://wonux.github.io/tags/gcc/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>gcc-config:Active gcc profile is invalid 解决办法</title>
-      <link>https://wonux.gitee.io/post/gentoo-gcc-invalid/</link>
+      <link>https://wonux.github.io/post/gentoo-gcc-invalid/</link>
       <pubDate>Tue, 02 Sep 2014 16:32:00 +0000</pubDate>
       
-      <guid>https://wonux.gitee.io/post/gentoo-gcc-invalid/</guid>
+      <guid>https://wonux.github.io/post/gentoo-gcc-invalid/</guid>
       <description>错误描述 Gentoo软件安装错误,提示： gcc-config: Active gcc profile is invalid 解决方法： 列出可用的profile 1 gcc-config -l gcc-config: Active gcc profile is invalid! [1] i686-pc-linux-gnu-4.6.3 显示当前使用的profile 1 gcc-config</description>
     </item>
     

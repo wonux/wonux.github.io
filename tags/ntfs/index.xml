@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ntfs on Wonux - Bolg</title>
-    <link>https://wonux.gitee.io/tags/ntfs/</link>
+    <link>https://wonux.github.io/tags/ntfs/</link>
     <description>Recent content in ntfs on Wonux - Bolg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 20 Nov 2014 10:20:00 +0000</lastBuildDate><atom:link href="https://wonux.gitee.io/tags/ntfs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 20 Nov 2014 10:20:00 +0000</lastBuildDate><atom:link href="https://wonux.github.io/tags/ntfs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Gentoo挂载Windowntfs的NTFS分区</title>
-      <link>https://wonux.gitee.io/post/gentoo-ntfs/</link>
+      <link>https://wonux.github.io/post/gentoo-ntfs/</link>
       <pubDate>Thu, 20 Nov 2014 10:20:00 +0000</pubDate>
       
-      <guid>https://wonux.gitee.io/post/gentoo-ntfs/</guid>
+      <guid>https://wonux.github.io/post/gentoo-ntfs/</guid>
       <description>内核需要开启的选项 1 2 File systems ---&amp;gt; &amp;lt;*&amp;gt; FUSE (Filesystem in Userspace) support 使用NTFS-3G NTFS-3G是一个由Tuxera公司开发并维护的开源项目，目的是为Linux提供</description>
     </item>
     

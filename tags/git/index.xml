@@ -2,62 +2,62 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>git on Wonux - Bolg</title>
-    <link>https://wonux.gitee.io/tags/git/</link>
+    <link>https://wonux.github.io/tags/git/</link>
     <description>Recent content in git on Wonux - Bolg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 24 Mar 2016 15:38:00 +0000</lastBuildDate><atom:link href="https://wonux.gitee.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 24 Mar 2016 15:38:00 +0000</lastBuildDate><atom:link href="https://wonux.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Git创建空白新分支</title>
-      <link>https://wonux.gitee.io/post/git-empty-branch/</link>
+      <link>https://wonux.github.io/post/git-empty-branch/</link>
       <pubDate>Thu, 24 Mar 2016 15:38:00 +0000</pubDate>
       
-      <guid>https://wonux.gitee.io/post/git-empty-branch/</guid>
+      <guid>https://wonux.github.io/post/git-empty-branch/</guid>
       <description>有时候需要在项目中创建一个空白的新分支，来开发测试与当前分支内容无关的内容。向分支提交一个初始的空commit，保证完全复位。 创建并切换新分</description>
     </item>
     
     <item>
       <title>Git同时提交到多个远程仓库</title>
-      <link>https://wonux.gitee.io/post/git-remote/</link>
+      <link>https://wonux.github.io/post/git-remote/</link>
       <pubDate>Sun, 06 Mar 2016 11:38:00 +0000</pubDate>
       
-      <guid>https://wonux.gitee.io/post/git-remote/</guid>
+      <guid>https://wonux.github.io/post/git-remote/</guid>
       <description>在已经习惯使用git同步写代码，github无疑是最的托管平台，但是国内由于“你懂的”原因，速度很慢，有时无法访问，于是想把自己的代码同步到</description>
     </item>
     
     <item>
       <title>Pelican-Elegant Mac风格主题配置</title>
-      <link>https://wonux.gitee.io/post/git-pelican-elegant/</link>
+      <link>https://wonux.github.io/post/git-pelican-elegant/</link>
       <pubDate>Thu, 14 May 2015 18:38:00 +0000</pubDate>
       
-      <guid>https://wonux.gitee.io/post/git-pelican-elegant/</guid>
+      <guid>https://wonux.github.io/post/git-pelican-elegant/</guid>
       <description>简介 elegant是Mac风格的优秀主题，简单，专注文章本身。 A responsive, minimal, and stylish theme for Pelican：https://github.com/talha</description>
     </item>
     
     <item>
       <title>Pelican &#43; Github 搭建静态个人博客</title>
-      <link>https://wonux.gitee.io/post/git-pelican/</link>
+      <link>https://wonux.github.io/post/git-pelican/</link>
       <pubDate>Wed, 06 May 2015 16:45:00 +0000</pubDate>
       
-      <guid>https://wonux.gitee.io/post/git-pelican/</guid>
+      <guid>https://wonux.github.io/post/git-pelican/</guid>
       <description>前言 一直以来都希望拥有属于自己的个人博客，随性发点信息，写点技术感想，记录自己的生活，重要的是不受广告的影响、不被河蟹、不会担心有一天被莫名</description>
     </item>
     
     <item>
       <title>Git子模块引用外部项目</title>
-      <link>https://wonux.gitee.io/post/git-git-submodule/</link>
+      <link>https://wonux.github.io/post/git-git-submodule/</link>
       <pubDate>Fri, 14 Nov 2014 13:38:00 +0000</pubDate>
       
-      <guid>https://wonux.gitee.io/post/git-git-submodule/</guid>
+      <guid>https://wonux.github.io/post/git-git-submodule/</guid>
       <description>Git子模块(submodule)简介 经常有这样的事情，当你在一个项目上工作时，你需要在其中使用另外一个项目。也许它是一个第三方开发的库或者</description>
     </item>
     
     <item>
       <title>Hexo &#43; Github 搭建静态个人博客</title>
-      <link>https://wonux.gitee.io/post/git-hexo/</link>
+      <link>https://wonux.github.io/post/git-hexo/</link>
       <pubDate>Wed, 12 Nov 2014 16:07:00 +0000</pubDate>
       
-      <guid>https://wonux.gitee.io/post/git-hexo/</guid>
+      <guid>https://wonux.github.io/post/git-hexo/</guid>
       <description>&lt;h2 id=&#34;hexo简介&#34;&gt;Hexo简介&lt;/h2&gt;
 &lt;p&gt;Github上托管博客是使用jekyll搭建的，官方的Github Pages同样推荐使用它。我之前体验了一下jekyll，没有达到我想要的效果。于是寻找替代方案，搜索同类博客程序，我认识了hexo，hexo出自台湾大学生tommy351之手,是由Node.js驱动的一款快速、简单且功能强大的博客框架。Node.js是一个可以快速构建网络服务及应用的平台 。该平台的构建是基于Chrome&amp;rsquo;s JavaScript runtime，也就是说，实际上它是对Google V8引擎（应用于Google Chrome浏览器)进行了封装。V8引擎执行Javascript的速度非常快，性能非常好。Node对一些特殊用例进行了优化，提供了替代的API，使得V8在非浏览器环境下运行得更好。它和jekyll相比，更快，更轻量。&lt;/p&gt;
 &lt;h2 id=&#34;hexo安装&#34;&gt;Hexo安装&lt;/h2&gt;

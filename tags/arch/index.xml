@@ -2,98 +2,98 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>arch on Wonux - Bolg</title>
-    <link>https://wonux.gitee.io/tags/arch/</link>
+    <link>https://wonux.github.io/tags/arch/</link>
     <description>Recent content in arch on Wonux - Bolg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 24 Feb 2016 14:30:00 +0000</lastBuildDate><atom:link href="https://wonux.gitee.io/tags/arch/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 24 Feb 2016 14:30:00 +0000</lastBuildDate><atom:link href="https://wonux.github.io/tags/arch/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Gentoo/Arch常用软件列表</title>
-      <link>https://wonux.gitee.io/post/gentoo-arch-apps/</link>
+      <link>https://wonux.github.io/post/gentoo-arch-apps/</link>
       <pubDate>Wed, 24 Feb 2016 14:30:00 +0000</pubDate>
       
-      <guid>https://wonux.gitee.io/post/gentoo-arch-apps/</guid>
+      <guid>https://wonux.github.io/post/gentoo-arch-apps/</guid>
       <description>1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70</description>
     </item>
     
     <item>
       <title>Arch安装KDE5</title>
-      <link>https://wonux.gitee.io/post/arch-kde/</link>
+      <link>https://wonux.github.io/post/arch-kde/</link>
       <pubDate>Mon, 25 Jan 2016 15:04:00 +0000</pubDate>
       
-      <guid>https://wonux.gitee.io/post/arch-kde/</guid>
+      <guid>https://wonux.github.io/post/arch-kde/</guid>
       <description>plasma desktop Install the plasma-meta meta-package or the plasma group. Alternatively, for a more minimal Plasma installation, install the plasma-desktop package. sddm The Simple Desktop Display Manager (SDDM) is the preferred display manager for KDE Plasma desktop. Install sddm 1 pacman -S sddm Configuration SDDM defaults to using systemd-logind for session management. 1 sddm --example-config &amp;gt; /etc/sddm.conf Loading sddm 1 2 systemctl start sddm systemctl enable sddm</description>
     </item>
     
     <item>
       <title>Arch无线网络网络管理</title>
-      <link>https://wonux.gitee.io/post/arch-wireless/</link>
+      <link>https://wonux.github.io/post/arch-wireless/</link>
       <pubDate>Wed, 22 Oct 2014 15:04:00 +0000</pubDate>
       
-      <guid>https://wonux.gitee.io/post/arch-wireless/</guid>
+      <guid>https://wonux.github.io/post/arch-wireless/</guid>
       <description>wifi-menu脚本 + dhcpcd</description>
     </item>
     
     <item>
       <title>Arch软件管理 -- Pacman常用命令</title>
-      <link>https://wonux.gitee.io/post/arch-pacman/</link>
+      <link>https://wonux.github.io/post/arch-pacman/</link>
       <pubDate>Wed, 22 Oct 2014 13:04:00 +0000</pubDate>
       
-      <guid>https://wonux.gitee.io/post/arch-pacman/</guid>
+      <guid>https://wonux.github.io/post/arch-pacman/</guid>
       <description>Pacman是Arch Linux 的包管理器。它将一个简单的二进制包格式和易用的构建系统结合了起来。不管软件包是来自官方的 Arch 库还是用户自己创建，Pac</description>
     </item>
     
     <item>
       <title>Arch声卡配置</title>
-      <link>https://wonux.gitee.io/post/arch-alsa/</link>
+      <link>https://wonux.github.io/post/arch-alsa/</link>
       <pubDate>Sat, 11 Oct 2014 15:04:00 +0000</pubDate>
       
-      <guid>https://wonux.gitee.io/post/arch-alsa/</guid>
+      <guid>https://wonux.github.io/post/arch-alsa/</guid>
       <description>ALSA Utilities Install the alsa-utils package. This contains (among other utilities) the alsamixer and amixer utilities. 1 pacman -S alsa-utils Unmuting the channels ALSA by default has all channels muted, all of which will need to be unmuted manually. This can be done using amixer: 1 amixer sset Master unmute This can alternatively be done using alsamixer: 1 alsamixer Test your changes 1 speaker-test -c 2 User privileges Usually, local</description>
     </item>
     
     <item>
       <title>Arch安装fcitx</title>
-      <link>https://wonux.gitee.io/post/arch-fcitx/</link>
+      <link>https://wonux.github.io/post/arch-fcitx/</link>
       <pubDate>Sat, 11 Oct 2014 13:04:00 +0000</pubDate>
       
-      <guid>https://wonux.gitee.io/post/arch-fcitx/</guid>
+      <guid>https://wonux.github.io/post/arch-fcitx/</guid>
       <description>安装fcitx,安装gtk、qt模块。 1 2 3 4 5 [root@Arctux ~]# pacman -S fcitx-im :: There are 4 members in group fcitx-im: :: Repository community 1) fcitx 2) fcitx-gtk2 3) fcitx-gtk3 4) fcitx-qt4 Enter a selection (default=all): 安装fcitx配置工具 1 [root@ARCH ~]# pacman -S fcitx-configtool .</description>
     </item>
     
     <item>
       <title>ArchLinux安装详解</title>
-      <link>https://wonux.gitee.io/post/arch-handbook/</link>
+      <link>https://wonux.github.io/post/arch-handbook/</link>
       <pubDate>Fri, 10 Oct 2014 13:18:00 +0000</pubDate>
       
-      <guid>https://wonux.gitee.io/post/arch-handbook/</guid>
+      <guid>https://wonux.github.io/post/arch-handbook/</guid>
       <description>选择安装方式 CD/USB Arch启动盘安装 使用Arch启动盘比较简单方便，没有额外设置，直接阅读下一步。 USB flash installation media 启动盘制作： USB flash installation media 从已经存在的Lin</description>
     </item>
     
     <item>
       <title>Arch下载官方镜像列表Official mirrors</title>
-      <link>https://wonux.gitee.io/post/arch-mirrors/</link>
+      <link>https://wonux.github.io/post/arch-mirrors/</link>
       <pubDate>Wed, 08 Oct 2014 13:29:00 +0000</pubDate>
       
-      <guid>https://wonux.gitee.io/post/arch-mirrors/</guid>
+      <guid>https://wonux.github.io/post/arch-mirrors/</guid>
       <description>Official mirrors The official Arch Linux mirror list is available from the pacman-mirrorlist package. To get an even more up-to-date list of mirrors, use the Pacman Mirror List Generator page on the main site. 手动下载镜像列表 有时因为系统镜像列表丢失或可读性不强，我们需要从官方网站</description>
     </item>
     
     <item>
       <title>ArchLinux最小化安装LXDE桌面环境</title>
-      <link>https://wonux.gitee.io/post/arch-xorg-lxde/</link>
+      <link>https://wonux.github.io/post/arch-xorg-lxde/</link>
       <pubDate>Tue, 10 Jun 2014 15:00:00 +0000</pubDate>
       
-      <guid>https://wonux.gitee.io/post/arch-xorg-lxde/</guid>
+      <guid>https://wonux.github.io/post/arch-xorg-lxde/</guid>
       <description>安装最小化的LXDE桌面环境： 1 pacman -S lxde-common 安装LXDE Session： 1 2 pacman -S lxsession 不安装这个没法登录进桌面环境 安装LXDE面板： 1 pacman -S lxpanel 不安装这个</description>
     </item>
     
     <item>
       <title>Arch最小化安装X</title>
-      <link>https://wonux.gitee.io/post/arch-xorg/</link>
+      <link>https://wonux.github.io/post/arch-xorg/</link>
       <pubDate>Tue, 10 Jun 2014 14:42:00 +0000</pubDate>
       
-      <guid>https://wonux.gitee.io/post/arch-xorg/</guid>
+      <guid>https://wonux.github.io/post/arch-xorg/</guid>
       <description>Xorg xorg-server 安装xorg-server 1 pacman -S xorg-server 可选：xorg-server-utils 1 pacman -S xorg-server-utils Xorg-server-utils meta-package pulls in the most useful packages for certain configuration tasks, they are pointed out in the relevant sections. Driver installation 如果不知道</description>
     </item>
     

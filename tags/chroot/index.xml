@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>chroot on Wonux - Bolg</title>
-    <link>https://wonux.gitee.io/tags/chroot/</link>
+    <link>https://wonux.github.io/tags/chroot/</link>
     <description>Recent content in chroot on Wonux - Bolg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 25 Nov 2014 16:08:00 +0000</lastBuildDate><atom:link href="https://wonux.gitee.io/tags/chroot/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 25 Nov 2014 16:08:00 +0000</lastBuildDate><atom:link href="https://wonux.github.io/tags/chroot/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Linux系统维护 -- chroot</title>
-      <link>https://wonux.gitee.io/post/apps-chroot/</link>
+      <link>https://wonux.github.io/post/apps-chroot/</link>
       <pubDate>Tue, 25 Nov 2014 16:08:00 +0000</pubDate>
       
-      <guid>https://wonux.gitee.io/post/apps-chroot/</guid>
+      <guid>https://wonux.github.io/post/apps-chroot/</guid>
       <description>chroot简介 chroot，即 change root directory (更改 root 目录)。在 linux 系统中，系统默认的目录结构都是以 /，即是以根 (root) 开始的。而在使用 chroot 之后，系统的目录结</description>
     </item>
     

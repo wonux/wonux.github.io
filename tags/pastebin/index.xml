@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>pastebin on Wonux - Bolg</title>
-    <link>https://wonux.gitee.io/tags/pastebin/</link>
+    <link>https://wonux.github.io/tags/pastebin/</link>
     <description>Recent content in pastebin on Wonux - Bolg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 16 Sep 2014 10:08:00 +0000</lastBuildDate><atom:link href="https://wonux.gitee.io/tags/pastebin/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 16 Sep 2014 10:08:00 +0000</lastBuildDate><atom:link href="https://wonux.github.io/tags/pastebin/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>直接粘贴代码到网络上:command-line pastebins</title>
-      <link>https://wonux.gitee.io/post/apps-pastebin/</link>
+      <link>https://wonux.github.io/post/apps-pastebin/</link>
       <pubDate>Tue, 16 Sep 2014 10:08:00 +0000</pubDate>
       
-      <guid>https://wonux.gitee.io/post/apps-pastebin/</guid>
+      <guid>https://wonux.github.io/post/apps-pastebin/</guid>
       <description>软件作用 直接把管道里面的文字内容传到网站上面，然后反馈一个地址可以读取内容。 同类软件 wgetpaste dpaste pastebin pasteie 用法 介绍wgetpaste为例： 1 2 GENTOO ~ # cat /etc/portage/make.conf |</description>
     </item>
     

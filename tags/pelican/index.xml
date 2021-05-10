@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>pelican on Wonux - Bolg</title>
-    <link>https://wonux.gitee.io/tags/pelican/</link>
+    <link>https://wonux.github.io/tags/pelican/</link>
     <description>Recent content in pelican on Wonux - Bolg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 14 May 2015 18:38:00 +0000</lastBuildDate><atom:link href="https://wonux.gitee.io/tags/pelican/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 14 May 2015 18:38:00 +0000</lastBuildDate><atom:link href="https://wonux.github.io/tags/pelican/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Pelican-Elegant Mac风格主题配置</title>
-      <link>https://wonux.gitee.io/post/git-pelican-elegant/</link>
+      <link>https://wonux.github.io/post/git-pelican-elegant/</link>
       <pubDate>Thu, 14 May 2015 18:38:00 +0000</pubDate>
       
-      <guid>https://wonux.gitee.io/post/git-pelican-elegant/</guid>
+      <guid>https://wonux.github.io/post/git-pelican-elegant/</guid>
       <description>简介 elegant是Mac风格的优秀主题，简单，专注文章本身。 A responsive, minimal, and stylish theme for Pelican：https://github.com/talha</description>
     </item>
     
     <item>
       <title>Pelican &#43; Github 搭建静态个人博客</title>
-      <link>https://wonux.gitee.io/post/git-pelican/</link>
+      <link>https://wonux.github.io/post/git-pelican/</link>
       <pubDate>Wed, 06 May 2015 16:45:00 +0000</pubDate>
       
-      <guid>https://wonux.gitee.io/post/git-pelican/</guid>
+      <guid>https://wonux.github.io/post/git-pelican/</guid>
       <description>前言 一直以来都希望拥有属于自己的个人博客，随性发点信息，写点技术感想，记录自己的生活，重要的是不受广告的影响、不被河蟹、不会担心有一天被莫名</description>
     </item>
     

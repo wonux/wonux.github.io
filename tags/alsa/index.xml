@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>alsa on Wonux - Bolg</title>
-    <link>https://wonux.gitee.io/tags/alsa/</link>
+    <link>https://wonux.github.io/tags/alsa/</link>
     <description>Recent content in alsa on Wonux - Bolg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 11 Oct 2014 15:04:00 +0000</lastBuildDate><atom:link href="https://wonux.gitee.io/tags/alsa/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 11 Oct 2014 15:04:00 +0000</lastBuildDate><atom:link href="https://wonux.github.io/tags/alsa/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Arch声卡配置</title>
-      <link>https://wonux.gitee.io/post/arch-alsa/</link>
+      <link>https://wonux.github.io/post/arch-alsa/</link>
       <pubDate>Sat, 11 Oct 2014 15:04:00 +0000</pubDate>
       
-      <guid>https://wonux.gitee.io/post/arch-alsa/</guid>
+      <guid>https://wonux.github.io/post/arch-alsa/</guid>
       <description>ALSA Utilities Install the alsa-utils package. This contains (among other utilities) the alsamixer and amixer utilities. 1 pacman -S alsa-utils Unmuting the channels ALSA by default has all channels muted, all of which will need to be unmuted manually. This can be done using amixer: 1 amixer sset Master unmute This can alternatively be done using alsamixer: 1 alsamixer Test your changes 1 speaker-test -c 2 User privileges Usually, local</description>
     </item>
     
     <item>
       <title>Gentoo安装详解（五）--声卡设置</title>
-      <link>https://wonux.gitee.io/post/gentoo-handbook-alsa/</link>
+      <link>https://wonux.github.io/post/gentoo-handbook-alsa/</link>
       <pubDate>Mon, 05 May 2014 15:40:00 +0000</pubDate>
       
-      <guid>https://wonux.gitee.io/post/gentoo-handbook-alsa/</guid>
+      <guid>https://wonux.github.io/post/gentoo-handbook-alsa/</guid>
       <description>硬件检测 To choose the right driver, first detect the used audio controller. You can use lspci for this task: 1 lspci | grep -i audio 内核配置 You need to activate the following kernel options: 1 2 3 4 5 6 7 8 9 10 11 12 13 Device Drivers ---&amp;gt; Sound ---&amp;gt; &amp;lt;*&amp;gt; Sound card Support &amp;lt;*&amp;gt; Advanced Linux Sound Architecture ---&amp;gt; [*] PCI</description>
     </item>
     

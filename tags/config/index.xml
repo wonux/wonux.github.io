@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>config on Wonux - Bolg</title>
-    <link>https://wonux.gitee.io/tags/config/</link>
+    <link>https://wonux.github.io/tags/config/</link>
     <description>Recent content in config on Wonux - Bolg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 25 Nov 2014 15:08:00 +0000</lastBuildDate><atom:link href="https://wonux.gitee.io/tags/config/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 25 Nov 2014 15:08:00 +0000</lastBuildDate><atom:link href="https://wonux.github.io/tags/config/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>文件系统配置启动挂载：fstab文件详解</title>
-      <link>https://wonux.gitee.io/post/apps-fstab/</link>
+      <link>https://wonux.github.io/post/apps-fstab/</link>
       <pubDate>Tue, 25 Nov 2014 15:08:00 +0000</pubDate>
       
-      <guid>https://wonux.gitee.io/post/apps-fstab/</guid>
+      <guid>https://wonux.github.io/post/apps-fstab/</guid>
       <description>fstab文件介绍 fstab文件包含了你的电脑上的存储设备及其文件系统的信息。它是决定一个硬盘（分区）被怎样使用或者说整合到整个系统中的文件</description>
     </item>
     

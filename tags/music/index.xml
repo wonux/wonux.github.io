@@ -2,35 +2,35 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>music on Wonux - Bolg</title>
-    <link>https://wonux.gitee.io/tags/music/</link>
+    <link>https://wonux.github.io/tags/music/</link>
     <description>Recent content in music on Wonux - Bolg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 29 Feb 2016 12:04:00 +0000</lastBuildDate><atom:link href="https://wonux.gitee.io/tags/music/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 29 Feb 2016 12:04:00 +0000</lastBuildDate><atom:link href="https://wonux.github.io/tags/music/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Shell终端收听音乐--豆瓣FM命令行版</title>
-      <link>https://wonux.gitee.io/post/apps-doubanfm/</link>
+      <link>https://wonux.github.io/post/apps-doubanfm/</link>
       <pubDate>Mon, 29 Feb 2016 12:04:00 +0000</pubDate>
       
-      <guid>https://wonux.gitee.io/post/apps-doubanfm/</guid>
+      <guid>https://wonux.github.io/post/apps-doubanfm/</guid>
       <description>douban.fm Terminal-based douban.fm inspired by douban.fm.该版本版基于Python2.* 安装Python2.* 1 2 pacman -S python2 pacman -S python2-pip 安装douban.fm 1 pip2 install douban.fm ###需要m</description>
     </item>
     
     <item>
       <title>Shell终端收听音乐--网易云音乐命令行版</title>
-      <link>https://wonux.gitee.io/post/apps-musicbox/</link>
+      <link>https://wonux.github.io/post/apps-musicbox/</link>
       <pubDate>Mon, 18 Jan 2016 12:04:00 +0000</pubDate>
       
-      <guid>https://wonux.gitee.io/post/apps-musicbox/</guid>
+      <guid>https://wonux.github.io/post/apps-musicbox/</guid>
       <description>Musicbox：网易云音乐命令行版本 高品质网易云音乐命令行版本，简洁优雅，丝般顺滑，基于Python编写。 这款命令行的客户端使用 Python 构建，以</description>
     </item>
     
     <item>
       <title>MPD&#43;MPC&#43;Conky 听音乐</title>
-      <link>https://wonux.gitee.io/post/apps-mpd/</link>
+      <link>https://wonux.github.io/post/apps-mpd/</link>
       <pubDate>Tue, 09 Sep 2014 11:07:00 +0000</pubDate>
       
-      <guid>https://wonux.gitee.io/post/apps-mpd/</guid>
+      <guid>https://wonux.github.io/post/apps-mpd/</guid>
       <description>MPD、MPC介绍： 为何选用MPD+MPC？ 在Linux下有很多不错的音乐播放器，强大的如amarok，简单的如bmp，而我更喜欢mpc（需</description>
     </item>
     

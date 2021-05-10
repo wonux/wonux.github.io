@@ -2,71 +2,71 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>network on Wonux - Bolg</title>
-    <link>https://wonux.gitee.io/tags/network/</link>
+    <link>https://wonux.github.io/tags/network/</link>
     <description>Recent content in network on Wonux - Bolg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 16 Jun 2015 07:30:00 +0000</lastBuildDate><atom:link href="https://wonux.gitee.io/tags/network/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 16 Jun 2015 07:30:00 +0000</lastBuildDate><atom:link href="https://wonux.github.io/tags/network/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Gentoo双网卡同时启用上内外网</title>
-      <link>https://wonux.gitee.io/post/gentoo-dual-network/</link>
+      <link>https://wonux.github.io/post/gentoo-dual-network/</link>
       <pubDate>Tue, 16 Jun 2015 07:30:00 +0000</pubDate>
       
-      <guid>https://wonux.gitee.io/post/gentoo-dual-network/</guid>
+      <guid>https://wonux.github.io/post/gentoo-dual-network/</guid>
       <description>引言：本文配置网络通过 OpenRC/netifrc 方法（net.*scritps）配置。 1 2 3 4 5 6 7 8 9 10 外网网卡：enp3s4 内网网卡：enp2s0 - 外网地址（通</description>
     </item>
     
     <item>
       <title>Gentoo网络管理方法总结</title>
-      <link>https://wonux.gitee.io/post/gentoo-network-method/</link>
+      <link>https://wonux.github.io/post/gentoo-network-method/</link>
       <pubDate>Mon, 15 Jun 2015 15:30:00 +0000</pubDate>
       
-      <guid>https://wonux.gitee.io/post/gentoo-network-method/</guid>
+      <guid>https://wonux.github.io/post/gentoo-network-method/</guid>
       <description>OpenRC/netifrc Netifrc is a collection of modules created to configure and manage network interfaces via individual, per-interface scripts located in the /etc/init.d/ directory. Enable Gentoo&amp;rsquo;s network stack (net.* scripts). 检测网卡名字 1 2 3 ifconfig -a or ls /sys/class/net 添加网卡 通过net.lo链接 1 2 3 ln -s /etc/init.d/net.lo /etc/init.d/net.ifname /etc/init.d/net.ifname start rc-update add net.ifname default</description>
     </item>
     
     <item>
       <title>Gentoo无线网络配置 -- wpa_supplicant</title>
-      <link>https://wonux.gitee.io/post/gentoo-wpa-supplicant/</link>
+      <link>https://wonux.github.io/post/gentoo-wpa-supplicant/</link>
       <pubDate>Sun, 04 Jan 2015 15:06:00 +0000</pubDate>
       
-      <guid>https://wonux.gitee.io/post/gentoo-wpa-supplicant/</guid>
+      <guid>https://wonux.github.io/post/gentoo-wpa-supplicant/</guid>
       <description>安装 安装net-wireless/wpa_supplicant包 1 emerge --ask wpa_supplicant 启动网络 为wpa_supplicant添加无线接口 在wpa_supp</description>
     </item>
     
     <item>
       <title>Gentoo网络配置</title>
-      <link>https://wonux.gitee.io/post/gentoo-network/</link>
+      <link>https://wonux.github.io/post/gentoo-network/</link>
       <pubDate>Thu, 20 Nov 2014 10:07:00 +0000</pubDate>
       
-      <guid>https://wonux.gitee.io/post/gentoo-network/</guid>
+      <guid>https://wonux.github.io/post/gentoo-network/</guid>
       <description>网卡识别配置 要开始配置你的网卡，你首先需要告诉Gentoo RC系统你的网卡。 可以用ifconfig命令查看自己网卡名字： 1 ifconfig -a 网卡名字（如e</description>
     </item>
     
     <item>
       <title>RFKill软开关蓝牙及无线功能 -- 解决无线网络连接失败问题</title>
-      <link>https://wonux.gitee.io/post/apps-rfkill/</link>
+      <link>https://wonux.github.io/post/apps-rfkill/</link>
       <pubDate>Wed, 22 Oct 2014 15:07:00 +0000</pubDate>
       
-      <guid>https://wonux.gitee.io/post/apps-rfkill/</guid>
+      <guid>https://wonux.github.io/post/apps-rfkill/</guid>
       <description>介绍 ​​​​​​​多​​​​​​​计​​​​​​​算​​​​​​​机​​​​​​​系​​​​​​​统​​​​​​​包​​​​​​​含​​​​</description>
     </item>
     
     <item>
       <title>Arch无线网络网络管理</title>
-      <link>https://wonux.gitee.io/post/arch-wireless/</link>
+      <link>https://wonux.github.io/post/arch-wireless/</link>
       <pubDate>Wed, 22 Oct 2014 15:04:00 +0000</pubDate>
       
-      <guid>https://wonux.gitee.io/post/arch-wireless/</guid>
+      <guid>https://wonux.github.io/post/arch-wireless/</guid>
       <description>wifi-menu脚本 + dhcpcd</description>
     </item>
     
     <item>
       <title>Gentoo解决Udev升级的网卡重命名问题</title>
-      <link>https://wonux.gitee.io/post/gentoo-udev-netware/</link>
+      <link>https://wonux.github.io/post/gentoo-udev-netware/</link>
       <pubDate>Mon, 30 Jun 2014 10:40:00 +0000</pubDate>
       
-      <guid>https://wonux.gitee.io/post/gentoo-udev-netware/</guid>
+      <guid>https://wonux.github.io/post/gentoo-udev-netware/</guid>
       <description>问题描述： 配置网络时，很多新手运行ifconfig命令查看网卡时，会发现我们熟悉的eth0网卡没有了，或是发现一些不规则命名的东东，不错，那</description>
     </item>
     

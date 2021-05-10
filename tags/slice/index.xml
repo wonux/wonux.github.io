@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>slice on Wonux - Bolg</title>
-    <link>https://wonux.gitee.io/tags/slice/</link>
+    <link>https://wonux.github.io/tags/slice/</link>
     <description>Recent content in slice on Wonux - Bolg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 23 Apr 2015 17:19:00 +0000</lastBuildDate><atom:link href="https://wonux.gitee.io/tags/slice/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 23 Apr 2015 17:19:00 +0000</lastBuildDate><atom:link href="https://wonux.github.io/tags/slice/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>UNIX基础 -- 磁盘组织</title>
-      <link>https://wonux.gitee.io/post/freebsd-disk/</link>
+      <link>https://wonux.github.io/post/freebsd-disk/</link>
       <pubDate>Thu, 23 Apr 2015 17:19:00 +0000</pubDate>
       
-      <guid>https://wonux.gitee.io/post/freebsd-disk/</guid>
+      <guid>https://wonux.github.io/post/freebsd-disk/</guid>
       <description>磁盘组织 FreeBSD 查找文件的最小单位是文件名。 而文件名区分大小写，不凭文件扩展名去识别这个文件是 程序、 文档， 或是其他格式的数据。 在文件系统里目录和文</description>
     </item>
     

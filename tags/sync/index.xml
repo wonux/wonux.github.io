@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>sync on Wonux - Bolg</title>
-    <link>https://wonux.gitee.io/tags/sync/</link>
+    <link>https://wonux.github.io/tags/sync/</link>
     <description>Recent content in sync on Wonux - Bolg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 27 Jan 2016 15:07:00 +0000</lastBuildDate><atom:link href="https://wonux.gitee.io/tags/sync/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 27 Jan 2016 15:07:00 +0000</lastBuildDate><atom:link href="https://wonux.github.io/tags/sync/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>RSync实现文件备份同步</title>
-      <link>https://wonux.gitee.io/post/apps-rsync/</link>
+      <link>https://wonux.github.io/post/apps-rsync/</link>
       <pubDate>Wed, 27 Jan 2016 15:07:00 +0000</pubDate>
       
-      <guid>https://wonux.gitee.io/post/apps-rsync/</guid>
+      <guid>https://wonux.github.io/post/apps-rsync/</guid>
       <description>rsync介绍 rsync , Remote Synchronize 顾名思意它是一款实现远程同步功能的软件，可通过LAN/WAN快速同步多台主机间的文件。它在同步文件的同时，可以保持原来</description>
     </item>
     

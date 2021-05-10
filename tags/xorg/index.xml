@@ -2,62 +2,62 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>xorg on Wonux - Bolg</title>
-    <link>https://wonux.gitee.io/tags/xorg/</link>
+    <link>https://wonux.github.io/tags/xorg/</link>
     <description>Recent content in xorg on Wonux - Bolg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 25 Jan 2016 15:04:00 +0000</lastBuildDate><atom:link href="https://wonux.gitee.io/tags/xorg/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 25 Jan 2016 15:04:00 +0000</lastBuildDate><atom:link href="https://wonux.github.io/tags/xorg/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Arch安装KDE5</title>
-      <link>https://wonux.gitee.io/post/arch-kde/</link>
+      <link>https://wonux.github.io/post/arch-kde/</link>
       <pubDate>Mon, 25 Jan 2016 15:04:00 +0000</pubDate>
       
-      <guid>https://wonux.gitee.io/post/arch-kde/</guid>
+      <guid>https://wonux.github.io/post/arch-kde/</guid>
       <description>plasma desktop Install the plasma-meta meta-package or the plasma group. Alternatively, for a more minimal Plasma installation, install the plasma-desktop package. sddm The Simple Desktop Display Manager (SDDM) is the preferred display manager for KDE Plasma desktop. Install sddm 1 pacman -S sddm Configuration SDDM defaults to using systemd-logind for session management. 1 sddm --example-config &amp;gt; /etc/sddm.conf Loading sddm 1 2 systemctl start sddm systemctl enable sddm</description>
     </item>
     
     <item>
       <title>openbox设置透明效果</title>
-      <link>https://wonux.gitee.io/post/apps-openbox-tranparent/</link>
+      <link>https://wonux.github.io/post/apps-openbox-tranparent/</link>
       <pubDate>Wed, 13 May 2015 17:08:00 +0000</pubDate>
       
-      <guid>https://wonux.gitee.io/post/apps-openbox-tranparent/</guid>
+      <guid>https://wonux.github.io/post/apps-openbox-tranparent/</guid>
       <description>X窗口下的透明效果设置 使用 transset + devilspie + xcompmgr 设置透明效果。 X窗口下没有现成的工具，但可以借助于Xcompmgr和transset。 在运行Xcompm</description>
     </item>
     
     <item>
       <title>Gentoo Xorg:Failed to load module &#34;……&#34; 问题</title>
-      <link>https://wonux.gitee.io/post/gentoo-xorg-failed/</link>
+      <link>https://wonux.github.io/post/gentoo-xorg-failed/</link>
       <pubDate>Fri, 24 Oct 2014 09:32:00 +0000</pubDate>
       
-      <guid>https://wonux.gitee.io/post/gentoo-xorg-failed/</guid>
+      <guid>https://wonux.github.io/post/gentoo-xorg-failed/</guid>
       <description>错误描述： 安装完xorg-server后，startx启动桌面环境，出现缺少模块错误。 Xorg:Failed to load module &amp;ldquo;……&amp;rdquo; 查看log： 1</description>
     </item>
     
     <item>
       <title>ArchLinux最小化安装LXDE桌面环境</title>
-      <link>https://wonux.gitee.io/post/arch-xorg-lxde/</link>
+      <link>https://wonux.github.io/post/arch-xorg-lxde/</link>
       <pubDate>Tue, 10 Jun 2014 15:00:00 +0000</pubDate>
       
-      <guid>https://wonux.gitee.io/post/arch-xorg-lxde/</guid>
+      <guid>https://wonux.github.io/post/arch-xorg-lxde/</guid>
       <description>安装最小化的LXDE桌面环境： 1 pacman -S lxde-common 安装LXDE Session： 1 2 pacman -S lxsession 不安装这个没法登录进桌面环境 安装LXDE面板： 1 pacman -S lxpanel 不安装这个</description>
     </item>
     
     <item>
       <title>Arch最小化安装X</title>
-      <link>https://wonux.gitee.io/post/arch-xorg/</link>
+      <link>https://wonux.github.io/post/arch-xorg/</link>
       <pubDate>Tue, 10 Jun 2014 14:42:00 +0000</pubDate>
       
-      <guid>https://wonux.gitee.io/post/arch-xorg/</guid>
+      <guid>https://wonux.github.io/post/arch-xorg/</guid>
       <description>Xorg xorg-server 安装xorg-server 1 pacman -S xorg-server 可选：xorg-server-utils 1 pacman -S xorg-server-utils Xorg-server-utils meta-package pulls in the most useful packages for certain configuration tasks, they are pointed out in the relevant sections. Driver installation 如果不知道</description>
     </item>
     
     <item>
       <title>Gentoo安装详解（四）-- 安装X桌面环境</title>
-      <link>https://wonux.gitee.io/post/gentoo-handbook-xorg/</link>
+      <link>https://wonux.github.io/post/gentoo-handbook-xorg/</link>
       <pubDate>Mon, 05 May 2014 10:20:00 +0000</pubDate>
       
-      <guid>https://wonux.gitee.io/post/gentoo-handbook-xorg/</guid>
+      <guid>https://wonux.github.io/post/gentoo-handbook-xorg/</guid>
       <description>安装X桌面环境： 安装Xorg： 检测显卡信息： 1 2 dmesg | grep video lspci | grep -i VGA 配置INPUT_DEVICE、VIDEO_CARDS变量： 在安装Xorg之</description>
     </item>
     

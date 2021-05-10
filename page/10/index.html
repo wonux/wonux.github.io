@@ -26,9 +26,9 @@
 <meta name="generator" content="Hugo 0.83.1 with theme even" />
 
 
-<link rel="canonical" href="https://wonux.gitee.io/" />
-  <link href="https://wonux.gitee.io/index.xml" rel="alternate" type="application/rss+xml" title="Wonux - Bolg" />
-  <link href="https://wonux.gitee.io/index.xml" rel="feed" type="application/rss+xml" title="Wonux - Bolg" />
+<link rel="canonical" href="https://wonux.github.io/" />
+  <link href="https://wonux.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Wonux - Bolg" />
+  <link href="https://wonux.github.io/index.xml" rel="feed" type="application/rss+xml" title="Wonux - Bolg" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -44,7 +44,7 @@
 <meta property="og:title" content="Wonux - Bolg" />
 <meta property="og:description" content="Hugo theme even example site." />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://wonux.gitee.io/" />
+<meta property="og:url" content="https://wonux.github.io/" />
 
 <meta itemprop="name" content="Wonux - Bolg">
 <meta itemprop="description" content="Hugo theme even example site."><meta name="twitter:card" content="summary"/>
@@ -122,6 +122,75 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/arch-alsa/">Arch声卡配置</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2014-10-11 </span>
+      <div class="post-category">
+          <a href="/categories/arch/"> Arch </a>
+          </div>
+        <span class="more-meta"> 约 170 字 </span>
+        <span class="more-meta"> 预计阅读 1 分钟 </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      ALSA Utilities Install the alsa-utils package. This contains (among other utilities) the alsamixer and amixer utilities. 1 pacman -S alsa-utils Unmuting the channels ALSA by default has all channels muted, all of which will need to be unmuted manually. This can be done using amixer: 1 amixer sset Master unmute This can alternatively be done using alsamixer: 1 alsamixer Test your changes 1 speaker-test -c 2 User privileges Usually, local
+    </div>
+    <div class="read-more">
+      <a href="/post/arch-alsa/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/arch-fcitx/">Arch安装fcitx</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2014-10-11 </span>
+      <div class="post-category">
+          <a href="/categories/arch/"> Arch </a>
+          </div>
+        <span class="more-meta"> 约 98 字 </span>
+        <span class="more-meta"> 预计阅读 1 分钟 </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      安装fcitx,安装gtk、qt模块。 1 2 3 4 5 [root@Arctux ~]# pacman -S fcitx-im :: There are 4 members in group fcitx-im: :: Repository community 1) fcitx 2) fcitx-gtk2 3) fcitx-gtk3 4) fcitx-qt4 Enter a selection (default=all): 安装fcitx配置工具 1 [root@ARCH ~]# pacman -S fcitx-configtool .
+    </div>
+    <div class="read-more">
+      <a href="/post/arch-fcitx/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/arch-handbook/">ArchLinux安装详解</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2014-10-10 </span>
+      <div class="post-category">
+          <a href="/categories/arch/"> Arch </a>
+          </div>
+        <span class="more-meta"> 约 785 字 </span>
+        <span class="more-meta"> 预计阅读 2 分钟 </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      选择安装方式 CD/USB Arch启动盘安装 使用Arch启动盘比较简单方便，没有额外设置，直接阅读下一步。 USB flash installation media 启动盘制作： USB flash installation media 从已经存在的Lin
+    </div>
+    <div class="read-more">
+      <a href="/post/arch-handbook/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/post/arch-mirrors/">Arch下载官方镜像列表Official mirrors</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2014-10-08 </span>
@@ -166,75 +235,6 @@
   </div>
 </article>
 
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/apps-mpd/">MPD&#43;MPC&#43;Conky 听音乐</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2014-09-09 </span>
-      <div class="post-category">
-          <a href="/categories/applications/"> Applications </a>
-          </div>
-        <span class="more-meta"> 约 1194 字 </span>
-        <span class="more-meta"> 预计阅读 3 分钟 </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      MPD、MPC介绍： 为何选用MPD+MPC？ 在Linux下有很多不错的音乐播放器，强大的如amarok，简单的如bmp，而我更喜欢mpc（需
-    </div>
-    <div class="read-more">
-      <a href="/post/apps-mpd/" class="read-more-link">阅读更多</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/gentoo-gcc-invalid/">gcc-config:Active gcc profile is invalid 解决办法</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2014-09-02 </span>
-      <div class="post-category">
-          <a href="/categories/gentoo/"> Gentoo </a>
-          </div>
-        <span class="more-meta"> 约 101 字 </span>
-        <span class="more-meta"> 预计阅读 1 分钟 </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      错误描述 Gentoo软件安装错误,提示： gcc-config: Active gcc profile is invalid 解决方法： 列出可用的profile 1 gcc-config -l gcc-config: Active gcc profile is invalid! [1] i686-pc-linux-gnu-4.6.3 显示当前使用的profile 1 gcc-config
-    </div>
-    <div class="read-more">
-      <a href="/post/gentoo-gcc-invalid/" class="read-more-link">阅读更多</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/gentoo-localization/">Gentoo本地化设置--时区、时钟、字体、中文环境</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2014-06-30 </span>
-      <div class="post-category">
-          <a href="/categories/gentoo/"> Gentoo </a>
-          </div>
-        <span class="more-meta"> 约 1021 字 </span>
-        <span class="more-meta"> 预计阅读 3 分钟 </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      时区 你需要选择时区让系统知道你的地理位置，以保持正确的时间。在/usr/share/zoneinfo中查找你的时区。然后在/etc/conf
-    </div>
-    <div class="read-more">
-      <a href="/post/gentoo-localization/" class="read-more-link">阅读更多</a>
-    </div>
-  </div>
-</article>
-
     </section>
   
   <nav class="pagination">
@@ -258,7 +258,7 @@
       <a href="mailto:wonux@qq.com" class="iconfont icon-email" title="email"></a>
       <a href="https://github.com/wonux" class="iconfont icon-github" title="github"></a>
       <a href="https://www.douban.com/people/wonux" class="iconfont icon-douban" title="douban"></a>
-  <a href="https://wonux.gitee.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  <a href="https://wonux.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
 </div>
 
 <div class="copyright">
