@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>video on Wonux - Bolg</title>
+    <link>http://wonux.gitee.io/tags/video/</link>
+    <description>Recent content in video on Wonux - Bolg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 29 Oct 2014 14:08:00 +0000</lastBuildDate><atom:link href="http://wonux.gitee.io/tags/video/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mplayer使用及快捷键</title>
+      <link>http://wonux.gitee.io/post/apps-mplayer/</link>
+      <pubDate>Wed, 29 Oct 2014 14:08:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/apps-mplayer/</guid>
+      <description>MPlayer 是我在 Linux 系统中用到的相当好的媒体播放程序，它因支持播放广泛的音／视频文件格式而著称。本文所要探讨的，除却一般的使用方法之外，更包括一些鲜为</description>
+    </item>
+    
+  </channel>
+</rss>

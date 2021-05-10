@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>UNIX基础--Shells - Wonux - Bolg</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="孤逐王" /><meta name="description" content="Shells Shell提供了一个和操作系统交互的命令行接口。shell的主要功能就是从输入取得命令然后去执行。FreeBSD内含了一些shell，包括" /><meta name="keywords" content="Hugo, theme, even, gentoo, arch, linux" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.83.1 with theme even" />
+
+
+<link rel="canonical" href="http://wonux.gitee.io/post/freebsd-shells/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<link href="/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="UNIX基础--Shells" />
+<meta property="og:description" content="Shells Shell提供了一个和操作系统交互的命令行接口。shell的主要功能就是从输入取得命令然后去执行。FreeBSD内含了一些shell，包括" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://wonux.gitee.io/post/freebsd-shells/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2015-04-26T14:26:00&#43;00:00" />
+<meta property="article:modified_time" content="2015-04-27T21:21:00&#43;00:00" />
+
+<meta itemprop="name" content="UNIX基础--Shells">
+<meta itemprop="description" content="Shells Shell提供了一个和操作系统交互的命令行接口。shell的主要功能就是从输入取得命令然后去执行。FreeBSD内含了一些shell，包括"><meta itemprop="datePublished" content="2015-04-26T14:26:00&#43;00:00" />
+<meta itemprop="dateModified" content="2015-04-27T21:21:00&#43;00:00" />
+<meta itemprop="wordCount" content="856">
+<meta itemprop="keywords" content="unix,shell,freebsd," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="UNIX基础--Shells"/>
+<meta name="twitter:description" content="Shells Shell提供了一个和操作系统交互的命令行接口。shell的主要功能就是从输入取得命令然后去执行。FreeBSD内含了一些shell，包括"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Wonux Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Wonux Blog</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">UNIX基础--Shells</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2015-04-26 </span>
+        <div class="post-category">
+            <a href="/categories/freebsd/"> FreeBSD </a>
+            </div>
+          <span class="more-meta"> 约 856 字 </span>
+          <span class="more-meta"> 预计阅读 2 分钟 </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#shells">Shells</a>
+          <ul>
+            <li><a href="#shell的特点">Shell的特点：</a></li>
+            <li><a href="#改变shell">改变Shell</a></li>
+            <li><a href="#shell高级技巧">Shell高级技巧</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h2 id="shells">Shells</h2>
+<p>Shell提供了一个和操作系统交互的命令行接口。shell的主要功能就是从输入取得命令然后去执行。FreeBSD内含了一些shell，包括:Bourne shell（sh）、 extended C shell（tcsh）。 其他shell也可在FreeBSD的Ports得到，例如:zsh和bash。</p>
+<h3 id="shell的特点">Shell的特点：</h3>
+<ul>
+<li>文件名补全</li>
+<li>使用环境变量
+Common Environment Variables</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">Variable	Description
+USER	Current logged in user&#39;s name.
+PATH	Colon-separated list of directories to search for binaries.
+DISPLAY	Network name of the Xorg display to connect to, if available.
+SHELL	The current shell.
+TERM	The name of the user&#39;s type of terminal. Used to determine the capabilities of the terminal.
+TERMCAP	Database entry of the terminal escape codes to perform various terminal functions.
+OSTYPE	Type of operating system.
+MACHTYPE	The system&#39;s CPU architecture.
+EDITOR	The user&#39;s preferred text editor.
+PAGER	The user&#39;s preferred utility for viewing text one page at a time.
+MANPATH	Colon-separated list of directories to search for manual pages.
+</code></pre></td></tr></table>
+</div>
+</div><p>怎样设置环境变量：不同的shell有不同的方法。</p>
+<ul>
+<li>在tcsh和csh这样的C-Style shell，使用<code>setenv</code>设置环境变量</li>
+<li>在sh和bash这样的Bourne shell，使用, <code>export</code>设置环境变量</li>
+</ul>
+<p>例如：设置或改变EDITOR环境变量，将EDITOR设为/usr/local/bin/vim.
+在csh或tcsh下</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">setenv EDITOR /usr/local/bin/vim
+</code></pre></td></tr></table>
+</div>
+</div><p>在sh或bash下</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">export EDITOR=&#34;/usr/local/bin/vim&#34;
+</code></pre></td></tr></table>
+</div>
+</div><p>命令行中在环境变量前加一个$字符，可以取得环境变量查看当前设置。
+shell里有许多特别的字符代表着特别的内容，我们把叫做meta-characters。最常用的就是<code>*</code>字符，它可代表文件名的任何字符。为了防止shell去分析这些特别字符， 我们可在它之前加一个<code> \</code>字符去说明它只是普通字符。</p>
+<h3 id="改变shell">改变Shell</h3>
+<p>改变Shell的最简单方法是使用 chsh 命令。</p>
+<ul>
+<li>执行 chsh 将根据EDITOR 环境变量进入到那个编辑器，假如没有设定，就会进入vi编辑器。 请改变“Shell:”这行对应值。</li>
+<li>可使用chsh 的-s选项， 这样就能设置您的shell却又不用编辑器。假如想把shell改为bash:</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">chsh -s /usr/local/bin/bash
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>注意:新的shell必须在<code>/etc/shells</code>文件里列出。 如果从ports里安装一个shell，应该默认自动添加到这个文件了。如果没有添加，用下面的命令添加：<code>echo &quot;/usr/local/bin/bash&quot; &gt;&gt; /etc/shells</code> ，然后从新运行<code>chsh</code>.</p>
+</blockquote>
+<h3 id="shell高级技巧">Shell高级技巧</h3>
+<p>Advanced Shell Techniques</p>
+<ul>
+<li>重定向：<code>&gt;</code> <code>&lt;</code></li>
+<li>管道：<code>|</code></li>
+</ul>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">孤逐王</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2015-04-27
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/unix/">unix</a>
+          <a href="/tags/shell/">shell</a>
+          <a href="/tags/freebsd/">freebsd</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/freebsd-man/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">UNIX基础 -- Manual Pages</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/freebsd-process/">
+            <span class="next-text nav-default">UNIX基础 -- 进程和守护进程</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:wonux@qq.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/wonux" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.douban.com/people/wonux" class="iconfont icon-douban" title="douban"></a>
+  <a href="http://wonux.gitee.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2014 - 
+    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>wonux</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>openbox设置透明效果 - Wonux - Bolg</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="孤逐王" /><meta name="description" content="X窗口下的透明效果设置 使用 transset &#43; devilspie &#43; xcompmgr 设置透明效果。 X窗口下没有现成的工具，但可以借助于Xcompmgr和transset。 在运行Xcompm" /><meta name="keywords" content="Hugo, theme, even, gentoo, arch, linux" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.83.1 with theme even" />
+
+
+<link rel="canonical" href="http://wonux.gitee.io/post/apps-openbox-tranparent/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<link href="/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="openbox设置透明效果" />
+<meta property="og:description" content="X窗口下的透明效果设置 使用 transset &#43; devilspie &#43; xcompmgr 设置透明效果。 X窗口下没有现成的工具，但可以借助于Xcompmgr和transset。 在运行Xcompm" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://wonux.gitee.io/post/apps-openbox-tranparent/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2015-05-13T17:08:00&#43;00:00" />
+<meta property="article:modified_time" content="2015-05-14T11:13:00&#43;00:00" />
+
+<meta itemprop="name" content="openbox设置透明效果">
+<meta itemprop="description" content="X窗口下的透明效果设置 使用 transset &#43; devilspie &#43; xcompmgr 设置透明效果。 X窗口下没有现成的工具，但可以借助于Xcompmgr和transset。 在运行Xcompm"><meta itemprop="datePublished" content="2015-05-13T17:08:00&#43;00:00" />
+<meta itemprop="dateModified" content="2015-05-14T11:13:00&#43;00:00" />
+<meta itemprop="wordCount" content="880">
+<meta itemprop="keywords" content="apps,xorg,openbox," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="openbox设置透明效果"/>
+<meta name="twitter:description" content="X窗口下的透明效果设置 使用 transset &#43; devilspie &#43; xcompmgr 设置透明效果。 X窗口下没有现成的工具，但可以借助于Xcompmgr和transset。 在运行Xcompm"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Wonux Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Wonux Blog</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">openbox设置透明效果</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2015-05-13 </span>
+        <div class="post-category">
+            <a href="/categories/applications/"> Applications </a>
+            </div>
+          <span class="more-meta"> 约 880 字 </span>
+          <span class="more-meta"> 预计阅读 2 分钟 </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#x窗口下的透明效果设置">X窗口下的透明效果设置</a>
+          <ul>
+            <li><a href="#transset设置透明度"><code>transset</code>设置透明度</a></li>
+            <li><a href="#xcompmgr显示透明效果"><code>xcompmgr</code>显示透明效果</a></li>
+            <li><a href="#结合devilspie的使用">结合<code>devilspie</code>的使用</a></li>
+            <li><a href="#openbox下的使用">openbox下的使用</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h2 id="x窗口下的透明效果设置">X窗口下的透明效果设置</h2>
+<p>使用<code> transset</code> + <code>devilspie</code> + <code>xcompmgr </code>设置透明效果。</p>
+<p>X窗口下没有现成的工具，但可以借助于Xcompmgr和transset。
+在运行Xcompmgr之后，就可以用transset来设置窗口透明度了。</p>
+<h3 id="transset设置透明度"><code>transset</code>设置透明度</h3>
+<p><code>opacity</code>变量：0～1。0表示完全透明，1表示不透明。如果不指定opacity参数，默认值是0.75</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">transset --help
+</code></pre></td></tr></table>
+</div>
+</div><p>查看用法</p>
+<blockquote>
+<p>options:
+-h, &ndash;help           display this message
+-t, &ndash;toggle         force toggle of opacity
+-c, &ndash;click          select by clicking on window  (default)
+-p, &ndash;point          select the window currently under the cursor
+-a, &ndash;actual         select the actual window
+-n, &ndash;name NAME      select by name, NAME is matched as regular expression
+&ndash;no-regex           don&rsquo;t use regular expression for matching name
+-i, &ndash;id             select by window id
+&ndash;inc            increase by the given opacity
+&ndash;dec            decrease by given opacity
+-m, &ndash;min OPACITY    minimum possible opacity  (default = 0)
+-x, &ndash;max OPACITY    maximum possible opacity  (default = 1)
+-v, &ndash;verbose        print some debug info
+-V, &ndash;version        print version number</p>
+</blockquote>
+<h3 id="xcompmgr显示透明效果"><code>xcompmgr</code>显示透明效果</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">xcompmgr
+</code></pre></td></tr></table>
+</div>
+</div><p>但是，<code>transset</code>是一个命令行工具，如何与窗口系统结合起来，开机启动就显示透明效果呢。下面介绍两种使用方式。</p>
+<h3 id="结合devilspie的使用">结合<code>devilspie</code>的使用</h3>
+<p>devilspie支持自动绑定某类窗口，即窗口启动时会触发后台devilspie程序的相应行为。devilspie的配置文件在~/.devilspie/目录中，比如随便建立一个文件opacity.ds。内容为</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">( if
+  ( or
+    ( contains ( window_class ) &#34;Gvim&#34; )
+    ( contains ( application_name ) &#34;sakura&#34; )
+    ( contains ( application_name ) &#34;tilda&#34; )
+  )
+  ( begin
+    ( spawn_async (str &#34;transset -t -i &#34; (window_xid)  ))
+  )
+  )
+</code></pre></td></tr></table>
+</div>
+</div><p>应该比较好理解，当启动Gvim， sakura 或 tilda 时设置其透明度为0.75。如执行<code>devilspie -a</code>，然后启动那个应用，它的属性就会在devilspie的输出中显示出来。</p>
+<blockquote>
+<p>注意，xcompmgr和devilspie的启动不一定要放在.xinitrc中，只要在X启动之前执行即可，比如在openbox环境中，加入autostart.sh也是可以的。</p>
+</blockquote>
+<h3 id="openbox下的使用">openbox下的使用</h3>
+<p>修改~/.config/openbox/rc.xml中的<context name=”Titlebar”>项下面的鼠标绑定内容。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">&lt;context name=”Titlebar”&gt;
+    &lt;!-- 使用transset-df设置窗口透明效果 --&gt;
+    &lt;mousebind button=&#34;C-Middle&#34; action=&#34;Click&#34;&gt;
+        &lt;action name=&#34;Execute&#34;&gt;
+            &lt;execute&gt;transset-df -p&lt;/execute&gt;
+        &lt;/action&gt;
+    &lt;/mousebind&gt;
+    &lt;mousebind button=&#34;C-Up&#34; action=&#34;Click&#34;&gt;
+        &lt;action name=&#34;Execute&#34;&gt;
+            &lt;execute&gt;transset-df -p --inc 0.2 &lt;/execute&gt;
+        &lt;/action&gt;
+    &lt;/mousebind&gt;
+    &lt;mousebind button=&#34;C-Down&#34; action=&#34;Click&#34;&gt;
+        &lt;action name=&#34;Execute&#34;&gt;
+            &lt;execute&gt;transset-df -p -m 0.2 --dec 0.2&lt;/execute&gt;
+        &lt;/action&gt;
+    &lt;/mousebind&gt;
+</code></pre></td></tr></table>
+</div>
+</div><p>这样，你就可以在窗口标题栏上按Ctrl+中键切换透明度了，Ctrl+向上滚动增加透明度，Ctrl+向下滚动减少透明度。</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">孤逐王</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2015-05-14
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/apps/">apps</a>
+          <a href="/tags/xorg/">xorg</a>
+          <a href="/tags/openbox/">openbox</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/git-pelican-elegant/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Pelican-Elegant Mac风格主题配置</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/git-pelican/">
+            <span class="next-text nav-default">Pelican &#43; Github 搭建静态个人博客</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:wonux@qq.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/wonux" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.douban.com/people/wonux" class="iconfont icon-douban" title="douban"></a>
+  <a href="http://wonux.gitee.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2014 - 
+    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>wonux</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

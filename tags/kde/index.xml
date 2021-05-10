@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>kde on Wonux - Bolg</title>
+    <link>http://wonux.gitee.io/tags/kde/</link>
+    <description>Recent content in kde on Wonux - Bolg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 25 Jan 2016 15:04:00 +0000</lastBuildDate><atom:link href="http://wonux.gitee.io/tags/kde/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Arch安装KDE5</title>
+      <link>http://wonux.gitee.io/post/arch-kde/</link>
+      <pubDate>Mon, 25 Jan 2016 15:04:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/arch-kde/</guid>
+      <description>plasma desktop Install the plasma-meta meta-package or the plasma group. Alternatively, for a more minimal Plasma installation, install the plasma-desktop package. sddm The Simple Desktop Display Manager (SDDM) is the preferred display manager for KDE Plasma desktop. Install sddm 1 pacman -S sddm Configuration SDDM defaults to using systemd-logind for session management. 1 sddm --example-config &amp;gt; /etc/sddm.conf Loading sddm 1 2 systemctl start sddm systemctl enable sddm</description>
+    </item>
+    
+  </channel>
+</rss>

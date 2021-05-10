@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>image on Wonux - Bolg</title>
+    <link>http://wonux.gitee.io/tags/image/</link>
+    <description>Recent content in image on Wonux - Bolg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 06 May 2014 17:08:00 +0000</lastBuildDate><atom:link href="http://wonux.gitee.io/tags/image/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux下截图工具：scrot 从入门到精通</title>
+      <link>http://wonux.gitee.io/post/apps-scrot/</link>
+      <pubDate>Tue, 06 May 2014 17:08:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/apps-scrot/</guid>
+      <description>简介： scrot 主要用在命令行下，它使用 imlib2 库来抓取并保存图像。scrot 的使用格式为：scrot [options] [file]。 一般用法： 就一般而言，使用 scrot 可以抓取</description>
+    </item>
+    
+  </channel>
+</rss>

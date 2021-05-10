@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>UNIX基础 -- 权限 - Wonux - Bolg</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="孤逐王" /><meta name="description" content="权限 Permissions FreeBSD使用传统的UNIX®系统的基本权限。在UNIX®系统中，基本权限分配了三种访问类型：读、写、执行。权限可以用字母r、w、" /><meta name="keywords" content="Hugo, theme, even, gentoo, arch, linux" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.83.1 with theme even" />
+
+
+<link rel="canonical" href="http://wonux.gitee.io/post/freebsd-permission/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<link href="/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="UNIX基础 -- 权限" />
+<meta property="og:description" content="权限 Permissions FreeBSD使用传统的UNIX®系统的基本权限。在UNIX®系统中，基本权限分配了三种访问类型：读、写、执行。权限可以用字母r、w、" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://wonux.gitee.io/post/freebsd-permission/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2015-04-23T15:34:00&#43;00:00" />
+<meta property="article:modified_time" content="2015-04-23T15:52:00&#43;00:00" />
+
+<meta itemprop="name" content="UNIX基础 -- 权限">
+<meta itemprop="description" content="权限 Permissions FreeBSD使用传统的UNIX®系统的基本权限。在UNIX®系统中，基本权限分配了三种访问类型：读、写、执行。权限可以用字母r、w、"><meta itemprop="datePublished" content="2015-04-23T15:34:00&#43;00:00" />
+<meta itemprop="dateModified" content="2015-04-23T15:52:00&#43;00:00" />
+<meta itemprop="wordCount" content="472">
+<meta itemprop="keywords" content="unix,permission,freebsd," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="UNIX基础 -- 权限"/>
+<meta name="twitter:description" content="权限 Permissions FreeBSD使用传统的UNIX®系统的基本权限。在UNIX®系统中，基本权限分配了三种访问类型：读、写、执行。权限可以用字母r、w、"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Wonux Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Wonux Blog</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">UNIX基础 -- 权限</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2015-04-23 </span>
+        <div class="post-category">
+            <a href="/categories/freebsd/"> FreeBSD </a>
+            </div>
+          <span class="more-meta"> 约 472 字 </span>
+          <span class="more-meta"> 预计阅读 1 分钟 </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#权限">权限</a>
+          <ul>
+            <li><a href="#权限的符号化表示">权限的符号化表示</a></li>
+            <li><a href="#freebsd文件标志">FreeBSD文件标志</a></li>
+            <li><a href="#setuidsetgid和sticky-权限">setuid、setgid和sticky 权限</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h2 id="权限">权限</h2>
+<p>Permissions</p>
+<p>FreeBSD使用传统的UNIX®系统的基本权限。在UNIX®系统中，基本权限分配了三种访问类型：读、写、执行。权限可以用字母r、w、x表示；也可以用二进制数表示，按rwx的顺序，x值1，w值2，r值4。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">0		---
+1		--x
+2		-w-
+3		-wx
+4		r--
+5		r-x
+6		rw-
+7		rwx
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>使用命令ls的-l参数可以显示出文件的所属者、 所属组和其他人等属性。</p>
+</blockquote>
+<h3 id="权限的符号化表示">权限的符号化表示</h3>
+<p>Symbolic Permissions</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">Option	    Letter	Represents
+(who)	     u	      User
+(who)	     g	      Group owner
+(who)	     o	      Other
+(who)	     a	      All (“world”)
+(action)	     +      Adding permissions
+(action)	     -	      Removing permissions
+(action)	     =      Explicitly set permissions
+(permissions)	r	Read
+(permissions)	w	Write
+(permissions)	x	Execute
+(permissions)	t	Sticky bit
+(permissions)	s	Set UID or GID
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="freebsd文件标志">FreeBSD文件标志</h3>
+<p>FreeBSD File Flags</p>
+<p>FreeBSD 还支持使用 “文件标志”。这些标志为文件提供了进一步的安全控制机制，但这些控制并不适用于目录。这些文件标志提供了针对文件的进一步控制， 帮助确保即使是 root 用户也无法删除或修改文件。</p>
+<h3 id="setuidsetgid和sticky-权限">setuid、setgid和sticky 权限</h3>
+<p>除了前面已经讨论过的那些权限之外，还有三个管理员应该知道的权限配置。它们是setuid、setgid和 sticky。这些配置对于一些 UNIX® 操作而言很重要， 因为它们能提供一些一般情况下不会授予普通用户的功能。</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">孤逐王</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2015-04-23
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/unix/">unix</a>
+          <a href="/tags/permission/">permission</a>
+          <a href="/tags/freebsd/">freebsd</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/freebsd-disk/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">UNIX基础 -- 磁盘组织</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/freebsd-account/">
+            <span class="next-text nav-default">UNIX基础 -- 用户和基本账户管理</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:wonux@qq.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/wonux" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.douban.com/people/wonux" class="iconfont icon-douban" title="douban"></a>
+  <a href="http://wonux.gitee.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2014 - 
+    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>wonux</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

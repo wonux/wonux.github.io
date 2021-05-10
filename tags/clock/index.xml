@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>clock on Wonux - Bolg</title>
+    <link>http://wonux.gitee.io/tags/clock/</link>
+    <description>Recent content in clock on Wonux - Bolg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 06 May 2014 17:21:00 +0000</lastBuildDate><atom:link href="http://wonux.gitee.io/tags/clock/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gentoo解决Windows双系统时间不同步的问题</title>
+      <link>http://wonux.gitee.io/post/gentoo-handbook-clock/</link>
+      <pubDate>Tue, 06 May 2014 17:21:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/gentoo-handbook-clock/</guid>
+      <description>升级后的gentoo不再使用/etc/conf.d/clock，而是使用/etc/conf.d/hwclock来设置和时间相关了。 在/etc</description>
+    </item>
+    
+  </channel>
+</rss>

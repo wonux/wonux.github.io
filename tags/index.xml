@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Wonux - Bolg</title>
+    <link>http://wonux.gitee.io/tags/</link>
+    <description>Recent content in Tags on Wonux - Bolg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 24 Mar 2016 15:38:00 +0000</lastBuildDate><atom:link href="http://wonux.gitee.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>apps</title>
+      <link>http://wonux.gitee.io/tags/apps/</link>
+      <pubDate>Thu, 24 Mar 2016 15:38:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/tags/apps/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>git</title>
+      <link>http://wonux.gitee.io/tags/git/</link>
+      <pubDate>Thu, 24 Mar 2016 15:38:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>music</title>
+      <link>http://wonux.gitee.io/tags/music/</link>
+      <pubDate>Mon, 29 Feb 2016 12:04:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/tags/music/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>http://wonux.gitee.io/tags/python/</link>
+      <pubDate>Mon, 29 Feb 2016 12:04:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>arch</title>
+      <link>http://wonux.gitee.io/tags/arch/</link>
+      <pubDate>Wed, 24 Feb 2016 14:30:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/tags/arch/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gentoo</title>
+      <link>http://wonux.gitee.io/tags/gentoo/</link>
+      <pubDate>Wed, 24 Feb 2016 14:30:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/tags/gentoo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sync</title>
+      <link>http://wonux.gitee.io/tags/sync/</link>
+      <pubDate>Wed, 27 Jan 2016 15:07:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/tags/sync/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kde</title>
+      <link>http://wonux.gitee.io/tags/kde/</link>
+      <pubDate>Mon, 25 Jan 2016 15:04:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/tags/kde/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>xorg</title>
+      <link>http://wonux.gitee.io/tags/xorg/</link>
+      <pubDate>Mon, 25 Jan 2016 15:04:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/tags/xorg/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vi</title>
+      <link>http://wonux.gitee.io/tags/vi/</link>
+      <pubDate>Thu, 07 Jan 2016 08:07:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/tags/vi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vim</title>
+      <link>http://wonux.gitee.io/tags/vim/</link>
+      <pubDate>Thu, 07 Jan 2016 08:07:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/tags/vim/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>firefox</title>
+      <link>http://wonux.gitee.io/tags/firefox/</link>
+      <pubDate>Sat, 26 Dec 2015 15:58:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/tags/firefox/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pdf</title>
+      <link>http://wonux.gitee.io/tags/pdf/</link>
+      <pubDate>Thu, 24 Dec 2015 08:02:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/tags/pdf/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>file-manager</title>
+      <link>http://wonux.gitee.io/tags/file-manager/</link>
+      <pubDate>Tue, 22 Dec 2015 08:40:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/tags/file-manager/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>torrent</title>
+      <link>http://wonux.gitee.io/tags/torrent/</link>
+      <pubDate>Wed, 16 Dec 2015 16:40:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/tags/torrent/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bugs</title>
+      <link>http://wonux.gitee.io/tags/bugs/</link>
+      <pubDate>Thu, 10 Dec 2015 09:30:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/tags/bugs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>i18n</title>
+      <link>http://wonux.gitee.io/tags/i18n/</link>
+      <pubDate>Thu, 10 Dec 2015 09:30:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/tags/i18n/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>network</title>
+      <link>http://wonux.gitee.io/tags/network/</link>
+      <pubDate>Tue, 16 Jun 2015 07:30:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/tags/network/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>blog</title>
+      <link>http://wonux.gitee.io/tags/blog/</link>
+      <pubDate>Thu, 14 May 2015 18:38:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/tags/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pelican</title>
+      <link>http://wonux.gitee.io/tags/pelican/</link>
+      <pubDate>Thu, 14 May 2015 18:38:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/tags/pelican/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>openbox</title>
+      <link>http://wonux.gitee.io/tags/openbox/</link>
+      <pubDate>Wed, 13 May 2015 17:08:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/tags/openbox/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>freebsd</title>
+      <link>http://wonux.gitee.io/tags/freebsd/</link>
+      <pubDate>Mon, 04 May 2015 09:37:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/tags/freebsd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>package</title>
+      <link>http://wonux.gitee.io/tags/package/</link>
+      <pubDate>Mon, 04 May 2015 09:37:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/tags/package/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ports</title>
+      <link>http://wonux.gitee.io/tags/ports/</link>
+      <pubDate>Mon, 04 May 2015 09:37:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/tags/ports/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>unix</title>
+      <link>http://wonux.gitee.io/tags/unix/</link>
+      <pubDate>Mon, 04 May 2015 09:37:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/tags/unix/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>man</title>
+      <link>http://wonux.gitee.io/tags/man/</link>
+      <pubDate>Thu, 30 Apr 2015 16:37:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/tags/man/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>shell</title>
+      <link>http://wonux.gitee.io/tags/shell/</link>
+      <pubDate>Sun, 26 Apr 2015 14:26:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/tags/shell/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>process</title>
+      <link>http://wonux.gitee.io/tags/process/</link>
+      <pubDate>Sun, 26 Apr 2015 13:17:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/tags/process/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>disk</title>
+      <link>http://wonux.gitee.io/tags/disk/</link>
+      <pubDate>Thu, 23 Apr 2015 17:19:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/tags/disk/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>slice</title>
+      <link>http://wonux.gitee.io/tags/slice/</link>
+      <pubDate>Thu, 23 Apr 2015 17:19:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/tags/slice/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>permission</title>
+      <link>http://wonux.gitee.io/tags/permission/</link>
+      <pubDate>Thu, 23 Apr 2015 15:34:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/tags/permission/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>account</title>
+      <link>http://wonux.gitee.io/tags/account/</link>
+      <pubDate>Wed, 22 Apr 2015 17:15:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/tags/account/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>console</title>
+      <link>http://wonux.gitee.io/tags/console/</link>
+      <pubDate>Tue, 21 Apr 2015 17:18:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/tags/console/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tty</title>
+      <link>http://wonux.gitee.io/tags/tty/</link>
+      <pubDate>Tue, 21 Apr 2015 17:18:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/tags/tty/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>wireless</title>
+      <link>http://wonux.gitee.io/tags/wireless/</link>
+      <pubDate>Sun, 04 Jan 2015 15:06:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/tags/wireless/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>wpa2</title>
+      <link>http://wonux.gitee.io/tags/wpa2/</link>
+      <pubDate>Sun, 04 Jan 2015 15:06:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/tags/wpa2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>chroot</title>
+      <link>http://wonux.gitee.io/tags/chroot/</link>
+      <pubDate>Tue, 25 Nov 2014 16:08:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/tags/chroot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>config</title>
+      <link>http://wonux.gitee.io/tags/config/</link>
+      <pubDate>Tue, 25 Nov 2014 15:08:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/tags/config/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fstab</title>
+      <link>http://wonux.gitee.io/tags/fstab/</link>
+      <pubDate>Tue, 25 Nov 2014 15:08:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/tags/fstab/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>locale</title>
+      <link>http://wonux.gitee.io/tags/locale/</link>
+      <pubDate>Thu, 20 Nov 2014 16:21:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/tags/locale/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>grub</title>
+      <link>http://wonux.gitee.io/tags/grub/</link>
+      <pubDate>Thu, 20 Nov 2014 15:21:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/tags/grub/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ntfs</title>
+      <link>http://wonux.gitee.io/tags/ntfs/</link>
+      <pubDate>Thu, 20 Nov 2014 10:20:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/tags/ntfs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>portage</title>
+      <link>http://wonux.gitee.io/tags/portage/</link>
+      <pubDate>Thu, 20 Nov 2014 09:47:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/tags/portage/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>use</title>
+      <link>http://wonux.gitee.io/tags/use/</link>
+      <pubDate>Thu, 20 Nov 2014 09:47:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/tags/use/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hexo</title>
+      <link>http://wonux.gitee.io/tags/hexo/</link>
+      <pubDate>Wed, 12 Nov 2014 16:07:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/tags/hexo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>video</title>
+      <link>http://wonux.gitee.io/tags/video/</link>
+      <pubDate>Wed, 29 Oct 2014 14:08:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/tags/video/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pacman</title>
+      <link>http://wonux.gitee.io/tags/pacman/</link>
+      <pubDate>Wed, 22 Oct 2014 13:04:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/tags/pacman/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>alsa</title>
+      <link>http://wonux.gitee.io/tags/alsa/</link>
+      <pubDate>Sat, 11 Oct 2014 15:04:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/tags/alsa/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fcitx</title>
+      <link>http://wonux.gitee.io/tags/fcitx/</link>
+      <pubDate>Sat, 11 Oct 2014 13:04:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/tags/fcitx/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>handbook</title>
+      <link>http://wonux.gitee.io/tags/handbook/</link>
+      <pubDate>Fri, 10 Oct 2014 13:18:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/tags/handbook/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mirrors</title>
+      <link>http://wonux.gitee.io/tags/mirrors/</link>
+      <pubDate>Wed, 08 Oct 2014 13:29:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/tags/mirrors/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pastebin</title>
+      <link>http://wonux.gitee.io/tags/pastebin/</link>
+      <pubDate>Tue, 16 Sep 2014 10:08:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/tags/pastebin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gcc</title>
+      <link>http://wonux.gitee.io/tags/gcc/</link>
+      <pubDate>Tue, 02 Sep 2014 16:32:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/tags/gcc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>lxde</title>
+      <link>http://wonux.gitee.io/tags/lxde/</link>
+      <pubDate>Tue, 10 Jun 2014 15:00:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/tags/lxde/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>clock</title>
+      <link>http://wonux.gitee.io/tags/clock/</link>
+      <pubDate>Tue, 06 May 2014 17:21:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/tags/clock/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>image</title>
+      <link>http://wonux.gitee.io/tags/image/</link>
+      <pubDate>Tue, 06 May 2014 17:08:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/tags/image/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kernel</title>
+      <link>http://wonux.gitee.io/tags/kernel/</link>
+      <pubDate>Sun, 04 May 2014 17:10:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/tags/kernel/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

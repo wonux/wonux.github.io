@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Gentoo无线网络配置 -- wpa_supplicant - Wonux - Bolg</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="孤逐王" /><meta name="description" content="安装 安装net-wireless/wpa_supplicant包 1 emerge --ask wpa_supplicant 启动网络 为wpa_supplicant添加无线接口 在wpa_supp" /><meta name="keywords" content="Hugo, theme, even, gentoo, arch, linux" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.83.1 with theme even" />
+
+
+<link rel="canonical" href="http://wonux.gitee.io/post/gentoo-wpa-supplicant/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<link href="/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Gentoo无线网络配置 -- wpa_supplicant" />
+<meta property="og:description" content="安装 安装net-wireless/wpa_supplicant包 1 emerge --ask wpa_supplicant 启动网络 为wpa_supplicant添加无线接口 在wpa_supp" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://wonux.gitee.io/post/gentoo-wpa-supplicant/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2015-01-04T15:06:00&#43;00:00" />
+<meta property="article:modified_time" content="2015-02-10T13:39:00&#43;00:00" />
+
+<meta itemprop="name" content="Gentoo无线网络配置 -- wpa_supplicant">
+<meta itemprop="description" content="安装 安装net-wireless/wpa_supplicant包 1 emerge --ask wpa_supplicant 启动网络 为wpa_supplicant添加无线接口 在wpa_supp"><meta itemprop="datePublished" content="2015-01-04T15:06:00&#43;00:00" />
+<meta itemprop="dateModified" content="2015-02-10T13:39:00&#43;00:00" />
+<meta itemprop="wordCount" content="779">
+<meta itemprop="keywords" content="gentoo,network,wireless,wpa2," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Gentoo无线网络配置 -- wpa_supplicant"/>
+<meta name="twitter:description" content="安装 安装net-wireless/wpa_supplicant包 1 emerge --ask wpa_supplicant 启动网络 为wpa_supplicant添加无线接口 在wpa_supp"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Wonux Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Wonux Blog</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Gentoo无线网络配置 -- wpa_supplicant</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2015-01-04 </span>
+        <div class="post-category">
+            <a href="/categories/gentoo/"> Gentoo </a>
+            </div>
+          <span class="more-meta"> 约 779 字 </span>
+          <span class="more-meta"> 预计阅读 2 分钟 </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#安装">安装</a></li>
+            <li><a href="#启动网络">启动网络</a></li>
+            <li><a href="#配置">配置</a></li>
+            <li><a href="#设置获取ip">设置、获取IP</a></li>
+            <li><a href="#告知gentoo-rc系统网卡名字">告知Gentoo RC系统网卡名字</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h3 id="安装">安装</h3>
+<p>安装<code>net-wireless/wpa_supplicant</code>包</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">emerge --ask wpa_supplicant
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="启动网络">启动网络</h3>
+<ul>
+<li>为wpa_supplicant添加无线接口
+在<code>wpa_supplicant.conf</code>文件中添加</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=wheel
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>初始化wpa_supplicant环境</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">wpa_supplicant -d -Dnl80211 -iwlan0 -c /etc/wpa_supplicant/wpa_supplicant.conf
+</code></pre></td></tr></table>
+</div>
+</div><p>参数：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">-B - Fork into background.
+-c filename - Path to configuration file.
+-d increase debugging verbosity
+-i interface - Interface to listen on.
+-D driver - Optionally specify the driver to be used.
+</code></pre></td></tr></table>
+</div>
+</div><p>For a list of supported drivers see the output of <code>wpa_supplicant -h</code>.</p>
+<blockquote>
+<p><code> nl80211</code> is the current standard, but not all wireless chip&rsquo;s modules support it.<code>wext</code> is currently deprecated, but still widely supported.</p>
+</blockquote>
+<ul>
+<li>查看wpa_supplicant进程</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">ps -aux | grep wpa
+root      1841  0.0  0.2   6168  2920 ?        Ss   09:10   0:00 wpa_supplicant -B -c/etc/wpa_supplicant/wpa_supplicant.conf -iwlan0
+root      2122  0.0  0.0   2780   728 pts/0    S+   09:25   0:00 grep --colour=auto wpa
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="配置">配置</h3>
+<ul>
+<li>Set for Gentoo net.* scrips，tell the network script to use wpa_supplicant.
+<code>File/etc/conf.d/net</code></li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">modules_wlan0=&#34;wpa_supplicant&#34;
+# 因为wpa_supplicant还不能很好的自动侦测驱动，所以需要我们为其指定正在使用的驱动。
+wpa_supplicant_wlan0=&#34;-Dnl80211&#34;
+config_wlan0=&#34;dhcp&#34;
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>Set for dhcpcd,no special setup is needed.Do not add wpa_supplicant to any runlevel. It will be controlled by dhcpcd.</li>
+</ul>
+<p>配置文件<code>/etc/wpa_supplicant/wpa_supplicant.conf</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback"># Allow users in the &#39;wheel&#39; group to control wpa_supplicant
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=wheel
+# Make this file writable for wpa_gui
+update_config=1
+#自动扫描AP（也就是可以上的无线网络热点）
+ap_scan=1   
+# 简单的情形：WPA-PSk密码验证方式，PSK是ASCII密码短语，所有合法的加密方式都允许连接
+network={
+  ssid=&#34;simple&#34;
+  psk=&#34;very secret passphrase&#34;
+  # 优先级越高，就能越早匹配到。
+  priority=5
+}
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>To allow unprivileged users to control the connection using wpa_gui / wpa_cli, make sure <code>GROUP=wheel</code> and <code>update_config=1</code>.</p>
+</blockquote>
+<h4 id="也可以使用wpa_passphrase-命令添加无线热点">也可以使用<code>wpa_passphrase </code>命令添加无线热点</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">wpa_passphrase [ ssid ] [ passphrase ] &gt;&gt; /etc/wpa_supplicant/wpa_supplicant.conf
+</code></pre></td></tr></table>
+</div>
+</div><p>上面这条命令可以自动生成一段配置，我们将它输出添加到 wpa_supplicant 的默认配置文件里面。</p>
+<h4 id="wpa_cli">wpa_cli</h4>
+<p>运行wpa_cli时可能会出现如下的错误：
+<code>Could not connect to wpa_supplicant - re-trying</code>
+这个错误可能是因为你的wpa_supplicant进程没有启动起来造成的。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">wpa_cli
+&gt; scan
+&gt; scan_results
+&gt; add_network
+0
+&gt; set_network 0 ssid &#34;MYSSID&#34;
+&gt; set_network 0 psk &#34;passphrase&#34;
+&gt; enable_network 0
+&gt; save_config
+OK
+dhcpcd interface
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="设置获取ip">设置、获取IP</h3>
+<p>自动获取</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">dhcpcd wlan0
+</code></pre></td></tr></table>
+</div>
+</div><p>手动设置</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">ifconfig wlan0 192.168.1.11 broadcast 192.168.1.255 netmask 255.255.255.0
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="告知gentoo-rc系统网卡名字">告知Gentoo RC系统网卡名字</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">cd /etc/init.d
+ln -s net.lo net.wlan0
+#start and stop it using the following commands:
+/etc/init.d/net.eth0 start
+/etc/init.d/net.eth0 stop
+#开机启动
+rc-update add wlan0 default
+</code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">孤逐王</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2015-02-10
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/gentoo/">gentoo</a>
+          <a href="/tags/network/">network</a>
+          <a href="/tags/wireless/">wireless</a>
+          <a href="/tags/wpa2/">wpa2</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/freebsd-console/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">UNIX基础 -- 控制台和终端</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/apps-chroot/">
+            <span class="next-text nav-default">Linux系统维护 -- chroot</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:wonux@qq.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/wonux" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.douban.com/people/wonux" class="iconfont icon-douban" title="douban"></a>
+  <a href="http://wonux.gitee.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2014 - 
+    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>wonux</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

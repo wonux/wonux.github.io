@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Linux BT下载软件 -- Rtorrent 配置使用 - Wonux - Bolg</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="孤逐王" /><meta name="description" content="rtorrent介绍 rtorrent是Linux下的bt下载软件,由于支持DHT网络,可以很好的于迅雷和Bitcomet的用户进行资源共享," /><meta name="keywords" content="Hugo, theme, even, gentoo, arch, linux" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.83.1 with theme even" />
+
+
+<link rel="canonical" href="http://wonux.gitee.io/post/apps-rtorrent/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<link href="/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Linux BT下载软件 -- Rtorrent 配置使用" />
+<meta property="og:description" content="rtorrent介绍 rtorrent是Linux下的bt下载软件,由于支持DHT网络,可以很好的于迅雷和Bitcomet的用户进行资源共享," />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://wonux.gitee.io/post/apps-rtorrent/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2015-12-16T16:40:00&#43;00:00" />
+<meta property="article:modified_time" content="2015-12-18T16:13:00&#43;00:00" />
+
+<meta itemprop="name" content="Linux BT下载软件 -- Rtorrent 配置使用">
+<meta itemprop="description" content="rtorrent介绍 rtorrent是Linux下的bt下载软件,由于支持DHT网络,可以很好的于迅雷和Bitcomet的用户进行资源共享,"><meta itemprop="datePublished" content="2015-12-16T16:40:00&#43;00:00" />
+<meta itemprop="dateModified" content="2015-12-18T16:13:00&#43;00:00" />
+<meta itemprop="wordCount" content="1371">
+<meta itemprop="keywords" content="apps,torrent," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Linux BT下载软件 -- Rtorrent 配置使用"/>
+<meta name="twitter:description" content="rtorrent介绍 rtorrent是Linux下的bt下载软件,由于支持DHT网络,可以很好的于迅雷和Bitcomet的用户进行资源共享,"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Wonux Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Wonux Blog</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Linux BT下载软件 -- Rtorrent 配置使用</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2015-12-16 </span>
+        <div class="post-category">
+            <a href="/categories/applications/"> Applications </a>
+            </div>
+          <span class="more-meta"> 约 1371 字 </span>
+          <span class="more-meta"> 预计阅读 3 分钟 </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#rtorrent介绍">rtorrent介绍</a></li>
+            <li><a href="#配置">配置：</a></li>
+            <li><a href="#使用">使用：</a></li>
+            <li><a href="#global-keys">Global Keys</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h3 id="rtorrent介绍">rtorrent介绍</h3>
+<p>rtorrent是Linux下的bt下载软件,由于支持DHT网络,可以很好的于迅雷和Bitcomet的用户进行资源共享,所以很适合国内网络环境,下载速度极快.</p>
+<h3 id="配置">配置：</h3>
+<p>因安装过程不自动生成配置文件，要手动在用户根目录新建<code>~/.rtorrent.rc</code>文件。
+其内容大体如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">#最小允许peer数
+min_peers = 3
+#最大允许peer数
+max_peers = 500
+#最大同时上传用户数
+max_uploads = 10
+#最大下载950k/s  光纤用户使用,adsl请酌情修改
+download_rate = 950
+#最大上传200k/s  光纤用户使用,adsl请酌情修改
+upload_rate = 200
+
+#下载目录
+directory = ~/Downloads
+#下载历史目录（此目录中包括下载进度信息和DHT节点缓存）
+session = ~/Downloads/session
+#（配置自动监视,把bt种子扔进～/Downloads/torrents目录就自动下载）
+schedule = watch_directory,5,5,load_start=~/Downloads/torrents/*.torrent
+#（配置自动监视,把bt种子从～/Downloads/torrents目录拿走就自动停止下载）
+schedule = untied_directory,5,5,stop_untied=
+#硬盘空间低于100M就自动停止一切下载）
+schedule = low_diskspace,5,60,close_low_diskspace=100M
+#（在总上传量达到200M的情况下上传/下载率达到200%,或者在总上传量不足200M情况下上传/下载率达到2000%,则停止上传）
+# schedule = ratio,60,60,&#34;stop_on_ratio=200,200M,2000&#34;
+
+#bt监听端口
+port_range = 9400-9500
+#随机从上面范围内选择端口
+port_random = yes
+######开启DHT######
+dht = on
+#DHT所用的UDP端口
+dht_port = 9501   
+#种子交换功能
+peer_exchange = yes
+
+#（上传缓存,每个种子10M,小内存用户请酌情修改）
+send_buffer_size = 10M
+#（下载缓存,每个种子20M,小内存用户请酌情修改）
+receive_buffer_size = 20M
+#(修改编码以避免中文乱码）
+encoding_list=UTF-8
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="使用">使用：</h3>
+<ul>
+<li>启动：命令行输入rtorrent 即可</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">gentoo ~ # rtorrent
+</code></pre></td></tr></table>
+</div>
+</div><p>rtorrent就会自动下载~/Downloads/torrents目录下面的所有bt种子.</p>
+<ul>
+<li>添加和删除 torrents：
+<code>回退键</code>    用 URL 或者文件路径添加，采用 tab 键查看目录内容并自动完成，支持通配符，例如: ~/torrent/*
+<code>回车键</code>     和回退键一样，但是添加的 torrent 保持非激活( inactive )状态 (用 ^s 激活)
+<code>^o</code>     对选择的 torrent 设置新的下载目录，仅仅对还没有被激活过的 torrent
+<code>^s</code>     开始下载，先运行 hash ，除非已经做过
+<code>^d</code>     停止激活的下载，或者删除一个停止的下载
+<code>^r</code>     初始化 torrent 的 hash 检查
+<code>a/s/d</code>    增加上传带宽 1/5/50 KB.
+<code>z/x/c</code>     降低上传带宽 1/5/50 KB.
+<code>A/S/D</code>     增加下载带宽 1/5/50 KB.
+<code>Z/X/C</code>     降低下载带宽 1/5/50 KB.</li>
+</ul>
+<blockquote>
+<p>注意： ^s 和 ^q 在 shell 里面经常用来控制屏幕的暂停，这会和 rTorrent 发生冲突，用 stty -a 来检查是否已经被使用，删除的办法是：
+<code>stty stop undef</code>
+<code>stty start undef</code>
+before running rTorrent (or reattaching to screen) to leave them undefined. You could also replace undef with some other code — ^p, say. ^d also usually sends end-of-file but ncurses passes this through to rTorrent. stty eof undef if you are worried.
+To fix this, you may also toggle the flow control in screen with ^a ^f until screen displays “-flow” in the bottom left corner.</p>
+</blockquote>
+<ul>
+<li>退出： <code>CTRL+q</code></li>
+</ul>
+<h3 id="global-keys">Global Keys</h3>
+<ul>
+<li>
+<p>主屏幕视图操作
+<code>^q</code>             关闭 rTorrent，再按一次，强行关闭
+<code>上下</code>      选择 torrent
+<code>右键</code>     切换到下载视图
+<code>左键</code>     回到前一个屏幕
+<code>^r </code>    检查 hash
+<code>+/-</code>     修改优先度
+<code>l </code>    查看日志，空格退出
+<code>1</code>     显示所有下载
+<code>2</code>     显示所有下载，按文件名排序
+<code>3</code>    显示开始的下载
+<code>4</code>     显示停止的下载
+<code>5</code>     显示完成的下载
+<code>6</code>     显示未完成的下载
+<code>7</code>     显示正在 hash 的下载
+<code>8</code>     显示正在做种的下载</p>
+</li>
+<li>
+<p>下载视图
+<code>right</code>    Switch to selected view
+<code>left</code>     Switch to view selection or back to main view
+<code>1/2</code>     Adjust max uploads.
+<code>3/4</code>     Adjust min peers.
+<code>5/6</code>     Adjust max peers.
+<code>p</code>             Display peer info
+<code>o</code>             Display torrent info
+<code>i</code>             Display file list
+<code>u</code>             Display tracker list
+<code>t/T</code>       Initiate tracker request. Use capital T to force the request, ignoring the “min interval” set by the tracker.</p>
+</li>
+<li>
+<p>Peer list View Keys
+<code>left</code>     Switch to view selection
+<code>right</code>     Show peer details
+<code>*</code>     Snub peer (stop uploading to this peer)
+<code>k</code>     Kick peer (disconnect from peer)</p>
+</li>
+<li>
+<p>File list View Keys
+<code>left</code>     Switch to view selection
+<code>right</code>     Show file details
+<code>space</code>     Change the file priority; applies recursively when done on a directory
+<code>*</code>     Change the priority of all files
+<code>/ </code>    Collapse directories. While collapsed, press right to expand the selected directory.</p>
+</li>
+<li>
+<p>Tracker list View Keys
+<code>left</code>     Switch to view selection
+<code>*</code>             Enable/disable tracker
+<code>space</code>     Rotate trackers in a group</p>
+</li>
+</ul>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">孤逐王</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2015-12-18
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/apps/">apps</a>
+          <a href="/tags/torrent/">torrent</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/apps-vifm/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">vi风格控制台文件管理器 -- vifm 配置使用</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/gentoo-file-encode/">
+            <span class="next-text nav-default">Gentoo解决windows txt文件中文乱码问题 -- 文件编码介绍</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:wonux@qq.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/wonux" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.douban.com/people/wonux" class="iconfont icon-douban" title="douban"></a>
+  <a href="http://wonux.gitee.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2014 - 
+    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>wonux</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>UNIX基础 -- 安装应用程序: Packages 和 Ports - Wonux - Bolg</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="孤逐王" /><meta name="description" content="Packages and Ports 概述 FreeBSD 将许多系统工具捆绑作为基本系统的一部分。另外，FreeBSD 提供了两种补充的技术来安装第三方软件：FreeBSD Ports Collect" /><meta name="keywords" content="Hugo, theme, even, gentoo, arch, linux" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.83.1 with theme even" />
+
+
+<link rel="canonical" href="http://wonux.gitee.io/post/freebsd-apps/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<link href="/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="UNIX基础 -- 安装应用程序: Packages 和 Ports" />
+<meta property="og:description" content="Packages and Ports 概述 FreeBSD 将许多系统工具捆绑作为基本系统的一部分。另外，FreeBSD 提供了两种补充的技术来安装第三方软件：FreeBSD Ports Collect" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://wonux.gitee.io/post/freebsd-apps/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2015-05-04T09:37:00&#43;00:00" />
+<meta property="article:modified_time" content="2015-05-05T08:52:00&#43;00:00" />
+
+<meta itemprop="name" content="UNIX基础 -- 安装应用程序: Packages 和 Ports">
+<meta itemprop="description" content="Packages and Ports 概述 FreeBSD 将许多系统工具捆绑作为基本系统的一部分。另外，FreeBSD 提供了两种补充的技术来安装第三方软件：FreeBSD Ports Collect"><meta itemprop="datePublished" content="2015-05-04T09:37:00&#43;00:00" />
+<meta itemprop="dateModified" content="2015-05-05T08:52:00&#43;00:00" />
+<meta itemprop="wordCount" content="4719">
+<meta itemprop="keywords" content="unix,ports,package,freebsd," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="UNIX基础 -- 安装应用程序: Packages 和 Ports"/>
+<meta name="twitter:description" content="Packages and Ports 概述 FreeBSD 将许多系统工具捆绑作为基本系统的一部分。另外，FreeBSD 提供了两种补充的技术来安装第三方软件：FreeBSD Ports Collect"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Wonux Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Wonux Blog</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">UNIX基础 -- 安装应用程序: Packages 和 Ports</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2015-05-04 </span>
+        <div class="post-category">
+            <a href="/categories/freebsd/"> FreeBSD </a>
+            </div>
+          <span class="more-meta"> 约 4719 字 </span>
+          <span class="more-meta"> 预计阅读 10 分钟 </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#packages-and-ports">Packages and Ports</a>
+          <ul>
+            <li><a href="#概述">概述</a></li>
+            <li><a href="#查找软件">查找软件</a></li>
+            <li><a href="#使用pkg进行二进制包管理">使用pkg进行二进制包管理</a></li>
+            <li><a href="#使用ports-collection">使用Ports Collection</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h2 id="packages-and-ports">Packages and Ports</h2>
+<h3 id="概述">概述</h3>
+<p>FreeBSD 将许多系统工具捆绑作为基本系统的一部分。另外，FreeBSD 提供了两种补充的技术来安装第三方软件：FreeBSD Ports Collection，从源代码安装； packages，从预编译的二进制版本安装。这两种方法都可以用于从本地介质， 或从网上直接安装您喜欢的应用程序的最新版本。</p>
+<p>UNIX®系统典型的安装第三方软件的步骤包括：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">1、下载这个软件，软件的发布可能是源代码格式，或是一个二进制包。
+2、从默认的发行格式解压软件，通常是用compress, gzip,或bzip2压缩过tar包。
+3、阅读相关文档，了解如何安装。 (通常文件名是INSTALL或README， 或在doc/ 目录下的一些文档)
+4、如果软件是以源代码形式发布的，那就需要编译它。可能需要编辑一个 Makefile文件, 或运行 configure脚本。
+5、测试和安装软件。
+</code></pre></td></tr></table>
+</div>
+</div><p>FreeBSD的package是包含了一个应用的所有命令、全部的配置文件和文档的预编译好的副本 。package可以使用pkg命令来操作。
+FreeBSD的port是一个可以自动从源代码编译成应用程序的文件集合。这些文件包含了自动下载、解开、打补丁、编译、安装应用的所有必要的信息。</p>
+<p>pots系统也可以用于生成被包管理命令维护的packages。
+packages 和 ports 都可以自动处理依赖库。</p>
+<p>这两种技术是很相似，packages 和 ports有各自的强项，根据需要选择哪种方法安装一个特定的软件。</p>
+<p>Package优点</p>
+<ul>
+<li>一个压缩的 package 通常要比一个压缩的包含源代码的应用程序小得多。</li>
+<li>package 不需要进行额外的编译时间。 对于大型应用程序如 Mozilla， KDE 或 GNOME 来说这显得尤为重要， 特别是在您的系统资源比较差的情况下。</li>
+<li>package不需要理解任何在FreeBSD上编译软件的详细过程。</li>
+</ul>
+<p>Port优点：</p>
+<ul>
+<li>package 在编译时通常使用比较保守的选项，这是为了保证它们能够运行在大多数的系统上。通过从 port 安装，可以细微调整编译选项来产生适合于处理器的代码。</li>
+<li>一些软件包已经把与它们相关的能做和不能做的事情的选项都编译进去了。从 port 中安装时，不一定要接受默认的选项， 可以自己来设置。</li>
+<li>一些软件的许可条件禁止采用二进制形式发行。 它们必须以源代码形式发布，终端用户编译。</li>
+<li>一些人不信任二进制发行形式。 至少有了源代码， (理论上) 可以亲自阅读它，寻找潜在的问题。</li>
+<li>如果要自己对软件打补丁，您就需要有源代码。</li>
+</ul>
+<h3 id="查找软件">查找软件</h3>
+<p>FreeBSD中可用的应用程序正在不断地增长着。有很多方法可以查找需要安装的软件。</p>
+<ul>
+<li>FreeBSD站点上维护着一个最新的的可搜索当前所有可用应用程序的列表，在 <a href="http://www.freebsd.org/ports/index.html">http://www.FreeBSD.org/ports/</a>。ports可以通过程序名称或软件分类来搜索。</li>
+<li>Dan Langille维护着网站 FreshPorts，<a href="http://www.FreshPorts.org/">http://www.FreshPorts.org/</a>。 FreshPort提供综合搜索工具，追踪ports中应用的变化。注册用户可以创建自定义检视列表，当有任何程序被升级时，他们就会发 email 提醒您。</li>
+<li>如果不确定想要的应用程序的名字，可以尝试在 <a href="http://www.sourceforge.net/">SourceForge.net</a> or <a href="http://www.github.com/">GitHub.com</a>这些网站中查找，然后回到 <a href="http://www.freebsd.org/ports/index.html">FreeBSD site</a>主站查看应用是否被port进去了（ be ported）。</li>
+<li>查找二进制包仓库（binary package repository）
+pkg search xxx
+pkg search -o xxx</li>
+<li>Ports集（Ports Collection）安装后，有几种方法可以查询本地ports树。查找一个port属于哪个category：
+<code>whereis lsof</code>
+lsof: /usr/ports/sysutils/lsof
+<code>echo /usr/ports/*/*lsof*</code>
+/usr/ports/sysutils/lsof</li>
+<li>另外一个查找软件的方法是用Ports Collection内嵌的搜索机制。要使用这个搜索机制, 需要先cd到/usr/ports目录下面，然后运行<code>make search name=program-name</code>，program-name是要查找的软件名。例如：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback"># cd /usr/ports
+# make search name=lsof
+Port:   lsof-4.88.d,8
+Path:   /usr/ports/sysutils/lsof
+Info:   Lists information about open files (similar to fstat(1))
+Maint:  ler@lerctr.org
+Index:  sysutils
+B-deps:
+R-deps: 
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>注意：内嵌搜索机制使用索引信息文件. 如果显示消息：the INDEX is required, 执行<code>make fetchindex</code>下载最新的索引文件.</p>
+</blockquote>
+<p>显示精简信息，使用quicksearch特性：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback"># cd /usr/ports
+# make quicksearch name=lsof
+Port:   lsof-4.88.d,8
+Path:   /usr/ports/sysutils/lsof
+Info:   Lists information about open files (similar to fstat(1))
+</code></pre></td></tr></table>
+</div>
+</div><p>为了更深入的搜索，还可以用 <code>make search key=string</code>， string就是想搜索的部分内容。 它将搜索port的名字、 注释， 描述和从属关系， 如果不知道您想搜索的程序名字， 可以利用它搜索一些关键主题来找到需要的。
+当使用search或quicksearch时，搜索的关键字不区分大小写。</p>
+<h3 id="使用pkg进行二进制包管理">使用pkg进行二进制包管理</h3>
+<p>pkg是FreeBSD传统的包管理工具的下一代替代者。它提供了很多特性，使处理二进制包更快，更简单。
+pkg不是替代像 <a href="http://www.freebsd.org/cgi/url.cgi?ports/ports-mgmt/portmaster/pkg-descr">ports-mgmt/portmaster</a> 或 <a href="http://www.freebsd.org/cgi/url.cgi?ports/ports-mgmt/portupgrade/pkg-descr">ports-mgmt/portupgrade</a>这样的port管理工具，这些工具既可以使用二进制方式又可以通过ports集方式安装第三方软件，而pkg只安装二进制包。</p>
+<h4 id="安装pkg">安装pkg</h4>
+<p>从FreeBSD 8.4之后的版本包括了一个用于下载安装pkg（包括使用手册）的引导程序。（bootstrap utility）</p>
+<ul>
+<li>To bootstrap the system, run:</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">/usr/sbin/pkg
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="pkg常用命令">pkg常用命令</h4>
+<ul>
+<li>查看已安装软件包信息
+<code>pkg info</code></li>
+<li>安装和移除软件包
+<code>pkg install</code>和<code>pkg delete</code></li>
+<li>更新已安装软件包
+<code>pkg version</code>
+<code>pkg upgrade</code></li>
+<li>审核已安装软件包
+<code>pkg audit -F</code></li>
+<li>自动移除孤立依赖
+<code>pkg autoremove</code></li>
+<li>移除陈旧package包
+<code>pkg clean</code></li>
+</ul>
+<blockquote>
+<p>pkg默认在一个缓存目录（PKG_CACHEDIR）存储二进制包，当使用pkg upgrade更新包时，旧的版本不会自动移除。</p>
+</blockquote>
+<h3 id="使用ports-collection">使用Ports Collection</h3>
+<p>Ports Collection ── 本质上是 /usr/ports 目录下的一堆 Makefile、 Patches（补丁）和描述文件，这些文件用于在FreeBSD系统中编译和安装应用。</p>
+<h4 id="安装ports-collection">安装Ports Collection</h4>
+<ul>
+<li>Portsnap Method
+FreeBSD的base system包含Portsnap. 这是一个获得Ports Collection的快速易用的工具也是对大多数用户推荐的方法。
+1、下载压缩的 Ports 套件快照到 /var/db/portsnap：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">portsnap fetch
+</code></pre></td></tr></table>
+</div>
+</div><p>2、如果是首次运行 Portsnap，则需要将快照释放到 /usr/ports：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">portsnap extract
+</code></pre></td></tr></table>
+</div>
+</div><p>3、更新 /usr/ports：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">portsnap fetch
+portsnap update
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>当使用fetch选项时，extract、update选项可以连续运行：
+<code>portsnap fetch update</code></p>
+</blockquote>
+<ul>
+<li>Subversion Method
+如果需要更多的控制ports tree或者本地更改需要维护，	Subversion可以用于获得Ports Collection。
+1、在检测ports tree之前Subversion必须安装。如果ports tree已经存在：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">cd /usr/ports/devel/subversion
+make install clean
+</code></pre></td></tr></table>
+</div>
+</div><p>如果ports tree不可用：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">pkg install subversion
+</code></pre></td></tr></table>
+</div>
+</div><p>2、Check out a copy of the ports tree. 使用离你最近的Subversion mirror替换<code>svn0.us-east.FreeBSD.org</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">svn checkout https://svn0.us-east.FreeBSD.org/ports/head /usr/ports
+</code></pre></td></tr></table>
+</div>
+</div><p>3、As needed, update /usr/ports after the initial Subversion checkout:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">svn update /usr/ports
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="port-skeleton">Port Skeleton</h4>
+<p>port skeleton 是让一个程序在 FreeBSD 上简洁地编译并安装的所需文件的最小组合。 每个 port skeleton 包含：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">Makefile:  Makefile 包括好几个部分， 指出应用程序是如何编译以及将被安装在系统的哪些地方。 
+distinfo: 这个文件包括这些信息：这些文件用来对下载后的文件校验和进行检查	，来确保在下载过程中文件没有被破坏。	
+files/: 这个目录包括在FreeBSD系统上编译和安装程序需要用到的补丁。这些补丁基本上都是些小文件，指出特定文件作了哪些修正。它们都是纯文本的的格式，基本上是这样的 “删除第 10 行” 或 “将第 26 行改为这样 ...”，补丁文件也被称作 “diffs”，他们由diff程序生成。
+这个目录也包含了在编译 port 时要用到的其它文件。
+pkg-descr:这是一个提供更多细节，有软件的多行描述。
+pkg-plist: 这是即将被安装的所有文件的列表。它告诉 ports 系统在卸载时需要删除哪些文件。
+</code></pre></td></tr></table>
+</div>
+</div><p>port里面包含着如何编译源代码的指令，但不包含真正的源代码。ports中这个程序源代码标示文件叫 “distfile”,构建port的过程中会自动存储已经下载的源码到/usr/ports/distfiles.</p>
+<h4 id="安装ports">安装Ports</h4>
+<p>使用Ports Collection编译安装port，需要连接网络和超级用户特权。如果没有网络，则需要将 distfile 手工放到 /usr/ports/distfiles 中。</p>
+<ul>
+<li>首先进入要安装 port 的目录：
+<code>cd /usr/ports/sysutils/lsof</code></li>
+<li><code>make install</code></li>
+<li><code>make clean</code></li>
+</ul>
+<blockquote>
+<p>编译port的时候可以使用<code>make install clean</code>节省步骤。</p>
+</blockquote>
+<h4 id="移除已安装的ports">移除已安装的Ports</h4>
+<p>已经安装的ports可以使用<code>pkg delete</code>命令卸载。
+也可以在ports目录，使用<code>make deinstall</code>命令</p>
+<h4 id="升级ports">升级Ports</h4>
+<p>列出可以更新版本的ports：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">pkg version -l &#34;&lt;&#34;
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>Important:
+Before attempting an upgrade, read /usr/ports/UPDATING from the top of the file to the date closest to the last time ports were upgraded or the system was installed. This file describes various issues and additional steps users may encounter and need to perform when updating a port, including such things as file format changes, changes in locations of configuration files, or any incompatibilities with previous versions. Make note of any instructions which match any of the ports that need upgrading and follow these instructions when performing the upgrade.</p>
+</blockquote>
+<p>执行Ports升级，使用Portmaster或者Portupgrade.</p>
+<ul>
+<li>Upgrading Ports Using Portmaster
+<a href="http://www.freebsd.org/cgi/url.cgi?ports/ports-mgmt/portmaster/pkg-descr">ports-mgmt/portmaster</a>package（或称port），是推荐的升级已安装Ports的工具，它被设计为随FreeBSD系统使用而不需要依赖其他ports的工具。它用/var/db/pkg/中的信息决定哪些ports需要升级。</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">cd /usr/ports/ports-mgmt/portmaster
+make install clean
+</code></pre></td></tr></table>
+</div>
+</div><p>Portmaster 把 ports 分成4类：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">Root ports (不依赖其他的 ports，也不被依赖)
+Trunk ports (不依赖其他的 ports，但是被其他的 ports 依赖)
+Branch ports (依赖于其他的 ports，同时也被依赖)
+Leaf ports (依赖于其他的 ports，但不被依赖)
+</code></pre></td></tr></table>
+</div>
+</div><p>可以使用 -L 选项列出所有已安装的 ports 和查找存在更新的 ports：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">portmaster -L
+===&gt;&gt;&gt; Root ports (No dependencies, not depended on)
+===&gt;&gt;&gt; ispell-3.2.06_18
+===&gt;&gt;&gt; screen-4.0.3
+        ===&gt;&gt;&gt; New version available: screen-4.0.3_1
+===&gt;&gt;&gt; tcpflow-0.21_1
+===&gt;&gt;&gt; 7 root ports
+...
+===&gt;&gt;&gt; Branch ports (Have dependencies, are depended on)
+===&gt;&gt;&gt; apache22-2.2.3
+        ===&gt;&gt;&gt; New version available: apache22-2.2.8
+...
+===&gt;&gt;&gt; Leaf ports (Have dependencies, not depended on)
+===&gt;&gt;&gt; automake-1.9.6_2
+===&gt;&gt;&gt; bash-3.1.17
+        ===&gt;&gt;&gt; New version available: bash-3.2.33
+...
+===&gt;&gt;&gt; 32 leaf ports
+===&gt;&gt;&gt; 137 total installed ports
+        ===&gt;&gt;&gt; 83 have new versions available
+</code></pre></td></tr></table>
+</div>
+</div><p>可以使用这个简单的命令升级所有已安装的 ports：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">portmaster -a
+</code></pre></td></tr></table>
+</div>
+</div><p>如果你在升级的过程中发现了错误，你可以使用 -f 选项升级/重新编译所有的 ports：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">portmaster -af
+</code></pre></td></tr></table>
+</div>
+</div><p>同样你也可以使用 Portmaster 往系统里安装新的 ports，升级所有的依赖关系之后并安装新的 port：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">portmaster shells/bash
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>注意:
+Portmaster 默认在删除一个现有的 port 前会做一个备份包。如果新的版本能够被成功安装， Portmaster 将删除备份。 使用 -b 后 Portmaster 便不会自动删除备份。加上 -i 选项之后 Portmaster 将进入互动模式， 在升级每个 port 以前提示你给予确认。</p>
+</blockquote>
+<ul>
+<li>Upgrading Ports Using Portupgrade
+portupgrade 工具是设计来简化升级已安装的 port 的操作的。 它通过 <a href="http://www.freebsd.org/cgi/url.cgi?ports/ports-mgmt/portupgrade/pkg-descr">ports-mgmt/portupgrade</a> port 来提供。它安装一系列用于ports管理的应用。然而，它依赖于ruby。</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">cd /usr/ports/ports-mgmt/portupgrade
+make install clean
+</code></pre></td></tr></table>
+</div>
+</div><p>在每次升级之前，推荐使用 <code>pkgdb -F</code> 命令来扫描已安装的 port 的列表， 并修正其所报告的不一致。
+运行portupgrade -a升级系统中所安装的所有过时的 ports。 如果您希望在每个升级操作时得到确认， 应指定 -i 参数。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">portupgrade -ai
+</code></pre></td></tr></table>
+</div>
+</div><p>如果您只希望升级某个特定的应用程序， 而非全部可用的 port，应使用portupgrade pkgname。 指定 -R 参数非常重要，portupgrade将首先升级指定程序所需要的所有ports。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">portupgrade -R firefox
+</code></pre></td></tr></table>
+</div>
+</div><p>要使用预编译的 package 而不是 ports 来进行安装， 需要指定 -P。 如果指定了这个选项， portupgrade 会搜索 PKG_PATH 中指定的本地目录， 如果没有找到， 则从远程站点下载。 如果本地没有找到， 而且远程站点也没有成功地下载预编译包， 则 portupgrade 将使用 ports。 要禁止使用 port， 可以指定 -PP。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">portupgrade -PP gnome2
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="ports-and-disk-space">Ports and Disk Space</h4>
+<p>在通过 ports 编译和安装软件之后，您应记得清理临时的 work 目录， 其方法是使用 make clean 命令。</p>
+<ul>
+<li>If Portmaster is used to install a port, it will automatically remove this directory unless -K is specified.</li>
+<li>If Portupgrade is installed, this command will remove all work directories found within the local copy of the Ports Collection:
+<code>portsclean -C</code></li>
+</ul>
+<p>另外,许多过时的源码文件被收集在目录 /usr/ports/distfiles 中. 如果安装了Portupgrade, 下列命令将删除那些不被其他port引用的过时的distfiles。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">portsclean -D
+</code></pre></td></tr></table>
+</div>
+</div><p>使用Portupgrade移除所有的不被系统其他port引用的distfiles:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">portsclean -DD
+</code></pre></td></tr></table>
+</div>
+</div><p>如果安装了Portmaster,使用:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">portmaster --clean-distfiles
+</code></pre></td></tr></table>
+</div>
+</div><p>除了这些命令之外,  <a href="">ports-mgmt/pkg_cutleaves</a> package（or port）自动完成移除已安装但不再使用的ports的任务。</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">孤逐王</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2015-05-05
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/unix/">unix</a>
+          <a href="/tags/ports/">ports</a>
+          <a href="/tags/package/">package</a>
+          <a href="/tags/freebsd/">freebsd</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/git-pelican/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Pelican &#43; Github 搭建静态个人博客</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/freebsd-man/">
+            <span class="next-text nav-default">UNIX基础 -- Manual Pages</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:wonux@qq.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/wonux" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.douban.com/people/wonux" class="iconfont icon-douban" title="douban"></a>
+  <a href="http://wonux.gitee.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2014 - 
+    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>wonux</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

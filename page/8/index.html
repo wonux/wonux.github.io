@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Wonux - Bolg</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="wonux" /><meta name="description" content="Hugo theme even example site." /><meta name="keywords" content="Hugo, theme, even, gentoo, arch, linux" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.83.1 with theme even" />
+
+
+<link rel="canonical" href="http://wonux.gitee.io/" />
+  <link href="http://wonux.gitee.io/index.xml" rel="alternate" type="application/rss+xml" title="Wonux - Bolg" />
+  <link href="http://wonux.gitee.io/index.xml" rel="feed" type="application/rss+xml" title="Wonux - Bolg" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<link href="/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Wonux - Bolg" />
+<meta property="og:description" content="Hugo theme even example site." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://wonux.gitee.io/" />
+
+<meta itemprop="name" content="Wonux - Bolg">
+<meta itemprop="description" content="Hugo theme even example site."><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Wonux - Bolg"/>
+<meta name="twitter:description" content="Hugo theme even example site."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Wonux Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Wonux Blog</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/gentoo-ntfs/">Gentoo挂载Windowntfs的NTFS分区</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2014-11-20 </span>
+      <div class="post-category">
+          <a href="/categories/gentoo/"> Gentoo </a>
+          </div>
+        <span class="more-meta"> 约 256 字 </span>
+        <span class="more-meta"> 预计阅读 1 分钟 </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      内核需要开启的选项 1 2 File systems ---&gt; &lt;*&gt; FUSE (Filesystem in Userspace) support 使用NTFS-3G NTFS-3G是一个由Tuxera公司开发并维护的开源项目，目的是为Linux提供
+    </div>
+    <div class="read-more">
+      <a href="/post/gentoo-ntfs/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/gentoo-network/">Gentoo网络配置</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2014-11-20 </span>
+      <div class="post-category">
+          <a href="/categories/gentoo/"> Gentoo </a>
+          </div>
+        <span class="more-meta"> 约 545 字 </span>
+        <span class="more-meta"> 预计阅读 2 分钟 </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      网卡识别配置 要开始配置你的网卡，你首先需要告诉Gentoo RC系统你的网卡。 可以用ifconfig命令查看自己网卡名字： 1 ifconfig -a 网卡名字（如e
+    </div>
+    <div class="read-more">
+      <a href="/post/gentoo-network/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/gentoo-use/">Gentoo/Funtoo USE标记介绍</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2014-11-20 </span>
+      <div class="post-category">
+          <a href="/categories/gentoo/"> Gentoo </a>
+          </div>
+        <span class="more-meta"> 约 1060 字 </span>
+        <span class="more-meta"> 预计阅读 3 分钟 </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Gentoo/Funtoo USE标记 USE的简单理解如下：一个软件不只包含软件本身，还包括其组件，如，文档，插件，GUI支持等。USE就是用来标记是否要安装软件的同
+    </div>
+    <div class="read-more">
+      <a href="/post/gentoo-use/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/git-git-submodule/">Git子模块引用外部项目</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2014-11-14 </span>
+      
+        <span class="more-meta"> 约 604 字 </span>
+        <span class="more-meta"> 预计阅读 2 分钟 </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Git子模块(submodule)简介 经常有这样的事情，当你在一个项目上工作时，你需要在其中使用另外一个项目。也许它是一个第三方开发的库或者
+    </div>
+    <div class="read-more">
+      <a href="/post/git-git-submodule/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/git-hexo/">Hexo &#43; Github 搭建静态个人博客</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2014-11-12 </span>
+      <div class="post-category">
+          <a href="/categories/git/"> Git </a>
+          </div>
+        <span class="more-meta"> 约 1617 字 </span>
+        <span class="more-meta"> 预计阅读 4 分钟 </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <h2 id="hexo简介">Hexo简介</h2>
+<p>Github上托管博客是使用jekyll搭建的，官方的Github Pages同样推荐使用它。我之前体验了一下jekyll，没有达到我想要的效果。于是寻找替代方案，搜索同类博客程序，我认识了hexo，hexo出自台湾大学生tommy351之手,是由Node.js驱动的一款快速、简单且功能强大的博客框架。Node.js是一个可以快速构建网络服务及应用的平台 。该平台的构建是基于Chrome&rsquo;s JavaScript runtime，也就是说，实际上它是对Google V8引擎（应用于Google Chrome浏览器)进行了封装。V8引擎执行Javascript的速度非常快，性能非常好。Node对一些特殊用例进行了优化，提供了替代的API，使得V8在非浏览器环境下运行得更好。它和jekyll相比，更快，更轻量。</p>
+<h2 id="hexo安装">Hexo安装</h2>
+<h3 id="安装git">安装git</h3>
+<ul>
+<li>Linux
+大多数Linux发行版已经默认安装了git,如果没有直接使用包管理工具安装.</li>
+<li>Windows:
+<a href="http://git-scm.com/download/">Git-Downloads</a></li>
+</ul>
+<h3 id="安装nodejs">安装node.js</h3>
+<ul>
+<li>Gentoo package: <code>net-libs/nodejs</code></li>
+<li>Arch: <code>nodejs</code></li>
+<li>Windows: <a href="http://nodejs.org/download/">node.js</a></li>
+</ul>
+<h3 id="安装hexo">安装hexo</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">npm install hexo -g
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="配置hexo">配置Hexo</h2>
+<ul>
+<li>初始化博客根目录</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">hexo init blog
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>安装依赖包</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">npm install
+</code></pre></td></tr></table>
+</div>
+</div><p>安装之后，项目目录下出现如下文件结构：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">.
+├── _config.yml     全局配置文件
+├── package.json
+├── scaffolds
+├── scripts
+├── source           文章存放位置
+| ├── _drafts        草稿
+| └── _posts         文章
+└── themes
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="插件和主题">插件和主题</h3>
+<ul>
+<li>plugins: 插件</li>
+</ul>
+<p>添加插件的基本操作是：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">npm install &lt;plugin-name&gt; --save
+npm update
+</code></pre></td></tr></table>
+</div>
+</div><p>然后修改blog根目录下的_config.yml，添加：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">plugins:
+- plugin-name
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>themes:</li>
+</ul>
+<p>安装主题：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">git clone &lt;repository&gt; themes/&lt;theme-name&gt;
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>无论是插件还是主题在安装后都需要在根目录下_config.yml中修改plugins和theme的值以启用他们。</p>
+</blockquote>
+<p>本博客使用<a href="https://github.com/A-limon/pacman">pacman</a>主题，扁平化设计，响应速快，推荐使用。修改配置参考: <a href="http://yangjian.me/workspace/introducing-pacman-theme/">http://yangjian.me/workspace/introducing-pacman-theme/</a></p>
+<h3 id="写文章">写文章</h3>
+<p>使用Markdown语法编辑文章。使用hexo new命令生成文章或者直接在_posts目录下直接创建文件，打开后先编辑文章头部信息，如下所示是本文的头部信息，以&mdash;结尾。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">title: 使用Hexo搭建个人静态博客  #文章页面上的显示名称，可以任意修改，不会出现在URL中
+layout: post
+date: 2014-11-10 10:07:43  #文章生成时间，一般不改，当然也可以任意修改
+updated: 2014-11-12 13:24
+comments: true
+categories: 
+- Blog
+tags: 
+- hexo
+- blog
+---
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="文章摘要">文章摘要</h4>
+<p>在需要显示摘要的地方添加如下代码即可：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+    </div>
+    <div class="read-more">
+      <a href="/post/git-hexo/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    </section>
+  
+  <nav class="pagination">
+    <a class="prev" href="/page/7/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text">上一页</span>
+      </a>
+    <a class="next" href="/page/9/">
+        <span class="next-text">下一页</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+  </nav>
+        </div>
+        
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:wonux@qq.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/wonux" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.douban.com/people/wonux" class="iconfont icon-douban" title="douban"></a>
+  <a href="http://wonux.gitee.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2014 - 
+    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>wonux</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

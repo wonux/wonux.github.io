@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>use on Wonux - Bolg</title>
+    <link>http://wonux.gitee.io/tags/use/</link>
+    <description>Recent content in use on Wonux - Bolg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 20 Nov 2014 09:47:00 +0000</lastBuildDate><atom:link href="http://wonux.gitee.io/tags/use/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gentoo/Funtoo USE标记介绍</title>
+      <link>http://wonux.gitee.io/post/gentoo-use/</link>
+      <pubDate>Thu, 20 Nov 2014 09:47:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/gentoo-use/</guid>
+      <description>Gentoo/Funtoo USE标记 USE的简单理解如下：一个软件不只包含软件本身，还包括其组件，如，文档，插件，GUI支持等。USE就是用来标记是否要安装软件的同</description>
+    </item>
+    
+  </channel>
+</rss>

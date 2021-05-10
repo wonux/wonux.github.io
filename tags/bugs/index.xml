@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>bugs on Wonux - Bolg</title>
+    <link>http://wonux.gitee.io/tags/bugs/</link>
+    <description>Recent content in bugs on Wonux - Bolg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 10 Dec 2015 09:30:00 +0000</lastBuildDate><atom:link href="http://wonux.gitee.io/tags/bugs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gentoo解决windows txt文件中文乱码问题 -- 文件编码介绍</title>
+      <link>http://wonux.gitee.io/post/gentoo-file-encode/</link>
+      <pubDate>Thu, 10 Dec 2015 09:30:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/gentoo-file-encode/</guid>
+      <description>Linux与Windows系统语言编码区别 在Linux操作系统下，我们有时打开在windows下的txt文件，发现在windows下能正常显</description>
+    </item>
+    
+    <item>
+      <title>Gentoo !!! existing preserved libs问题</title>
+      <link>http://wonux.gitee.io/post/gentoo-preserved-libs/</link>
+      <pubDate>Thu, 20 Nov 2014 12:21:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/gentoo-preserved-libs/</guid>
+      <description>问题描述 1 2 3 4 5 6 7 8 9 10 11 !!! existing preserved libs: &amp;gt;&amp;gt;&amp;gt; package: media-libs/libmng-2.0.2-r1 * - /usr/lib/libmng.so.1 * - /usr/lib/libmng.so.1.0.0 * used by /opt/kingsoft/wps-office/office6/qt/plugins/imageformats/libqmng.so (app-office/wps-office-9.1.0.4751_alpha15) &amp;gt;&amp;gt;&amp;gt; package: media-libs/lcms-1.19-r2 * - /usr/lib/liblcms.so.1 * - /usr/lib/liblcms.so.1.0.19 * used by /usr/lib/libmng.so.1 (preserved) * used by /usr/lib/libmng.so.1.0.0 (preserved) Use emerge @preserved-rebuild to rebuild packages using these libraries 解决方法 折腾过程：</description>
+    </item>
+    
+    <item>
+      <title>Gentoo Xorg:Failed to load module &#34;……&#34; 问题</title>
+      <link>http://wonux.gitee.io/post/gentoo-xorg-failed/</link>
+      <pubDate>Fri, 24 Oct 2014 09:32:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/gentoo-xorg-failed/</guid>
+      <description>错误描述： 安装完xorg-server后，startx启动桌面环境，出现缺少模块错误。 Xorg:Failed to load module &amp;ldquo;……&amp;rdquo; 查看log： 1</description>
+    </item>
+    
+    <item>
+      <title>gcc-config:Active gcc profile is invalid 解决办法</title>
+      <link>http://wonux.gitee.io/post/gentoo-gcc-invalid/</link>
+      <pubDate>Tue, 02 Sep 2014 16:32:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/gentoo-gcc-invalid/</guid>
+      <description>错误描述 Gentoo软件安装错误,提示： gcc-config: Active gcc profile is invalid 解决方法： 列出可用的profile 1 gcc-config -l gcc-config: Active gcc profile is invalid! [1] i686-pc-linux-gnu-4.6.3 显示当前使用的profile 1 gcc-config</description>
+    </item>
+    
+    <item>
+      <title>Gentoo解决Udev升级的网卡重命名问题</title>
+      <link>http://wonux.gitee.io/post/gentoo-udev-netware/</link>
+      <pubDate>Mon, 30 Jun 2014 10:40:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/gentoo-udev-netware/</guid>
+      <description>问题描述： 配置网络时，很多新手运行ifconfig命令查看网卡时，会发现我们熟悉的eth0网卡没有了，或是发现一些不规则命名的东东，不错，那</description>
+    </item>
+    
+  </channel>
+</rss>

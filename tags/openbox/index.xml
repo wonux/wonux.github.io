@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>openbox on Wonux - Bolg</title>
+    <link>http://wonux.gitee.io/tags/openbox/</link>
+    <description>Recent content in openbox on Wonux - Bolg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 13 May 2015 17:08:00 +0000</lastBuildDate><atom:link href="http://wonux.gitee.io/tags/openbox/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>openbox设置透明效果</title>
+      <link>http://wonux.gitee.io/post/apps-openbox-tranparent/</link>
+      <pubDate>Wed, 13 May 2015 17:08:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/apps-openbox-tranparent/</guid>
+      <description>X窗口下的透明效果设置 使用 transset + devilspie + xcompmgr 设置透明效果。 X窗口下没有现成的工具，但可以借助于Xcompmgr和transset。 在运行Xcompm</description>
+    </item>
+    
+  </channel>
+</rss>

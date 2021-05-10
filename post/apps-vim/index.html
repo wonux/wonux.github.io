@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Vim常用技巧 - Wonux - Bolg</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="孤逐王" /><meta name="description" content="使用vim教程 1 vimtutor 它会复制一份教程文件,你可以放心练习,不用担心破坏原来的内容. 求助 :help :help &#43; 相关内容 vim三种工作模式 Normal模式: Esc In" /><meta name="keywords" content="Hugo, theme, even, gentoo, arch, linux" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.83.1 with theme even" />
+
+
+<link rel="canonical" href="http://wonux.gitee.io/post/apps-vim/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<link href="/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Vim常用技巧" />
+<meta property="og:description" content="使用vim教程 1 vimtutor 它会复制一份教程文件,你可以放心练习,不用担心破坏原来的内容. 求助 :help :help &#43; 相关内容 vim三种工作模式 Normal模式: Esc In" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://wonux.gitee.io/post/apps-vim/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2016-01-07T08:07:00&#43;00:00" />
+<meta property="article:modified_time" content="2016-01-07T16:19:00&#43;00:00" />
+
+<meta itemprop="name" content="Vim常用技巧">
+<meta itemprop="description" content="使用vim教程 1 vimtutor 它会复制一份教程文件,你可以放心练习,不用担心破坏原来的内容. 求助 :help :help &#43; 相关内容 vim三种工作模式 Normal模式: Esc In"><meta itemprop="datePublished" content="2016-01-07T08:07:00&#43;00:00" />
+<meta itemprop="dateModified" content="2016-01-07T16:19:00&#43;00:00" />
+<meta itemprop="wordCount" content="242">
+<meta itemprop="keywords" content="apps,vi,vim," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Vim常用技巧"/>
+<meta name="twitter:description" content="使用vim教程 1 vimtutor 它会复制一份教程文件,你可以放心练习,不用担心破坏原来的内容. 求助 :help :help &#43; 相关内容 vim三种工作模式 Normal模式: Esc In"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Wonux Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Wonux Blog</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Vim常用技巧</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2016-01-07 </span>
+        <div class="post-category">
+            <a href="/categories/applications/"> Applications </a>
+            </div>
+          <span class="more-meta"> 约 242 字 </span>
+          <span class="more-meta"> 预计阅读 1 分钟 </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#使用vim教程">使用vim教程</a></li>
+        <li><a href="#求助">求助</a></li>
+        <li><a href="#vim三种工作模式">vim三种工作模式</a>
+          <ul>
+            <li><a href="#定位">定位</a></li>
+            <li><a href="#查询信息">查询信息</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h2 id="使用vim教程">使用vim教程</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">vimtutor
+</code></pre></td></tr></table>
+</div>
+</div><p>它会复制一份教程文件,你可以放心练习,不用担心破坏原来的内容.</p>
+<h2 id="求助">求助</h2>
+<p><code>:help</code>
+<code>:help + 相关内容</code></p>
+<h2 id="vim三种工作模式">vim三种工作模式</h2>
+<ul>
+<li>Normal模式: <code>Esc</code></li>
+<li>Insert模式: <code>i</code> <code>a</code> <code>o</code>
+i:光标前 I:光标行首
+a:光标后 A:光标行末
+o:光标下新行 O:光标上新行</li>
+<li>末行模式: <code>:</code></li>
+</ul>
+<h3 id="定位">定位</h3>
+<p><code>h</code> <code>j</code> <code>k</code> <code>l</code>
+<code>0</code> <code>^</code>  ^行首非空字符  0行首字符
+<code>$</code> 末字符
+<code>w</code> <code>W</code> <code>b</code> <code>B</code> <code>e</code> <code>E</code>
+<code>Enter</code> 移至下行首
+<code>gg</code> <code>G</code> <code>8G</code>
+<code>50%</code>
+<code>H</code> <code>M</code> <code>L</code>
+<code>zz</code> <code>zt</code> <code>zb</code>
+<code>f</code>
+<code>F</code>
+<code>/</code>
+<code>?</code></p>
+<p><code>Ctrl + d</code>  下滚半页
+<code>Ctrl + u</code>  上滚半页
+<code>Ctrl + f</code>   下滚一页
+<code>Ctrl + b</code>  上滚一页</p>
+<p><code>x</code>
+<code>dw</code> <code>de</code>  <code>db</code>  <code>d$</code>
+<code>dd</code> <code>D</code> <code>3dd</code>
+<code>: 5,10d</code>
+J</p>
+<p><code>u</code> <code>U</code> <code>Ctrl + R</code></p>
+<p><code>yy</code>
+<code>p</code>
+<code>P</code></p>
+<p><code>:wq</code> <code>:x</code> <code>zz</code>
+<code>:q</code> <code>:q!</code></p>
+<h3 id="查询信息">查询信息</h3>
+<ul>
+<li>当前位围置
+<code>Ctrl + G</code>
+<code>:set number</code>  <code>:set nonumber</code>
+<code>:set ruler</code></li>
+</ul>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">孤逐王</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2016-01-07
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/apps/">apps</a>
+          <a href="/tags/vi/">vi</a>
+          <a href="/tags/vim/">vim</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/apps-musicbox/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Shell终端收听音乐--网易云音乐命令行版</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/apps-firefox-vimperator/">
+            <span class="next-text nav-default">firefox神器：vimperator插件</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:wonux@qq.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/wonux" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.douban.com/people/wonux" class="iconfont icon-douban" title="douban"></a>
+  <a href="http://wonux.gitee.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2014 - 
+    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>wonux</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

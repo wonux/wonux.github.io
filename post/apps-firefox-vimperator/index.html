@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>firefox神器：vimperator插件 - Wonux - Bolg</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="孤逐王" /><meta name="description" content="介绍 Vimperator是一个Firefox浏览器扩展，能够使Firefox浏览器像Vim一样高效工作。在安装上 Vimperator之后，无" /><meta name="keywords" content="Hugo, theme, even, gentoo, arch, linux" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.83.1 with theme even" />
+
+
+<link rel="canonical" href="http://wonux.gitee.io/post/apps-firefox-vimperator/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<link href="/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="firefox神器：vimperator插件" />
+<meta property="og:description" content="介绍 Vimperator是一个Firefox浏览器扩展，能够使Firefox浏览器像Vim一样高效工作。在安装上 Vimperator之后，无" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://wonux.gitee.io/post/apps-firefox-vimperator/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2015-12-26T15:58:00&#43;00:00" />
+<meta property="article:modified_time" content="2015-12-27T14:19:00&#43;00:00" />
+
+<meta itemprop="name" content="firefox神器：vimperator插件">
+<meta itemprop="description" content="介绍 Vimperator是一个Firefox浏览器扩展，能够使Firefox浏览器像Vim一样高效工作。在安装上 Vimperator之后，无"><meta itemprop="datePublished" content="2015-12-26T15:58:00&#43;00:00" />
+<meta itemprop="dateModified" content="2015-12-27T14:19:00&#43;00:00" />
+<meta itemprop="wordCount" content="1458">
+<meta itemprop="keywords" content="apps,vi,firefox," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="firefox神器：vimperator插件"/>
+<meta name="twitter:description" content="介绍 Vimperator是一个Firefox浏览器扩展，能够使Firefox浏览器像Vim一样高效工作。在安装上 Vimperator之后，无"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Wonux Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Wonux Blog</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">firefox神器：vimperator插件</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2015-12-26 </span>
+        <div class="post-category">
+            <a href="/categories/applications/"> Applications </a>
+            </div>
+          <span class="more-meta"> 约 1458 字 </span>
+          <span class="more-meta"> 预计阅读 3 分钟 </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#介绍">介绍</a></li>
+        <li><a href="#hint模式">HINT模式</a></li>
+        <li><a href="#firefox系统功能">firefox系统功能</a>
+          <ul>
+            <li><a href="#打开网页">打开网页</a></li>
+            <li><a href="#历史导航">历史导航</a></li>
+            <li><a href="#标签页操作">标签页操作</a></li>
+            <li><a href="#刷新网页">刷新网页</a></li>
+            <li><a href="#退出">退出</a></li>
+            <li><a href="#buffer">Buffer</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h2 id="介绍">介绍</h2>
+<p>Vimperator是一个Firefox浏览器扩展，能够使Firefox浏览器像Vim一样高效工作。在安装上 Vimperator之后，无论是 Firefox 的外观，还是 Firefox 的行为，都像极Vim。Vimperator还具有类似键盘绑定的功能，这使你能够灵活地使用热键来完成各种操作。不过，如果你想使用好它，必须确认你要有使用vim的经验，如同vim一样，vimperator也有多种模式，它也是致力于抛弃鼠标，使手指不用离开键盘就能完成大部分工作，事实也证明这样做确实很高效，但前提是你要习惯这种工作方式。</p>
+<h2 id="hint模式">HINT模式</h2>
+<p>这个模式算是用于极度的命令行爱好者或者鼠标坏掉的用户，hint模式就是为当前页面所有的链接标上序号，然后只要敲击键盘选择对应的链接即可，你的手完全不需要离开键盘去摸鼠标——我个人很喜欢这种方式。
+最基本的用法就是在页面按<code>f/F</code>，然后根据显示的数字来选择一下，链接就打开了。f会原页面打开，F则会在新页面打开。
+当然，还可以用‘;{mode}{hint}’来实现更多复杂的操作，但是对我来讲前面的就已经足够了，细节可以参考帮助文档。</p>
+<h2 id="firefox系统功能">firefox系统功能</h2>
+<p>vimperator命令提供了firefox各种功能入口,常用的如下:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">:dialog – To access some of Firefox&#39;s many dialog windows
+:bmarks – Vimperator provides a new interface to bookmarks
+:history – display a colorized, scrollable and clickable list of the locations in history.
+:emenu – Access the Firefox menus through the Vimperator command line.
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="打开网页">打开网页</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">-- o :o :open
+:o[pen] [arg1], [arg2], …
+o
+O    Show an :open prompt containing the current URL.
+:tabopen[!] [arg1], [arg2], …       [!], 后台打开,不切换到新标签
+-- t :t :tabopen :tabnew
+t
+T    Show a :tabopen prompt containing the current URL.
+-- w :winopen :wopen
+:wino[pen][!] [arg1], [arg2], …
+w
+W
+p    Open (put) a URL based on the current clipboard contents in the current buffer.
+P
+gP    Works like P but inverts the &#39;activate&#39; option.
+
+y    Yank current location to the clipboard. 
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>使用搜索引擎关键字搜索
+<code> :open baidu keywords</code></li>
+</ul>
+<blockquote>
+<p>设置搜索引擎关键字:<code>dialog searchengines</code>.</p>
+</blockquote>
+<h3 id="历史导航">历史导航</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">-- H &lt;C-o&gt; CTRL-O :ba :back
+:[count]ba[ck] [url]
+:ba[ck][!]    [!] goes to the beginning of the browser history.
+-- L &lt;C-i&gt; CTRL-i :fo :fw :forward
+:[count]fo[rward] [url]
+:fo[rward]!
+----------
+:ju[mps]    List all jumps aka current tab&#39;s history aka session history.
+gh    Go home. Opens the homepage in the current tab.
+gH
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="标签页操作">标签页操作</h3>
+<p>我个人是非常喜欢使用VIM的Buffer操作的，简单快捷，精准。
+而vimperator则是非常忠实的再现了这一特性，唯一不同的就是，这里的Buffer就相当于Tab。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">-- B :tabs :ls :files :buffers
+:buffers [filter]    Show a list of buffers.    %当前标签 #上一个标签
+-- b :b :buffer    
+[count]b    Go to the specified buffer from the buffer list.
+[count]gb    Repeat last :buffer! command.
+[count]gt    Go to the next tab.
+[count]gT    Go to the previous tab.
+[count]d    Delete current buffer tab.
+:tabo[nly]    Close all other tabs.
+-- u :u :undo
+[count]u    Undo closing of a tab.
+-- :undoa :undoall
+:undoa[ll]    Undo closing of all closed tabs. Firefox存储10个最近关闭的标签(包括重启firefox).
+d – close the active tab (delete the buffer)
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="刷新网页">刷新网页</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">r    Force reloading of the current web page.
+R   Force reloading of the current web page skipping the cache.
+:re[load][!]    Reload current web page.If [!] is given, skip the cache.
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="退出">退出</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">-- :q :quit
+:q[uit]    Quit current tab. The session is not stored.
+-- :qa :qall :quita :quitall
+:quita[ll]    Quit Vimperator. Quit Vimperator, no matter how many tabs/windows are open. The session is not stored.
+-- :wc :wclose :winc :winclose
+:winc[lose]    Close window.
+-- :winon :winonly
+:winon[ly]    Close all other windows.
+--:xa : xall  :wq :wqa :wqall
+:xa[ll]     Save the session and quit. 
+ZQ    Quit and don&#39;t save the session. Works like :qall.
+ZZ    Quit and save the session.Works like :xall.
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="buffer">Buffer</h3>
+<h4 id="motion-commands">Motion commands</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">-- &lt;Home&gt; gg
+[count]gg    Go to the top.   [count] scrolls to [count]%.
+-- &lt;End&gt; G
+[count]G    Go to the end.   [count] scrolls to [count]%. 
+{count}%    Scroll to {count} percent of the document.
+-- &lt;Left&gt; h
+[count]h    Scroll to the left.   [count], times to move to the left.
+-- &lt;Right&gt; l
+[count]l    Scroll to the right. [count], times to move to the right.
+-- &lt;C-e&gt; &lt;Down&gt; j
+[count]j    Scroll document down.  [count], times to move to the down.
+-- &lt;C-y&gt; &lt;Up&gt; k
+[count]k    Scroll document up.  [count], times to move to the up.
+
+-- &lt;C-d&gt;    Scroll window down to half a page in the buffer. 
+-- &lt;C-u&gt;    Scroll window up to half a page in the buffer. 
+-- &lt;S-Space&gt; &lt;PageUp&gt; &lt;C-b&gt;
+[count]&lt;C-b&gt;    Scroll up a full page. Scroll window [count] pages upwards.
+-- &lt;Space&gt; &lt;PageDown&gt; &lt;C-f&gt;
+[count]&lt;C-f&gt;    Scroll down a full page. Scroll window [count] pages downwards.
+
+[count]gi    Focus last used input field or first input field. 
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="zooming">Zooming</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">[count]zi    Enlarge text zoom of current web page. Mnemonic: zoom in.
+[count]zI    Enlarge full zoom of current web page. Mnemonic: zoom in.
+[count]zo    Reduce text zoom of current web page. Mnemonic: zoom out.
+[count]zO    Reduce full zoom of current web page. Mnemonic: zoom out.
+[count]zm    Enlarge text zoom by a larger amount. Mnemonic: zoom more.
+[count]zM    Enlarge full zoom by a larger amount. Mnemonic: zoom more.
+[count]zr    Reduce text zoom by a larger amount. Mnemonic: zoom reduce.
+[count]zR    Reduce full zoom by a larger amount. Mnemonic: zoom reduce.
+[count]zz    Set text zoom value of current web page. [count] 30% to 300% default 100%.
+[count]zZ    Set full zoom value of current web page. [count] 30% to 300% default 100%.
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="copying-text">Copying text</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">y    Yank current location to the clipboard. 
+Y    Copy currently selected text to the system clipboard
+</code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">孤逐王</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2015-12-27
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/apps/">apps</a>
+          <a href="/tags/vi/">vi</a>
+          <a href="/tags/firefox/">firefox</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/apps-vim/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Vim常用技巧</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/apps-zathura/">
+            <span class="next-text nav-default">vi风格pdf阅读器推荐：Zathura</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:wonux@qq.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/wonux" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.douban.com/people/wonux" class="iconfont icon-douban" title="douban"></a>
+  <a href="http://wonux.gitee.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2014 - 
+    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>wonux</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

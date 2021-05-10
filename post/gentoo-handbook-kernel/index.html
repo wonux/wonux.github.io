@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Gentoo安装详解（二）-- 编译内核 - Wonux - Bolg</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="wonux" /><meta name="description" content="编译内核： 安装内核源码： 选择内核：如gentoo-sources 1 2 emerge gentoo-sources ls -l /usr/src/linux 手动编译内核： 1 2 cd /usr/src/linux make menuconfig 必须启用的选项： Most information can be gathered by emerging sys-apps/pciutils which contains" /><meta name="keywords" content="Hugo, theme, even, gentoo, arch, linux" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.83.1 with theme even" />
+
+
+<link rel="canonical" href="http://wonux.gitee.io/post/gentoo-handbook-kernel/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<link href="/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Gentoo安装详解（二）-- 编译内核" />
+<meta property="og:description" content="编译内核： 安装内核源码： 选择内核：如gentoo-sources 1 2 emerge gentoo-sources ls -l /usr/src/linux 手动编译内核： 1 2 cd /usr/src/linux make menuconfig 必须启用的选项： Most information can be gathered by emerging sys-apps/pciutils which contains" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://wonux.gitee.io/post/gentoo-handbook-kernel/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2014-05-04T17:10:00&#43;00:00" />
+<meta property="article:modified_time" content="2015-05-08T10:44:00&#43;00:00" />
+
+<meta itemprop="name" content="Gentoo安装详解（二）-- 编译内核">
+<meta itemprop="description" content="编译内核： 安装内核源码： 选择内核：如gentoo-sources 1 2 emerge gentoo-sources ls -l /usr/src/linux 手动编译内核： 1 2 cd /usr/src/linux make menuconfig 必须启用的选项： Most information can be gathered by emerging sys-apps/pciutils which contains"><meta itemprop="datePublished" content="2014-05-04T17:10:00&#43;00:00" />
+<meta itemprop="dateModified" content="2015-05-08T10:44:00&#43;00:00" />
+<meta itemprop="wordCount" content="421">
+<meta itemprop="keywords" content="gentoo,handbook,kernel," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Gentoo安装详解（二）-- 编译内核"/>
+<meta name="twitter:description" content="编译内核： 安装内核源码： 选择内核：如gentoo-sources 1 2 emerge gentoo-sources ls -l /usr/src/linux 手动编译内核： 1 2 cd /usr/src/linux make menuconfig 必须启用的选项： Most information can be gathered by emerging sys-apps/pciutils which contains"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Wonux Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Wonux Blog</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Gentoo安装详解（二）-- 编译内核</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2014-05-04 </span>
+        <div class="post-category">
+            <a href="/categories/gentoo/"> Gentoo </a>
+            </div>
+          <span class="more-meta"> 约 421 字 </span>
+          <span class="more-meta"> 预计阅读 1 分钟 </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#编译内核">编译内核：</a>
+          <ul>
+            <li><a href="#手动编译内核">手动编译内核：</a></li>
+            <li><a href="#使用genkernel编译内核">使用genkernel编译内核：</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h2 id="编译内核">编译内核：</h2>
+<ul>
+<li>安装内核源码：</li>
+</ul>
+<p>选择内核：如gentoo-sources</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">emerge gentoo-sources
+ls -l /usr/src/linux
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="手动编译内核">手动编译内核：</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">cd /usr/src/linux
+make menuconfig
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>必须启用的选项：</li>
+</ul>
+<p>Most information can be gathered by emerging <a href="">sys-apps/pciutils</a> which contains the <code>lspci</code> command:
+显卡：<a href="https://wiki.gentoo.org/wiki/Xorg/Configuration">Xorg/Configuration</a>
+声卡：<a href="https://wiki.gentoo.org/wiki/ALSA">ALSA</a>
+网卡：根据具体网卡芯片型号，查看wiki。
+无线网卡芯片驱动查询：<a href="http://wireless.kernel.org/en/users/Devices/PCI">Linux Wireless</a></p>
+<blockquote>
+<p>其他选项根据需要添加，不了解保持默认即可.</p>
+</blockquote>
+<ul>
+<li>编译内核与模块：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">make &amp;&amp; make modules_install
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>拷贝内核到启动分区：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">cp arch/x86_64/boot/bzImage /boot/kernel-3.10.10-gentoo
+或
+make install  #使用make install
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>This will copy the kernel image into /boot together with the System.map file and the kernel configuration file.</p>
+</blockquote>
+<h3 id="使用genkernel编译内核">使用genkernel编译内核：</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">emerge genkernel
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>可选：复制安装光盘上的内核配置文件：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">zcat /proc/config.gz &gt; /usr/share/genkernel/arch/x86_64/kernel-config
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>编译：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">genkernel --menuconfig all
+</code></pre></td></tr></table>
+</div>
+</div><p>一旦genkernel运行完成，一个包括全部模块和initrd的内核将被建立。在后面配置引导程序时我们将会用到这个内核和initrd。请记下内核和initrd的名字，因为您将在配置引导程序的时候用到他们(Grub Legacy使用)。initrd将会在启动真正的系统前自动识别硬件（如同安装光盘一样）。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">ls /boot/kernel* /boot/initramfs*
+</code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">wonux</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2015-05-08
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/gentoo/">gentoo</a>
+          <a href="/tags/handbook/">handbook</a>
+          <a href="/tags/kernel/">kernel</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/gentoo-handbook-configure/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Gentoo安装详解（三）-- 配置系统</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/gentoo-handbook-base/">
+            <span class="next-text nav-default">Gentoo安装详解（一）-- 安装基本系统</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:wonux@qq.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/wonux" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.douban.com/people/wonux" class="iconfont icon-douban" title="douban"></a>
+  <a href="http://wonux.gitee.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2014 - 
+    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>wonux</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

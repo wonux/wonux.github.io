@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Wonux - Bolg</title>
+    <link>http://wonux.gitee.io/categories/</link>
+    <description>Recent content in Categories on Wonux - Bolg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 24 Mar 2016 15:38:00 +0000</lastBuildDate><atom:link href="http://wonux.gitee.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git</title>
+      <link>http://wonux.gitee.io/categories/git/</link>
+      <pubDate>Thu, 24 Mar 2016 15:38:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/categories/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Applications</title>
+      <link>http://wonux.gitee.io/categories/applications/</link>
+      <pubDate>Mon, 29 Feb 2016 12:04:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/categories/applications/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gentoo</title>
+      <link>http://wonux.gitee.io/categories/gentoo/</link>
+      <pubDate>Wed, 24 Feb 2016 14:30:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/categories/gentoo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Arch</title>
+      <link>http://wonux.gitee.io/categories/arch/</link>
+      <pubDate>Mon, 25 Jan 2016 15:04:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/categories/arch/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>FreeBSD</title>
+      <link>http://wonux.gitee.io/categories/freebsd/</link>
+      <pubDate>Mon, 04 May 2015 09:37:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/categories/freebsd/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

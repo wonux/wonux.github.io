@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>pacman on Wonux - Bolg</title>
+    <link>http://wonux.gitee.io/tags/pacman/</link>
+    <description>Recent content in pacman on Wonux - Bolg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 22 Oct 2014 13:04:00 +0000</lastBuildDate><atom:link href="http://wonux.gitee.io/tags/pacman/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Arch软件管理 -- Pacman常用命令</title>
+      <link>http://wonux.gitee.io/post/arch-pacman/</link>
+      <pubDate>Wed, 22 Oct 2014 13:04:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/arch-pacman/</guid>
+      <description>Pacman是Arch Linux 的包管理器。它将一个简单的二进制包格式和易用的构建系统结合了起来。不管软件包是来自官方的 Arch 库还是用户自己创建，Pac</description>
+    </item>
+    
+  </channel>
+</rss>

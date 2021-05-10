@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ports on Wonux - Bolg</title>
+    <link>http://wonux.gitee.io/tags/ports/</link>
+    <description>Recent content in ports on Wonux - Bolg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 04 May 2015 09:37:00 +0000</lastBuildDate><atom:link href="http://wonux.gitee.io/tags/ports/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>UNIX基础 -- 安装应用程序: Packages 和 Ports</title>
+      <link>http://wonux.gitee.io/post/freebsd-apps/</link>
+      <pubDate>Mon, 04 May 2015 09:37:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/freebsd-apps/</guid>
+      <description>Packages and Ports 概述 FreeBSD 将许多系统工具捆绑作为基本系统的一部分。另外，FreeBSD 提供了两种补充的技术来安装第三方软件：FreeBSD Ports Collect</description>
+    </item>
+    
+  </channel>
+</rss>

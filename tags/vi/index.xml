@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>vi on Wonux - Bolg</title>
+    <link>http://wonux.gitee.io/tags/vi/</link>
+    <description>Recent content in vi on Wonux - Bolg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 07 Jan 2016 08:07:00 +0000</lastBuildDate><atom:link href="http://wonux.gitee.io/tags/vi/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Vim常用技巧</title>
+      <link>http://wonux.gitee.io/post/apps-vim/</link>
+      <pubDate>Thu, 07 Jan 2016 08:07:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/apps-vim/</guid>
+      <description>使用vim教程 1 vimtutor 它会复制一份教程文件,你可以放心练习,不用担心破坏原来的内容. 求助 :help :help + 相关内容 vim三种工作模式 Normal模式: Esc In</description>
+    </item>
+    
+    <item>
+      <title>firefox神器：vimperator插件</title>
+      <link>http://wonux.gitee.io/post/apps-firefox-vimperator/</link>
+      <pubDate>Sat, 26 Dec 2015 15:58:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/apps-firefox-vimperator/</guid>
+      <description>介绍 Vimperator是一个Firefox浏览器扩展，能够使Firefox浏览器像Vim一样高效工作。在安装上 Vimperator之后，无</description>
+    </item>
+    
+    <item>
+      <title>vi风格pdf阅读器推荐：Zathura</title>
+      <link>http://wonux.gitee.io/post/apps-zathura/</link>
+      <pubDate>Thu, 24 Dec 2015 08:02:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/apps-zathura/</guid>
+      <description>介绍 Zathura是一款新的 PDF 查看器 ，它相当轻巧，界面简约（与 Apvlv 很相似），且可以定制（如按键绑定、默认窗口大小等 ）,支持vim风格快捷键。除</description>
+    </item>
+    
+    <item>
+      <title>vi风格控制台文件管理器 -- vifm 配置使用</title>
+      <link>http://wonux.gitee.io/post/apps-vifm/</link>
+      <pubDate>Tue, 22 Dec 2015 08:40:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/apps-vifm/</guid>
+      <description>介绍 vifm是Linux下一个基于ncurses的控制台文件管理器，我很少使用文件管理器，要用一下，就拿出vifm来。图形界面的文件管理器我</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>vi风格控制台文件管理器 -- vifm 配置使用 - Wonux - Bolg</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="孤逐王" /><meta name="description" content="介绍 vifm是Linux下一个基于ncurses的控制台文件管理器，我很少使用文件管理器，要用一下，就拿出vifm来。图形界面的文件管理器我" /><meta name="keywords" content="Hugo, theme, even, gentoo, arch, linux" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.83.1 with theme even" />
+
+
+<link rel="canonical" href="http://wonux.gitee.io/post/apps-vifm/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<link href="/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="vi风格控制台文件管理器 -- vifm 配置使用" />
+<meta property="og:description" content="介绍 vifm是Linux下一个基于ncurses的控制台文件管理器，我很少使用文件管理器，要用一下，就拿出vifm来。图形界面的文件管理器我" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://wonux.gitee.io/post/apps-vifm/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2015-12-22T08:40:00&#43;00:00" />
+<meta property="article:modified_time" content="2015-12-23T08:54:00&#43;00:00" />
+
+<meta itemprop="name" content="vi风格控制台文件管理器 -- vifm 配置使用">
+<meta itemprop="description" content="介绍 vifm是Linux下一个基于ncurses的控制台文件管理器，我很少使用文件管理器，要用一下，就拿出vifm来。图形界面的文件管理器我"><meta itemprop="datePublished" content="2015-12-22T08:40:00&#43;00:00" />
+<meta itemprop="dateModified" content="2015-12-23T08:54:00&#43;00:00" />
+<meta itemprop="wordCount" content="1238">
+<meta itemprop="keywords" content="apps,vi,file-manager," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="vi风格控制台文件管理器 -- vifm 配置使用"/>
+<meta name="twitter:description" content="介绍 vifm是Linux下一个基于ncurses的控制台文件管理器，我很少使用文件管理器，要用一下，就拿出vifm来。图形界面的文件管理器我"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Wonux Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Wonux Blog</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">vi风格控制台文件管理器 -- vifm 配置使用</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2015-12-22 </span>
+        
+          <span class="more-meta"> 约 1238 字 </span>
+          <span class="more-meta"> 预计阅读 3 分钟 </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#介绍">介绍</a></li>
+        <li><a href="#配置vifm">配置vifm</a>
+          <ul>
+            <li><a href="#配置文件">配置文件</a></li>
+            <li><a href="#用户自定命令">用户自定命令</a></li>
+            <li><a href="#集成命令mkcd-move-copy">集成命令:<code>mkcd</code> <code>move</code> <code>copy</code></a></li>
+            <li><a href="#文件默认打开方式">文件默认打开方式</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h2 id="介绍">介绍</h2>
+<p>vifm是Linux下一个基于ncurses的控制台文件管理器，我很少使用文件管理器，要用一下，就拿出vifm来。图形界面的文件管理器我不喜欢用，控制台下有人叫做mc的，功能很强大，但快捷键实在用不习惯，还经常和Terminal下的快捷键冲突，找来找去也只找到vifm这个还勉强可用，快捷键模拟vi，符合我的习惯。
+vifm最主要的特点是模拟vi的快捷键，例如要复制某个文件，按yy，然后到目的文件夹，按p。要移动文件，将yy换成dd就可以了。直接重命名，则按cw。另外，删除文件并不是直接删除，而是移到分区根目录的<code>.vifm-Trash/</code>中，所以不小心删错了，还可以找回来。比较常用的命令有：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">j,k     上下移动
+h,l     在父/子目录之间移动
+gg     移动到文件列表首行
+G      移动到文件列表末行
+M     移动到窗口中间
+H,L   移动到窗口首末文件
+gh     返回上级目录
+gl,Enter     进入目录或打开文件
+[count]dd,d[count]d     删除文件(放入回收站)
+[count]DD,D[count]D   删除文件(不放回收站)
+[count]yy,[count]Y,y[count]y     复制文件
+p       粘贴文件
+u       undo last change
+Space,Tab     在两个panel之间切换
+/     查找文件
+m[a-zA-Z0-9]     标记文件
+&#39;[a-zA-Z0-9]     移到标记所在文件
+za     切换隐藏文件显隐
+zo     显示隐藏文件
+zm     不显示隐藏文件
+:fil regex     隐藏匹配regex的文件
+zO     显示被:fil命令过滤的文件
+zM     隐藏被:fil命令过滤的文件
+cp     更改文件属性权限
+cw    文件/文件夹重命名
+cW   文件/文件夹重命名,不包含扩展名
+ga     计算文件夹大小
+!prog     执行系统命令, %f可以用来当前选中文件名
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="配置vifm">配置vifm</h2>
+<h3 id="配置文件">配置文件</h3>
+<p>Vifm creates and populates a <code>.vifm/</code> folder in your home directory containing the following:
+<code>vifmrc</code> - a well commented configuration file that can be edited to suit your working style.
+<code>vifm-help.txt</code> - the help text
+<code>vifminfo</code> - bookmarks and trash contents - it is not recommended to edit this file by hand
+<code>Trash/ directory</code> - self explanatory
+<code>colors/ directory</code> - color schemes
+<code>Default</code> - well commented default color scheme - can be copied to create user-created color schemes</p>
+<blockquote>
+<p>To get started, read the information avaliable in:</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">/usr/share/vifm/vifm.txt
+/usr/share/vifm/vifm-help.txt
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="用户自定命令">用户自定命令</h3>
+<p>用户可以根据自己习惯配置自定义命令,如创建cp, mv命令用于将一个面板中选中的文件复制/移动到另一个面板中去。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">command! cp cp -r %f %D
+command! mv mv -r %f %D
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">&#34; :com[mand][!] command_name action
+&#34; The following macros can be used in a command
+&#34; %a is replaced with the user arguments.
+&#34; %c the current file under the cursor.
+&#34; %C the current file under the cursor in the other directory.
+&#34; %f the current selected file, or files.
+&#34; %F the current selected file, or files in the other directory.
+&#34; %b same as %f %F.
+&#34; %d the current directory name.
+&#34; %D the other window directory name.
+&#34; %m run the command in a menu window
+
+command! df df -h %m 2&gt; /dev/null
+command! diff vim -d %f %F
+command! zip zip -r %f.zip %f
+command! run !! ./%f
+command! make !!make %a
+command! mkcd :mkdir %a | cd %a
+command! vgrep vim &#34;+grep %a&#34;
+command! reload :write | restart
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>其中%a是一个特殊值，表示输入的参数，类似的%f表示当前选中的文件, %F表示在另一个面板中选中的文件，%d表示当前目录，%D表示另一个面板的当前目录。</p>
+</blockquote>
+<h3 id="集成命令mkcd-move-copy">集成命令:<code>mkcd</code> <code>move</code> <code>copy</code></h3>
+<h3 id="文件默认打开方式">文件默认打开方式</h3>
+<p>vifm可以定义文件默认打开方式，这些都在<code>~/.vifm/vifmrc</code>中配置。使用<code>file[x]type</code>定义文件的默认打开方式：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback"> &#34; Pdf
+filextype *.pdf zathura %c %i &amp;, apvlv %c, xpdf %c
+fileviewer *.pdf pdftotext -nopgbrk %c -
+&#34; Image
+filextype *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm
+        \ {View in feh}
+        \ feh -FZ %d --start-at %d/%c 2&gt;/dev/null
+        \ {View in sxiv}
+        \ sxiv,
+        \ {View in gpicview}
+        \ gpicview %c,
+        \ {View in shotwell}
+        \ shotwell,
+fileviewer *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm convert -identify %f -verbose /dev/null
+&#34; Office files
+&#34; filextype *.odt,*.doc,*.docx,*.xls,*.xlsx,*.odp,*.pptx libreoffice %f &amp;
+fileviewer *.doc catdoc %c
+fileviewer *.docx, docx2txt.pl %f -
+filextype *.doc,*.docx wps %f &amp;
+filextype *.xls,*.xlsx et %f &amp;
+</code></pre></td></tr></table>
+</div>
+</div><p>参考:<a href="https://wiki.archlinux.org/index.php/Vifm">https://wiki.archlinux.org/index.php/Vifm</a></p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">孤逐王</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2015-12-23
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/apps/">apps</a>
+          <a href="/tags/vi/">vi</a>
+          <a href="/tags/file-manager/">file-manager</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/apps-zathura/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">vi风格pdf阅读器推荐：Zathura</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/apps-rtorrent/">
+            <span class="next-text nav-default">Linux BT下载软件 -- Rtorrent 配置使用</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:wonux@qq.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/wonux" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.douban.com/people/wonux" class="iconfont icon-douban" title="douban"></a>
+  <a href="http://wonux.gitee.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2014 - 
+    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>wonux</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

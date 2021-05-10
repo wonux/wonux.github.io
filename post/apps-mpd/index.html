@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>MPD&#43;MPC&#43;Conky 听音乐 - Wonux - Bolg</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="孤逐王" /><meta name="description" content="MPD、MPC介绍： 为何选用MPD&#43;MPC？ 在Linux下有很多不错的音乐播放器，强大的如amarok，简单的如bmp，而我更喜欢mpc（需" /><meta name="keywords" content="Hugo, theme, even, gentoo, arch, linux" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.83.1 with theme even" />
+
+
+<link rel="canonical" href="http://wonux.gitee.io/post/apps-mpd/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<link href="/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="MPD&#43;MPC&#43;Conky 听音乐" />
+<meta property="og:description" content="MPD、MPC介绍： 为何选用MPD&#43;MPC？ 在Linux下有很多不错的音乐播放器，强大的如amarok，简单的如bmp，而我更喜欢mpc（需" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://wonux.gitee.io/post/apps-mpd/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2014-09-09T11:07:00&#43;00:00" />
+<meta property="article:modified_time" content="2015-05-25T10:19:00&#43;00:00" />
+
+<meta itemprop="name" content="MPD&#43;MPC&#43;Conky 听音乐">
+<meta itemprop="description" content="MPD、MPC介绍： 为何选用MPD&#43;MPC？ 在Linux下有很多不错的音乐播放器，强大的如amarok，简单的如bmp，而我更喜欢mpc（需"><meta itemprop="datePublished" content="2014-09-09T11:07:00&#43;00:00" />
+<meta itemprop="dateModified" content="2015-05-25T10:19:00&#43;00:00" />
+<meta itemprop="wordCount" content="1194">
+<meta itemprop="keywords" content="apps,music," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="MPD&#43;MPC&#43;Conky 听音乐"/>
+<meta name="twitter:description" content="MPD、MPC介绍： 为何选用MPD&#43;MPC？ 在Linux下有很多不错的音乐播放器，强大的如amarok，简单的如bmp，而我更喜欢mpc（需"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Wonux Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Wonux Blog</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">MPD&#43;MPC&#43;Conky 听音乐</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2014-09-09 </span>
+        <div class="post-category">
+            <a href="/categories/applications/"> Applications </a>
+            </div>
+          <span class="more-meta"> 约 1194 字 </span>
+          <span class="more-meta"> 预计阅读 3 分钟 </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#mpdmpc介绍">MPD、MPC介绍：</a>
+          <ul>
+            <li><a href="#安装mpd">安装MPD</a></li>
+            <li><a href="#配置mpd">配置MPD</a></li>
+            <li><a href="#使用mpd">使用MPD</a></li>
+            <li><a href="#mpd-clients">MPD Clients</a></li>
+            <li><a href="#mpc">MPC</a></li>
+          </ul>
+        </li>
+        <li><a href="#conky">Conky</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h2 id="mpdmpc介绍">MPD、MPC介绍：</h2>
+<ul>
+<li>为何选用MPD+MPC？
+在Linux下有很多不错的音乐播放器，强大的如amarok，简单的如bmp，而我更喜欢mpc（需要安装MPD），简洁是我选择它的理由。每次开机自动打开守护程序MusicPD（简称mpd），这如同一个潜在的点歌器，终端下用mpc就能选听自己喜欢的歌曲，不需要任何界面，也不必为音乐播放器单开一个桌面。
+mpc和conky结合，可以做出开机音乐；mpc和remind结合用音乐来提醒某些事情。守护程序mpd就像一个功能强大的点歌器，你可以轻松地选择你喜爱的歌手、专辑，毫不逊于GUI的音乐播放器。
+我们还可以用conky在桌面上显示mpd的情况，显示歌曲名，显示歌手名，显示播放进程等，设计我们自己的音乐播放器，够酷吧。</li>
+<li>MPD
+MPD (Music Player Daemon) ：它跟常见的大多数播放器都很不同，是一个C／S结构的音乐播放器。MPD 作为一个守护程序运行于后台, 通过各种各样的client软件来控制播放动作、播放列表等， 占用很少的资源，从一开始使用我便喜欢上了这种方式。
+这是一个可以在后台播放音乐的东东，非常节省资源，而且和X无关，在终端下一样能播放。而且可以用过各种各样的MPC前端来进行控制。
+MPD的优点很多，配置简单但是功能丰富。比如，可以选择音频设备，选择mixer设备，选择ID3编码等等。最大的好处就是音乐播放和管理前台分离，这样既可以使用mpc这个最简单的MPD客户端控制播放，也可以用GMPC和QMPDClient这样的强大MPD客户端进行音乐管理。</li>
+<li>MPC
+一个命令行下的Mpd客户端。</li>
+</ul>
+<h3 id="安装mpd">安装MPD</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">emerge mpd
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="配置mpd">配置MPD</h3>
+<p>mpd的系统级配置文件是<code>/etc/mpd.conf</code>;用户级配置文件是<code>~/.config/mpd/mpd.conf</code> 或 <code>~/.mpdconf</code>.</p>
+<p>编辑<code>mpd.conf</code>：
+MPD设置有几个地方：
+1、MPD的音乐目录和进程需要存放一些数据库等文件的目录；
+2、MPD的执行用户；
+3、MPD的输出和混音器选择；
+4、MPD的ID3编码.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">music_directory &#34;/var/lib/mpd/music&#34; 
+playlist_directory &#34;/var/lib/mpd/playlists&#34; 
+db_file &#34;/var/lib/mpd/database&#34; 
+log_file &#34;/var/lib/mpd/log&#34; 
+state_file &#34;/var/lib/mpd/state&#34; 
+user &#34;mpd&#34; 
+bind_to_address &#34;localhost&#34; 
+bind_to_address &#34;/var/lib/mpd/socket&#34; 
+input { plugin &#34;curl&#34; }
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>mpd默认配置使用mpd用户，默认的<code>~</code>目录是<code>/var/lib/mpd/</code>.要添加mpd用户对<code>/var/lib/mpd/</code>目录相应的权限。</p>
+</blockquote>
+<h3 id="使用mpd">使用MPD</h3>
+<ul>
+<li>启动mpd守护进程</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">/etc/init.d/mpd start
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>开机启动</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">rc-update add mpd default
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="mpd-clients">MPD Clients</h3>
+<ul>
+<li>mpc</li>
+<li>vimpc</li>
+<li>gmpc</li>
+<li>glurp</li>
+<li>ario</li>
+</ul>
+<h3 id="mpc">MPC</h3>
+<p>mpc的常用参数：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">mpc add 添加歌曲到播放列表
+mpc listall|mpc add 可以把所有歌曲都添加到当前的播放列表
+mpc listall 可以列出所有的歌曲
+mpc playlist 查看当前播放列表
+mpc 查看当前播放歌曲的信息
+mpc play 播放
+mpc pause 暂停
+mpc stop 停止
+mpc next 播放下一首
+mpc prev 播放前一首
+mpc repeat on 启用重复播放
+mpc random on 启用随机播放
+mpc play 18 播放列表中第18首
+mpc search filename 可以按文件名查找
+mpc search artist 可以按歌手查找
+mpc search title 可以按歌曲名查找
+音量调节：
+mpc volume +20
+mpc volume -20
+mpc的更多选项可以看mpc的帮助。
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="conky">Conky</h2>
+<p>强大的Linux系统监控及桌面美化应用，在这里不详细介绍，自己Google，Wiki。</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">孤逐王</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2015-05-25
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/apps/">apps</a>
+          <a href="/tags/music/">music</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/apps-pastebin/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">直接粘贴代码到网络上:command-line pastebins</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/gentoo-gcc-invalid/">
+            <span class="next-text nav-default">gcc-config:Active gcc profile is invalid 解决办法</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:wonux@qq.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/wonux" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.douban.com/people/wonux" class="iconfont icon-douban" title="douban"></a>
+  <a href="http://wonux.gitee.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2014 - 
+    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>wonux</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

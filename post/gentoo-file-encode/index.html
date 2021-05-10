@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Gentoo解决windows txt文件中文乱码问题 -- 文件编码介绍 - Wonux - Bolg</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="孤逐王" /><meta name="description" content="Linux与Windows系统语言编码区别 在Linux操作系统下，我们有时打开在windows下的txt文件，发现在windows下能正常显" /><meta name="keywords" content="Hugo, theme, even, gentoo, arch, linux" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.83.1 with theme even" />
+
+
+<link rel="canonical" href="http://wonux.gitee.io/post/gentoo-file-encode/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<link href="/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Gentoo解决windows txt文件中文乱码问题 -- 文件编码介绍" />
+<meta property="og:description" content="Linux与Windows系统语言编码区别 在Linux操作系统下，我们有时打开在windows下的txt文件，发现在windows下能正常显" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://wonux.gitee.io/post/gentoo-file-encode/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2015-12-10T09:30:00&#43;00:00" />
+<meta property="article:modified_time" content="2015-12-10T09:30:00&#43;00:00" />
+
+<meta itemprop="name" content="Gentoo解决windows txt文件中文乱码问题 -- 文件编码介绍">
+<meta itemprop="description" content="Linux与Windows系统语言编码区别 在Linux操作系统下，我们有时打开在windows下的txt文件，发现在windows下能正常显"><meta itemprop="datePublished" content="2015-12-10T09:30:00&#43;00:00" />
+<meta itemprop="dateModified" content="2015-12-10T09:30:00&#43;00:00" />
+<meta itemprop="wordCount" content="751">
+<meta itemprop="keywords" content="gentoo,bugs,i18n," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Gentoo解决windows txt文件中文乱码问题 -- 文件编码介绍"/>
+<meta name="twitter:description" content="Linux与Windows系统语言编码区别 在Linux操作系统下，我们有时打开在windows下的txt文件，发现在windows下能正常显"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Wonux Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Wonux Blog</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Gentoo解决windows txt文件中文乱码问题 -- 文件编码介绍</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2015-12-10 </span>
+        <div class="post-category">
+            <a href="/categories/gentoo/"> Gentoo </a>
+            </div>
+          <span class="more-meta"> 约 751 字 </span>
+          <span class="more-meta"> 预计阅读 2 分钟 </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#linux与windows系统语言编码区别">Linux与Windows系统语言编码区别</a></li>
+            <li><a href="#系统编码设置">系统编码设置</a></li>
+            <li><a href="#解决方案">解决方案</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h3 id="linux与windows系统语言编码区别">Linux与Windows系统语言编码区别</h3>
+<p>在Linux操作系统下，我们有时打开在windows下的txt文件，发现在windows下能正常显示的txt文件出现了中文乱码。
+出现这种情况的原因为两种操作系统的中文字符编码方式（压缩方式）不同，在windows环境中中文字符编码一般为gbk，而在linux环境中为utf8，这就导致了在windows下能正常显示txt文件在linux环境下打开呈现了乱码状态。</p>
+<h3 id="系统编码设置">系统编码设置</h3>
+<p><code>locale.gen</code>文件</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback"># /etc/locale.gen: list all of the locales you want to have on your system
+#
+# The format of each line:
+# &lt;locale&gt; &lt;charmap&gt;
+#
+# Where &lt;locale&gt; is a locale located in /usr/share/i18n/locales/ and
+# where &lt;charmap&gt; is a charmap located in /usr/share/i18n/charmaps/.
+#
+# All blank lines and lines starting with # are ignored.
+#
+# For the default list of supported combinations, see the file:
+# /usr/share/i18n/SUPPORTED
+#
+# Whenever glibc is emerged, the locales listed here will be automatically
+# rebuilt for you.  After updating this file, you can simply run `locale-gen`
+# yourself instead of re-emerging glibc.
+en_US.UTF-8 UTF-8
+zh_CN.UTF-8 UTF-8
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>查看系统语言编码种类
+<code> /usr/share/i18n/locales/</code>目录下包含系统支持的编码语言种类</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">gentoo ~ # ls /usr/share/i18n/locales/
+en_US       en_GB     en_HK    
+zh_CN       zh_TW     zh_HK
+ja_JP       de_DE     ......
+gentoo ~ #
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>查看字符编码压缩方式</li>
+</ul>
+<p><code>/usr/share/i18n/charmaps/</code>目录下包含系统支持的字符编码方式</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">ls /usr/share/i18n/charmaps/
+ANSI_X3.110-1983.gz    IBM1026.gz         ISO-8859-16.gz
+ANSI_X3.4-1968.gz      IBM1047.gz         ISO_8859-1,GL.gz
+ARMSCII-8.gz           IBM1124.gz         ISO-8859-1.gz
+ASMO_449.gz            IBM1129.gz         ISO-8859-2.gz
+GB18030.gz             ISIRI-3342.gz      SAMI.gz
+GB_1988-80.gz          ISO_10367-BOX.gz   SAMI-WS2.gz
+GB2312.gz              ISO_10646.gz       SEN_850200_B.gz
+GBK.gz                 ISO_11548-1.gz     SEN_850200_C.
+HP-ROMAN9.gz           ISO_6937.gz        UTF-8.gz
+......
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li><code>enca</code>查看文件编码方式</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">enca -L zh_CN file    ###检查文件的编码
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="解决方案">解决方案</h3>
+<h4 id="iconv编码转换">iconv编码转换</h4>
+<p>使用<code>iconv</code>命令进行文件编码转换，如乱码文件名为hello.txt，那么在终端输入如下命令：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">iconv -f gbk -t utf8 hello.txt &gt; hello.utf8.txt
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="enca编码转换">enca编码转换</h4>
+<p>使用<code>enca</code>命令转换:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">enca -L zh_CN -x UTF-8 hello.utf8.txt      ###将文件编码转换为&#34;UTF-8&#34;编码
+enca -L zh_CN -x gbk hello.txt     ###将文件编码转换为&#34;gbk&#34;编码
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p><code>enca</code>有一个好处,如果文件本来就是你要转换的那种编码，它不会报错，还是会print出结果来， 而”iconv”则会报错。</p>
+</blockquote>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">孤逐王</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2015-12-10
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/gentoo/">gentoo</a>
+          <a href="/tags/bugs/">bugs</a>
+          <a href="/tags/i18n/">i18n</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/apps-rtorrent/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Linux BT下载软件 -- Rtorrent 配置使用</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/gentoo-dual-network/">
+            <span class="next-text nav-default">Gentoo双网卡同时启用上内外网</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:wonux@qq.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/wonux" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.douban.com/people/wonux" class="iconfont icon-douban" title="douban"></a>
+  <a href="http://wonux.gitee.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2014 - 
+    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>wonux</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

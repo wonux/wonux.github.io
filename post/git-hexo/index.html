@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Hexo &#43; Github 搭建静态个人博客 - Wonux - Bolg</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="孤逐王" /><meta name="description" content="Hexo简介 Github上托管博客是使用jekyll搭建的，官方的Github Pages同样推荐使用它。我之前体验了一下jekyll，没有达到我想要的效果。于是寻找替代方案，搜索同类博客程序，我认识了hexo，hexo出自台湾大学生tommy351之手,是由Node.js驱动的一款快速、简单且功能强大的博客框架。Node.js是一个可以快速构建网络服务及应用的平台 。该平台的构建是基于Chrome&amp;rsquo;s JavaScript runtime，也就是说，实际上它是对Google V8引擎（应用于Google Chrome浏览器)进行了封装。V8引擎执行Javascript的速度非常快，性能非常好。Node对一些特殊用例进行了优化，提供了替代的API，使得V8在非浏览器环境下运行得更好。它和jekyll相比，更快，更轻量。
+Hexo安装 安装git  Linux 大多数Linux发行版已经默认安装了git,如果没有直接使用包管理工具安装. Windows: Git-Downloads  安装node.js  Gentoo package: net-libs/nodejs Arch: nodejs Windows: node.js  安装hexo 1  npm install hexo -g   配置Hexo  初始化博客根目录  1  hexo init blog    安装依赖包  1  npm install   安装之后，项目目录下出现如下文件结构：
+1 2 3 4 5 6 7 8 9  . ├── _config.yml 全局配置文件 ├── package.json ├── scaffolds ├── scripts ├── source 文章存放位置 | ├── _drafts 草稿 | └── _posts 文章 └── themes   插件和主题  plugins: 插件  添加插件的基本操作是：
+1 2  npm install &amp;lt;plugin-name&amp;gt; --save npm update   然后修改blog根目录下的_config.yml，添加：
+1 2  plugins: - plugin-name    themes:  安装主题：
+1  git clone &amp;lt;repository&amp;gt; themes/&amp;lt;theme-name&amp;gt;    无论是插件还是主题在安装后都需要在根目录下_config.yml中修改plugins和theme的值以启用他们。
+ 本博客使用pacman主题，扁平化设计，响应速快，推荐使用。修改配置参考: http://yangjian.me/workspace/introducing-pacman-theme/
+写文章 使用Markdown语法编辑文章。使用hexo new命令生成文章或者直接在_posts目录下直接创建文件，打开后先编辑文章头部信息，如下所示是本文的头部信息，以&amp;mdash;结尾。
+1 2 3 4 5 6 7 8 9 10 11  title: 使用Hexo搭建个人静态博客 #文章页面上的显示名称，可以任意修改，不会出现在URL中 layout: post date: 2014-11-10 10:07:43 #文章生成时间，一般不改，当然也可以任意修改 updated: 2014-11-12 13:24 comments: true categories: - Blog tags: - hexo - blog ---   文章摘要 在需要显示摘要的地方添加如下代码即可：
+1 2 3 4 5 6  " /><meta name="keywords" content="Hugo, theme, even, gentoo, arch, linux" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.83.1 with theme even" />
+
+
+<link rel="canonical" href="http://wonux.gitee.io/post/git-hexo/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<link href="/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Hexo &#43; Github 搭建静态个人博客" />
+<meta property="og:description" content="Hexo简介
+Github上托管博客是使用jekyll搭建的，官方的Github Pages同样推荐使用它。我之前体验了一下jekyll，没有达到我想要的效果。于是寻找替代方案，搜索同类博客程序，我认识了hexo，hexo出自台湾大学生tommy351之手,是由Node.js驱动的一款快速、简单且功能强大的博客框架。Node.js是一个可以快速构建网络服务及应用的平台 。该平台的构建是基于Chrome&rsquo;s JavaScript runtime，也就是说，实际上它是对Google V8引擎（应用于Google Chrome浏览器)进行了封装。V8引擎执行Javascript的速度非常快，性能非常好。Node对一些特殊用例进行了优化，提供了替代的API，使得V8在非浏览器环境下运行得更好。它和jekyll相比，更快，更轻量。
+Hexo安装
+安装git
+
+Linux
+大多数Linux发行版已经默认安装了git,如果没有直接使用包管理工具安装.
+Windows:
+Git-Downloads
+
+安装node.js
+
+Gentoo package: net-libs/nodejs
+Arch: nodejs
+Windows: node.js
+
+安装hexo
+
+
+1
+
+
+npm install hexo -g
+
+
+配置Hexo
+
+初始化博客根目录
+
+
+
+1
+
+
+hexo init blog
+
+
+
+安装依赖包
+
+
+
+1
+
+
+npm install
+
+
+安装之后，项目目录下出现如下文件结构：
+
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+
+.
+├── _config.yml     全局配置文件
+├── package.json
+├── scaffolds
+├── scripts
+├── source           文章存放位置
+| ├── _drafts        草稿
+| └── _posts         文章
+└── themes
+
+
+插件和主题
+
+plugins: 插件
+
+添加插件的基本操作是：
+
+
+1
+2
+
+
+npm install &lt;plugin-name&gt; --save
+npm update
+
+
+然后修改blog根目录下的_config.yml，添加：
+
+
+1
+2
+
+
+plugins:
+- plugin-name
+
+
+
+themes:
+
+安装主题：
+
+
+1
+
+
+git clone &lt;repository&gt; themes/&lt;theme-name&gt;
+
+
+
+无论是插件还是主题在安装后都需要在根目录下_config.yml中修改plugins和theme的值以启用他们。
+
+本博客使用pacman主题，扁平化设计，响应速快，推荐使用。修改配置参考: http://yangjian.me/workspace/introducing-pacman-theme/
+写文章
+使用Markdown语法编辑文章。使用hexo new命令生成文章或者直接在_posts目录下直接创建文件，打开后先编辑文章头部信息，如下所示是本文的头部信息，以&mdash;结尾。
+
+
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+
+
+title: 使用Hexo搭建个人静态博客  #文章页面上的显示名称，可以任意修改，不会出现在URL中
+layout: post
+date: 2014-11-10 10:07:43  #文章生成时间，一般不改，当然也可以任意修改
+updated: 2014-11-12 13:24
+comments: true
+categories: 
+- Blog
+tags: 
+- hexo
+- blog
+---
+
+
+文章摘要
+在需要显示摘要的地方添加如下代码即可：
+
+
+1
+2
+3
+4
+5
+6
+
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://wonux.gitee.io/post/git-hexo/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2014-11-12T16:07:00&#43;00:00" />
+<meta property="article:modified_time" content="2015-02-10T17:19:00&#43;00:00" />
+
+<meta itemprop="name" content="Hexo &#43; Github 搭建静态个人博客">
+<meta itemprop="description" content="Hexo简介
+Github上托管博客是使用jekyll搭建的，官方的Github Pages同样推荐使用它。我之前体验了一下jekyll，没有达到我想要的效果。于是寻找替代方案，搜索同类博客程序，我认识了hexo，hexo出自台湾大学生tommy351之手,是由Node.js驱动的一款快速、简单且功能强大的博客框架。Node.js是一个可以快速构建网络服务及应用的平台 。该平台的构建是基于Chrome&rsquo;s JavaScript runtime，也就是说，实际上它是对Google V8引擎（应用于Google Chrome浏览器)进行了封装。V8引擎执行Javascript的速度非常快，性能非常好。Node对一些特殊用例进行了优化，提供了替代的API，使得V8在非浏览器环境下运行得更好。它和jekyll相比，更快，更轻量。
+Hexo安装
+安装git
+
+Linux
+大多数Linux发行版已经默认安装了git,如果没有直接使用包管理工具安装.
+Windows:
+Git-Downloads
+
+安装node.js
+
+Gentoo package: net-libs/nodejs
+Arch: nodejs
+Windows: node.js
+
+安装hexo
+
+
+1
+
+
+npm install hexo -g
+
+
+配置Hexo
+
+初始化博客根目录
+
+
+
+1
+
+
+hexo init blog
+
+
+
+安装依赖包
+
+
+
+1
+
+
+npm install
+
+
+安装之后，项目目录下出现如下文件结构：
+
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+
+.
+├── _config.yml     全局配置文件
+├── package.json
+├── scaffolds
+├── scripts
+├── source           文章存放位置
+| ├── _drafts        草稿
+| └── _posts         文章
+└── themes
+
+
+插件和主题
+
+plugins: 插件
+
+添加插件的基本操作是：
+
+
+1
+2
+
+
+npm install &lt;plugin-name&gt; --save
+npm update
+
+
+然后修改blog根目录下的_config.yml，添加：
+
+
+1
+2
+
+
+plugins:
+- plugin-name
+
+
+
+themes:
+
+安装主题：
+
+
+1
+
+
+git clone &lt;repository&gt; themes/&lt;theme-name&gt;
+
+
+
+无论是插件还是主题在安装后都需要在根目录下_config.yml中修改plugins和theme的值以启用他们。
+
+本博客使用pacman主题，扁平化设计，响应速快，推荐使用。修改配置参考: http://yangjian.me/workspace/introducing-pacman-theme/
+写文章
+使用Markdown语法编辑文章。使用hexo new命令生成文章或者直接在_posts目录下直接创建文件，打开后先编辑文章头部信息，如下所示是本文的头部信息，以&mdash;结尾。
+
+
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+
+
+title: 使用Hexo搭建个人静态博客  #文章页面上的显示名称，可以任意修改，不会出现在URL中
+layout: post
+date: 2014-11-10 10:07:43  #文章生成时间，一般不改，当然也可以任意修改
+updated: 2014-11-12 13:24
+comments: true
+categories: 
+- Blog
+tags: 
+- hexo
+- blog
+---
+
+
+文章摘要
+在需要显示摘要的地方添加如下代码即可：
+
+
+1
+2
+3
+4
+5
+6
+
+"><meta itemprop="datePublished" content="2014-11-12T16:07:00&#43;00:00" />
+<meta itemprop="dateModified" content="2015-02-10T17:19:00&#43;00:00" />
+<meta itemprop="wordCount" content="1617">
+<meta itemprop="keywords" content="apps,hexo,blog,git," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Hexo &#43; Github 搭建静态个人博客"/>
+<meta name="twitter:description" content="Hexo简介
+Github上托管博客是使用jekyll搭建的，官方的Github Pages同样推荐使用它。我之前体验了一下jekyll，没有达到我想要的效果。于是寻找替代方案，搜索同类博客程序，我认识了hexo，hexo出自台湾大学生tommy351之手,是由Node.js驱动的一款快速、简单且功能强大的博客框架。Node.js是一个可以快速构建网络服务及应用的平台 。该平台的构建是基于Chrome&rsquo;s JavaScript runtime，也就是说，实际上它是对Google V8引擎（应用于Google Chrome浏览器)进行了封装。V8引擎执行Javascript的速度非常快，性能非常好。Node对一些特殊用例进行了优化，提供了替代的API，使得V8在非浏览器环境下运行得更好。它和jekyll相比，更快，更轻量。
+Hexo安装
+安装git
+
+Linux
+大多数Linux发行版已经默认安装了git,如果没有直接使用包管理工具安装.
+Windows:
+Git-Downloads
+
+安装node.js
+
+Gentoo package: net-libs/nodejs
+Arch: nodejs
+Windows: node.js
+
+安装hexo
+
+
+1
+
+
+npm install hexo -g
+
+
+配置Hexo
+
+初始化博客根目录
+
+
+
+1
+
+
+hexo init blog
+
+
+
+安装依赖包
+
+
+
+1
+
+
+npm install
+
+
+安装之后，项目目录下出现如下文件结构：
+
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+
+.
+├── _config.yml     全局配置文件
+├── package.json
+├── scaffolds
+├── scripts
+├── source           文章存放位置
+| ├── _drafts        草稿
+| └── _posts         文章
+└── themes
+
+
+插件和主题
+
+plugins: 插件
+
+添加插件的基本操作是：
+
+
+1
+2
+
+
+npm install &lt;plugin-name&gt; --save
+npm update
+
+
+然后修改blog根目录下的_config.yml，添加：
+
+
+1
+2
+
+
+plugins:
+- plugin-name
+
+
+
+themes:
+
+安装主题：
+
+
+1
+
+
+git clone &lt;repository&gt; themes/&lt;theme-name&gt;
+
+
+
+无论是插件还是主题在安装后都需要在根目录下_config.yml中修改plugins和theme的值以启用他们。
+
+本博客使用pacman主题，扁平化设计，响应速快，推荐使用。修改配置参考: http://yangjian.me/workspace/introducing-pacman-theme/
+写文章
+使用Markdown语法编辑文章。使用hexo new命令生成文章或者直接在_posts目录下直接创建文件，打开后先编辑文章头部信息，如下所示是本文的头部信息，以&mdash;结尾。
+
+
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+
+
+title: 使用Hexo搭建个人静态博客  #文章页面上的显示名称，可以任意修改，不会出现在URL中
+layout: post
+date: 2014-11-10 10:07:43  #文章生成时间，一般不改，当然也可以任意修改
+updated: 2014-11-12 13:24
+comments: true
+categories: 
+- Blog
+tags: 
+- hexo
+- blog
+---
+
+
+文章摘要
+在需要显示摘要的地方添加如下代码即可：
+
+
+1
+2
+3
+4
+5
+6
+
+"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Wonux Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Wonux Blog</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Hexo &#43; Github 搭建静态个人博客</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2014-11-12 </span>
+        <div class="post-category">
+            <a href="/categories/git/"> Git </a>
+            </div>
+          <span class="more-meta"> 约 1617 字 </span>
+          <span class="more-meta"> 预计阅读 4 分钟 </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#hexo简介">Hexo简介</a></li>
+        <li><a href="#hexo安装">Hexo安装</a>
+          <ul>
+            <li><a href="#安装git">安装git</a></li>
+            <li><a href="#安装nodejs">安装node.js</a></li>
+            <li><a href="#安装hexo">安装hexo</a></li>
+          </ul>
+        </li>
+        <li><a href="#配置hexo">配置Hexo</a>
+          <ul>
+            <li><a href="#插件和主题">插件和主题</a></li>
+            <li><a href="#写文章">写文章</a></li>
+            <li><a href="#发布博客">发布博客</a></li>
+          </ul>
+        </li>
+        <li><a href="#hexo使用">Hexo使用</a>
+          <ul>
+            <li><a href="#init-初始化博客">init 初始化博客</a></li>
+            <li><a href="#new-创建新文章">new 创建新文章</a></li>
+            <li><a href="#generate-生成静态网页文件">generate 生成静态网页文件</a></li>
+            <li><a href="#publish-发布草稿">publish 发布草稿</a></li>
+            <li><a href="#server-启动本地服务">server 启动本地服务</a></li>
+            <li><a href="#deploy-发布博客">deploy 发布博客</a></li>
+            <li><a href="#clean-清除缓存">clean 清除缓存</a></li>
+            <li><a href="#list-显示博客结构">list 显示博客结构</a></li>
+            <li><a href="#常用命令">常用命令</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h2 id="hexo简介">Hexo简介</h2>
+<p>Github上托管博客是使用jekyll搭建的，官方的Github Pages同样推荐使用它。我之前体验了一下jekyll，没有达到我想要的效果。于是寻找替代方案，搜索同类博客程序，我认识了hexo，hexo出自台湾大学生tommy351之手,是由Node.js驱动的一款快速、简单且功能强大的博客框架。Node.js是一个可以快速构建网络服务及应用的平台 。该平台的构建是基于Chrome&rsquo;s JavaScript runtime，也就是说，实际上它是对Google V8引擎（应用于Google Chrome浏览器)进行了封装。V8引擎执行Javascript的速度非常快，性能非常好。Node对一些特殊用例进行了优化，提供了替代的API，使得V8在非浏览器环境下运行得更好。它和jekyll相比，更快，更轻量。</p>
+<h2 id="hexo安装">Hexo安装</h2>
+<h3 id="安装git">安装git</h3>
+<ul>
+<li>Linux
+大多数Linux发行版已经默认安装了git,如果没有直接使用包管理工具安装.</li>
+<li>Windows:
+<a href="http://git-scm.com/download/">Git-Downloads</a></li>
+</ul>
+<h3 id="安装nodejs">安装node.js</h3>
+<ul>
+<li>Gentoo package: <code>net-libs/nodejs</code></li>
+<li>Arch: <code>nodejs</code></li>
+<li>Windows: <a href="http://nodejs.org/download/">node.js</a></li>
+</ul>
+<h3 id="安装hexo">安装hexo</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">npm install hexo -g
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="配置hexo">配置Hexo</h2>
+<ul>
+<li>初始化博客根目录</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">hexo init blog
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>安装依赖包</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">npm install
+</code></pre></td></tr></table>
+</div>
+</div><p>安装之后，项目目录下出现如下文件结构：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">.
+├── _config.yml     全局配置文件
+├── package.json
+├── scaffolds
+├── scripts
+├── source           文章存放位置
+| ├── _drafts        草稿
+| └── _posts         文章
+└── themes
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="插件和主题">插件和主题</h3>
+<ul>
+<li>plugins: 插件</li>
+</ul>
+<p>添加插件的基本操作是：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">npm install &lt;plugin-name&gt; --save
+npm update
+</code></pre></td></tr></table>
+</div>
+</div><p>然后修改blog根目录下的_config.yml，添加：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">plugins:
+- plugin-name
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>themes:</li>
+</ul>
+<p>安装主题：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">git clone &lt;repository&gt; themes/&lt;theme-name&gt;
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>无论是插件还是主题在安装后都需要在根目录下_config.yml中修改plugins和theme的值以启用他们。</p>
+</blockquote>
+<p>本博客使用<a href="https://github.com/A-limon/pacman">pacman</a>主题，扁平化设计，响应速快，推荐使用。修改配置参考: <a href="http://yangjian.me/workspace/introducing-pacman-theme/">http://yangjian.me/workspace/introducing-pacman-theme/</a></p>
+<h3 id="写文章">写文章</h3>
+<p>使用Markdown语法编辑文章。使用hexo new命令生成文章或者直接在_posts目录下直接创建文件，打开后先编辑文章头部信息，如下所示是本文的头部信息，以&mdash;结尾。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">title: 使用Hexo搭建个人静态博客  #文章页面上的显示名称，可以任意修改，不会出现在URL中
+layout: post
+date: 2014-11-10 10:07:43  #文章生成时间，一般不改，当然也可以任意修改
+updated: 2014-11-12 13:24
+comments: true
+categories: 
+- Blog
+tags: 
+- hexo
+- blog
+---
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="文章摘要">文章摘要</h4>
+<p>在需要显示摘要的地方添加如下代码即可：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+e></td></tr></table>
+</div>
+</div><h4 id="文章中插入图片">文章中插入图片</h4>
+<p>使用markdown写文章，插入图片的格式为<code>![图片名称](链接地址)</code>，这里要说的是链接地址怎么写。对于hexo，使用本地路径：在/source目录下新建一个img文件夹，将图片放入该文件夹下，插入图片时链接即为/img/图片名称。</p>
+<h3 id="发布博客">发布博客</h3>
+<p>这里的发布也是十分简单的，首先在github上创建名为yourname.github.io的repo，接着修改_config.yml中的deploy字段，最后执行hexo d(前提是你已经在github上添加了你本机的ssh key)，OK，现在通过yourname.github.io已经可以访问你的博客了。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">deploy:
+type: github
+repo: git@github.com:yourname/yourname.github.io.git
+branch: master
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>如果是博客主页以github项目的方式创建，分支选择gh-pages。</p>
+</blockquote>
+<p>或 多个平台同时发布</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">deploy:
+type: git
+repo:
+  gitcafe: https://gitcafe.com/yourname/yourname.git,gh-pages
+  github: https://github.com/yourname/yourname.github.io.git,master
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="hexo使用">Hexo使用</h2>
+<h3 id="init-初始化博客">init 初始化博客</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">hexo init [folder]
+</code></pre></td></tr></table>
+</div>
+</div><p>如果目录不存在，将设置初始化当前目录</p>
+<h3 id="new-创建新文章">new 创建新文章</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">hexo new [layout] &lt;title&gt;
+</code></pre></td></tr></table>
+</div>
+</div><p>默认layout是post</p>
+<h3 id="generate-生成静态网页文件">generate 生成静态网页文件</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">hexo generate
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="publish-发布草稿">publish 发布草稿</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">hexo publish [layout] &lt;filename&gt;
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="server-启动本地服务">server 启动本地服务</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">hexo server
+</code></pre></td></tr></table>
+</div>
+</div><p>搭建本地server，进行文章预览调试。
+浏览器输入http://localhost:4000 就可以看到效果。</p>
+<h3 id="deploy-发布博客">deploy 发布博客</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">hexo deploy
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="clean-清除缓存">clean 清除缓存</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">hexo clean
+</code></pre></td></tr></table>
+</div>
+</div><p>清除缓存文件：Cleans the cache file (db.json) and generated files (public).</p>
+<h3 id="list-显示博客结构">list 显示博客结构</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">hexo list route
+</code></pre></td></tr></table>
+</div>
+</div><p>列出生成的所有博客文件路径</p>
+<h3 id="常用命令">常用命令</h3>
+<p>Hexo现在支持更加简单的命令格式了，比如：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">hexo n == hexo new
+hexo g == hexo generate
+hexo p == hexo publish
+hexo s == hexo server
+hexo d == hexo deploy
+发布博客：
+hexo g -d
+或
+hexo d -g
+</code></pre></td></tr></table>
+</div>
+</div><p>参考：</p>
+<ul>
+<li><a href="http://hexo.io/">hexo.io</a></li>
+<li><a href="https://github.com/hexojs/hexo">hexo on github</a></li>
+<li><a href="http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html">搭建一个免费的，无限流量的Blog&mdash;-github Pages和Jekyll入门</a></li>
+<li><a href="http://yangjian.me/workspace/introducing-pacman-theme/">pacman主题介绍</a></li>
+<li><a href="http://ibruce.info/2013/11/22/hexo-your-blog/">hexo你的博客</a></li>
+</ul>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">孤逐王</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2015-02-10
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/apps/">apps</a>
+          <a href="/tags/hexo/">hexo</a>
+          <a href="/tags/blog/">blog</a>
+          <a href="/tags/git/">git</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/git-git-submodule/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Git子模块引用外部项目</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/apps-mplayer/">
+            <span class="next-text nav-default">Mplayer使用及快捷键</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:wonux@qq.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/wonux" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.douban.com/people/wonux" class="iconfont icon-douban" title="douban"></a>
+  <a href="http://wonux.gitee.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2014 - 
+    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>wonux</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>RFKill软开关蓝牙及无线功能 -- 解决无线网络连接失败问题 - Wonux - Bolg</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="孤逐王" /><meta name="description" content="介绍 ​​​​​​​多​​​​​​​计​​​​​​​算​​​​​​​机​​​​​​​系​​​​​​​统​​​​​​​包​​​​​​​含​​​​" /><meta name="keywords" content="Hugo, theme, even, gentoo, arch, linux" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.83.1 with theme even" />
+
+
+<link rel="canonical" href="http://wonux.gitee.io/post/apps-rfkill/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<link href="/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="RFKill软开关蓝牙及无线功能 -- 解决无线网络连接失败问题" />
+<meta property="og:description" content="介绍 ​​​​​​​多​​​​​​​计​​​​​​​算​​​​​​​机​​​​​​​系​​​​​​​统​​​​​​​包​​​​​​​含​​​​" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://wonux.gitee.io/post/apps-rfkill/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2014-10-22T15:07:00&#43;00:00" />
+<meta property="article:modified_time" content="2016-02-02T17:19:00&#43;00:00" />
+
+<meta itemprop="name" content="RFKill软开关蓝牙及无线功能 -- 解决无线网络连接失败问题">
+<meta itemprop="description" content="介绍 ​​​​​​​多​​​​​​​计​​​​​​​算​​​​​​​机​​​​​​​系​​​​​​​统​​​​​​​包​​​​​​​含​​​​"><meta itemprop="datePublished" content="2014-10-22T15:07:00&#43;00:00" />
+<meta itemprop="dateModified" content="2016-02-02T17:19:00&#43;00:00" />
+<meta itemprop="wordCount" content="3949">
+<meta itemprop="keywords" content="apps,network,wireless," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="RFKill软开关蓝牙及无线功能 -- 解决无线网络连接失败问题"/>
+<meta name="twitter:description" content="介绍 ​​​​​​​多​​​​​​​计​​​​​​​算​​​​​​​机​​​​​​​系​​​​​​​统​​​​​​​包​​​​​​​含​​​​"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Wonux Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Wonux Blog</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">RFKill软开关蓝牙及无线功能 -- 解决无线网络连接失败问题</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2014-10-22 </span>
+        <div class="post-category">
+            <a href="/categories/applications/"> Applications </a>
+            </div>
+          <span class="more-meta"> 约 3949 字 </span>
+          <span class="more-meta"> 预计阅读 8 分钟 </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#介绍">介绍</a></li>
+        <li><a href="#使用">使用</a>
+          <ul>
+            <li><a href="#获得设备列表">获​​​​​​​得​​​​​​​设​​​​​​​备​​​​​​​列​​​​​​​表</a></li>
+            <li><a href="#停用设备">停用设备</a></li>
+            <li><a href="#重新使用设备">重​​​​​​​新​​​​​​​使​​​​​​​用​​​​​​​设​​​​​​​备</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h2 id="介绍">介绍</h2>
+<p>​​​​​​​多​​​​​​​计​​​​​​​算​​​​​​​机​​​​​​​系​​​​​​​统​​​​​​​包​​​​​​​含​​​​​​​无​​​​​​​线​​​​​​​电​​​​​​​传​​​​​​​输​​​​​​​，其​​​​​​​中​​​​​​​包​​​​​​​括​​​​​​​ Wi-Fi、​​​​​​​蓝​​​​​​​牙​​​​​​​和​​​​​​​ 3G 设​​​​​​​备​​​​​​​。​​​​​​​这​​​​​​​些​​​​​​​设​​​​​​​备​​​​​​​消​​​​​​​耗​​​​​​​电​​​​​​​源​​​​​​​，在​​​​​​​不​​​​​​​使​​​​​​​用​​​​​​​这​​​​​​​些​​​​​​​设​​​​​​​备​​​​​​​时​​​​​​​是​​​​​​​一​​​​​​​种​​​​​​​浪​​​​​​​费​​​​​​​。​​​​​​​
+RFKill 是​​​​​​​ Linux 内​​​​​​​核​​​​​​​中​​​​​​​的​​​​​​​一​​​​​​​个​​​​​​​子​​​​​​​系​​​​​​​统​​​​​​​，它​​​​​​​可​​​​​​​提​​​​​​​供​​​​​​​一​​​​​​​个​​​​​​​界​​​​​​​面​​​​​​​，在​​​​​​​此​​​​​​​界​​​​​​​面​​​​​​​中​​​​​​​可​​​​​​​查​​​​​​​询​​​​​​​、​​​​​​​激​​​​​​​活​​​​​​​并​​​​​​​取​​​​​​​消​​​​​​​激​​​​​​​活​​​​​​​计​​​​​​​算​​​​​​​机​​​​​​​系​​​​​​​统​​​​​​​中​​​​​​​的​​​​​​​无​​​​​​​线​​​​​​​电​​​​​​​传​​​​​​​输​​​​​​​。​​​​​​​当​​​​​​​取​​​​​​​消​​​​​​​激​​​​​​​活​​​​​​​传​​​​​​​输​​​​​​​时​​​​​​​，可​​​​​​​使​​​​​​​其​​​​​​​处​​​​​​​于​​​​​​​可​​​​​​​被​​​​​​​软​​​​​​​件​​​​​​​重​​​​​​​新​​​​​​​激​​​​​​​活​​​​​​​的​​​​​​​状​​​​​​​态​​​​​​​（软​​​​​​​锁​​​​​​​定​​​​​​​）或​​​​​​​者​​​​​​​将​​​​​​​其​​​​​​​放​​​​​​​在​​​​​​​软​​​​​​​件​​​​​​​无​​​​​​​法​​​​​​​重​​​​​​​新​​​​​​​激​​​​​​​活​​​​​​​的​​​​​​​位​​​​​​​置​​​​​​​（硬​​​​​​​锁​​​​​​​定​​​​​​​）。​​​​​​​
+RFKill 核​​​​​​​为​​​​​​​子​​​​​​​系​​​​​​​统​​​​​​​提​​​​​​​供​​​​​​​应​​​​​​​用​​​​​​​程​​​​​​​序​​​​​​​编​​​​​​​程​​​​​​​界​​​​​​​面​​​​​​​（API）。​​​​​​​内​​​​​​​核​​​​​​​驱​​​​​​​动​​​​​​​程​​​​​​​序​​​​​​​被​​​​​​​设​​​​​​​计​​​​​​​为​​​​​​​支​​​​​​​持​​​​​​​ RFKill 使​​​​​​​用​​​​​​​这​​​​​​​个​​​​​​​ API 注​​​​​​​册​​​​​​​内​​​​​​​核​​​​​​​，并​​​​​​​包​​​​​​​含​​​​​​​启​​​​​​​用​​​​​​​和​​​​​​​禁​​​​​​​用​​​​​​​这​​​​​​​个​​​​​​​设​​​​​​​备​​​​​​​的​​​​​​​方​​​​​​​法​​​​​​​。​​​​​​​另​​​​​​​外​​​​​​​，RFKill 核​​​​​​​提​​​​​​​供​​​​​​​用​​​​​​​户​​​​​​​程​​​​​​​序​​​​​​​可​​​​​​​解​​​​​​​读​​​​​​​的​​​​​​​通​​​​​​​知​​​​​​​以​​​​​​​及​​​​​​​用​​​​​​​户​​​​​​​程​​​​​​​序​​​​​​​查​​​​​​​询​​​​​​​传​​​​​​​输​​​​​​​状​​​​​​​态​​​​​​​的​​​​​​​方​​​​​​​法​​​​​​​。​​​​​​​
+RFKill 界​​​​​​​面​​​​​​​位​​​​​​​于​​​​​​​ /dev/rfkill，其​​​​​​​中​​​​​​​包​​​​​​​含​​​​​​​系​​​​​​​统​​​​​​​中​​​​​​​所​​​​​​​有​​​​​​​无​​​​​​​线​​​​​​​电​​​​​​​传​​​​​​​输​​​​​​​的​​​​​​​当​​​​​​​前​​​​​​​状​​​​​​​态​​​​​​​。​​​​​​​每​​​​​​​个​​​​​​​设​​​​​​​备​​​​​​​都​​​​​​​在​​​​​​​ sysfs 中​​​​​​​注​​​​​​​册​​​​​​​当​​​​​​​前​​​​​​​ RFKill 状​​​​​​​态​​​​​​​。​​​​​​​另​​​​​​​外​​​​​​​，在​​​​​​​启​​​​​​​用​​​​​​​了​​​​​​​ RFKill 的​​​​​​​设​​​​​​​备​​​​​​​中​​​​​​​每​​​​​​​当​​​​​​​状​​​​​​​态​​​​​​​更​​​​​​​改​​​​​​​时​​​​​​​，RFKill 会​​​​​​​发​​​​​​​出​​​​​​​ uevents。​​​​​​​
+Rfkill 是​​​​​​​一​​​​​​​个​​​​​​​命​​​​​​​令​​​​​​​行​​​​​​​工​​​​​​​具​​​​​​​，您​​​​​​​可​​​​​​​使​​​​​​​用​​​​​​​它​​​​​​​查​​​​​​​询​​​​​​​和​​​​​​​更​​​​​​​改​​​​​​​系​​​​​​​统​​​​​​​中​​​​​​​启​​​​​​​用​​​​​​​了​​​​​​​ RFKill 的​​​​​​​设​​​​​​​备​​​​​​​。​​​​​​​要​​​​​​​获​​​​​​​得​​​​​​​这​​​​​​​个​​​​​​​工​​​​​​​具​​​​​​​，请​​​​​​​安​​​​​​​装​​​​​​​ <code>rfkill</code> 软​​​​​​​件​​​​​​​包​​​​​​​。​​​​​​​</p>
+<h2 id="使用">使用</h2>
+<h3 id="获得设备列表">获​​​​​​​得​​​​​​​设​​​​​​​备​​​​​​​列​​​​​​​表</h3>
+<p>使​​​​​​​用​​​​​​​命​​​​​​​令​​​​​​​ rfkill list 获​​​​​​​得​​​​​​​设​​​​​​​备​​​​​​​列​​​​​​​表​​​​​​​，每​​​​​​​个​​​​​​​都​​​​​​​包​​​​​​​含​​​​​​​与​​​​​​​之​​​​​​​关​​​​​​​联​​​​​​​的​​​​​​​索​​​​​​​引​​​​​​​号​​​​​​​，从​​​​​​​ 0 开​​​​​​​始​​​​​​​。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">rfkill list
+0: phy0: Wireless LAN
+	Soft blocked: yes
+	Hard blocked: yes
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="停用设备">停用设备</h3>
+<p>​​​​​​​​​​​​​​可​​​​​​​以​​​​​​​使​​​​​​​用​​​​​​​​​​​​​​​​​索​​​​​​​引​​​​​​​号​​​​​​​让​​​​​​​ rfkill 停​​​​​​​止​​​​​​​使​​​​​​​用​​​​​​​或​​​​​​​者​​​​​​​使​​​​​​​用​​​​​​​某​​​​​​​个​​​​​​​设​​​​​​​备​​​​​​​。例​​​​​​​如​​​​​​​，停​​​​​​​用​​​​​​​系​​​​​​​统​​​​​​​中​​​​​​​第​​​​​​​一​​​​​​​个​​​​​​​启​​​​​​​用​​​​​​​ RFKill 的​​​​​​​设​​​​​​​备​​​​​​​​​​​​​​：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">rfkill block 0
+</code></pre></td></tr></table>
+</div>
+</div><p>​​​​​​还​​​​​​​可​​​​​​​以​​​​​​​使​​​​​​​用​​​​​​​ rfkill 阻​​​​​​​断​​​​​​​某​​​​​​​一​​​​​​​类​​​​​​​设​​​​​​​备​​​​​​​​​​​​​​。​​​​​​​例​​​​​​​如，停​​​​​​​用​​​​​​​系​​​​​​​统​​​​​​​中​​​​​​​的​​​​​​​所​​​​​​​有​​​​​​​ Wi-Fi 设​​​​​​​备​​​​​​​：​​</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">rfkill block wifi
+</code></pre></td></tr></table>
+</div>
+</div><p>或​​​​​​​者​​​​​​​停​​​​​​​止​​​​​​​使​​​​​​​用所​​​​​​​有​​​​​​​启​​​​​​​用​​​​​​​了​​​​​​​ RFKill 的​​​​​​​设​​​​​​​备​​​​​​​：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">rfkill block all
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="重新使用设备">重​​​​​​​新​​​​​​​使​​​​​​​用​​​​​​​设​​​​​​​备</h3>
+<p>要​​​​​​​重​​​​​​​新​​​​​​​使​​​​​​​用​​​​​​​设​​​​​​​备​​​​​​​，请​​​​​​​运​​​​​​​行​​​​​​​ rfkill unblock，而​​​​​​​不​​​​​​​是​​​​​​​ rfkill block。​​​​​​​</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">rfkill unblock wifi
+rfkill all
+</code></pre></td></tr></table>
+</div>
+</div><p>要​​​​​​​获​​​​​​​得​​​​​​​ rfkill 可​​​​​​​停​​​​​​​用​​​​​​​的​​​​​​​完​​​​​​​整​​​​​​​设​​​​​​​备​​​​​​​类​​​​​​​别​​​​​​​列​​​​​​​表​​​​​​​，请​​​​​​​运​​​​​​​行​​​​​​​ rfkill help。​​​​​​​</p>
+<p>参考： <a href="https://access.redhat.com/documentation/zh-CN/Red_Hat_Enterprise_Linux/6/html/Power_Management_Guide/RFKill.html">https://access.redhat.com/documentation/zh-CN/Red_Hat_Enterprise_Linux/6/html/Power_Management_Guide/RFKill.html</a></p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">孤逐王</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2016-02-02
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/apps/">apps</a>
+          <a href="/tags/network/">network</a>
+          <a href="/tags/wireless/">wireless</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/gentoo-xorg-failed/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Gentoo Xorg:Failed to load module &#34;……&#34; 问题</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/arch-wireless/">
+            <span class="next-text nav-default">Arch无线网络网络管理</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:wonux@qq.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/wonux" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.douban.com/people/wonux" class="iconfont icon-douban" title="douban"></a>
+  <a href="http://wonux.gitee.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2014 - 
+    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>wonux</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

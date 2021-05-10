@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>文件系统配置启动挂载：fstab文件详解 - Wonux - Bolg</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="孤逐王" /><meta name="description" content="fstab文件介绍 fstab文件包含了你的电脑上的存储设备及其文件系统的信息。它是决定一个硬盘（分区）被怎样使用或者说整合到整个系统中的文件" /><meta name="keywords" content="Hugo, theme, even, gentoo, arch, linux" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.83.1 with theme even" />
+
+
+<link rel="canonical" href="http://wonux.gitee.io/post/apps-fstab/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<link href="/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="文件系统配置启动挂载：fstab文件详解" />
+<meta property="og:description" content="fstab文件介绍 fstab文件包含了你的电脑上的存储设备及其文件系统的信息。它是决定一个硬盘（分区）被怎样使用或者说整合到整个系统中的文件" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://wonux.gitee.io/post/apps-fstab/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2014-11-25T15:08:00&#43;00:00" />
+<meta property="article:modified_time" content="2015-02-10T11:13:00&#43;00:00" />
+
+<meta itemprop="name" content="文件系统配置启动挂载：fstab文件详解">
+<meta itemprop="description" content="fstab文件介绍 fstab文件包含了你的电脑上的存储设备及其文件系统的信息。它是决定一个硬盘（分区）被怎样使用或者说整合到整个系统中的文件"><meta itemprop="datePublished" content="2014-11-25T15:08:00&#43;00:00" />
+<meta itemprop="dateModified" content="2015-02-10T11:13:00&#43;00:00" />
+<meta itemprop="wordCount" content="1762">
+<meta itemprop="keywords" content="apps,fstab,config," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="文件系统配置启动挂载：fstab文件详解"/>
+<meta name="twitter:description" content="fstab文件介绍 fstab文件包含了你的电脑上的存储设备及其文件系统的信息。它是决定一个硬盘（分区）被怎样使用或者说整合到整个系统中的文件"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Wonux Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Wonux Blog</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">文件系统配置启动挂载：fstab文件详解</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2014-11-25 </span>
+        <div class="post-category">
+            <a href="/categories/applications/"> Applications </a>
+            </div>
+          <span class="more-meta"> 约 1762 字 </span>
+          <span class="more-meta"> 预计阅读 4 分钟 </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#fstab文件介绍">fstab文件介绍</a></li>
+            <li><a href="#系统挂载的一些限制">系统挂载的一些限制</a></li>
+            <li><a href="#文件各字段解释">文件各字段解释</a></li>
+            <li><a href="#opts常用参数"><opts>常用参数：</a></li>
+            <li><a href="#重启系统">重启系统</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h3 id="fstab文件介绍">fstab文件介绍</h3>
+<p>fstab文件包含了你的电脑上的存储设备及其文件系统的信息。它是决定一个硬盘（分区）被怎样使用或者说整合到整个系统中的文件。具体来说：用fstab可以自动挂载各种文件系统格式的硬盘、分区、可移动设备和远程设备等。对于Windows与Linux双操作系统用户，用fstab挂载FAT格式和NTFS格式的分区，可以在Linux中共享windows系统下的资源。</p>
+<p>这个文件的全路径是<code>/etc/fstab</code>。它只是一个文本文件，你能够用你喜欢的编辑器打开它，但是必须是root用户才能编辑它。同时fsck、mount、umount的等命令都利用该程序。</p>
+<p><code>/etc/fstab</code> 是启动时的配置文件，不过，实际 filesystem 的挂载是记录到 <code>/etc/mtab</code> 与 <code>/proc/mounts</code> 这两个文件当中的。每次我们在更动 filesystem 的挂载时，也会同时更动这两个文件喔！</p>
+<h3 id="系统挂载的一些限制">系统挂载的一些限制</h3>
+<blockquote>
+<ul>
+<li>根目录 / 是必须挂载的﹐而且一定要先于其它 mount point 被挂载进来。</li>
+</ul>
+</blockquote>
+<ul>
+<li>其它 mount point 必须为已创建的目录﹐可任意指定﹐但一定要遵守必须的系统目录架构原则</li>
+<li>所有 mount point 在同一时间之内﹐只能挂载一次。</li>
+<li>所有 partition 在同一时间之内﹐只能挂载一次。</li>
+<li>如若进行卸除﹐您必须先将工作目录移到 mount point(及其子目录) 之外。</li>
+</ul>
+<h3 id="文件各字段解释">文件各字段解释</h3>
+<p>示例：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback"># &lt;fs&gt;            &lt;mountpoint&gt;    &lt;type&gt;        &lt;opts&gt;        &lt;dump/pass&gt;
+
+# NOTE: If your BOOT partition is ReiserFS, add the notail option to opts.
+
+/dev/sda10        /boot            ext4        noauto,noatime    1 2
+/dev/sda6         /                ext4        noatime           0 1
+/dev/sda9         none             swap        sw                0 0
+/dev/cdrom        /mnt/cdrom       auto        noauto,ro         0 0
+</code></pre></td></tr></table>
+</div>
+</div><p>其实 /etc/fstab (filesystem table) 就是将我们利用 mount 命令进行挂载时， 将所有的选项与参数写入到这个文件中就是了。除此之外， /etc/fstab 还加入了 dump 这个备份用命令的支持！ 与启动时是否进行文件系统检验 fsck 等命令有关。</p>
+<blockquote>
+<ul>
+<li><file systems> 挂载设备 : 不是我们通常理解的文件系统，而是指设备（硬盘及其分区，DVD光驱等）。它告知我们设备（分区）的名字，这是你在命令行中挂载（mount）、卸载（umount）设备时要用到的。</li>
+</ul>
+</blockquote>
+<ul>
+<li><mountpoint> 挂载点：告诉我们设备挂载到哪里。</li>
+<li><type> 文件系统类型：Linux支持许多文件系统。 要得到一个完整的支持名单查找mount man-page。典型 的名字包括这些：ext2, ext3, reiserfs, xfs, jfs,iso9660, vfat, ntfs, swap和auto, &lsquo;auto&rsquo; 不是一个文件系统，而是让mount命令自动判断文件类型，特别对于可移动设备，软盘，DVD驱动器，这样做是很有必要的，因为可能每次挂载的文件类型不一致。</li>
+<li><opts> 文件系统参数：这部分是最有用的设置！！！ 它能使你所挂载的设备在开机时自动加载、使中文显示不出现乱码、限制对挂载分区读写权限。它是与mount命令的用法相关的，要想得到一个完整的列表，参考mount manpage.</li>
+<li><dump> 备份命令：dump utility用来决定是否做备份的.  dump会检查entry并用数字来决定是否对这个文件系统进行备份。允许的数字是0和1。如果是0，dump就会忽略这个文件系统，如果是1，dump就会作一个备份。大部分的用户是没有安装dump的，所以对他们而言<dump>这个entry应该写为0。</li>
+<li><pass> 是否以fsck检验扇区：启动的过程中，系统默认会以fsck检验我们的 filesystem 是否完整 (clean)。 不过，某些 filesystem 是不需要检验的，例如内存置换空间 (swap) ，或者是特殊文件系统例如 /proc 与 /sys 等等。fsck会检查这个头目下的数字来决定检查文件系统的顺序，允许的数字是0, 1, 和2。0 是不要检验， 1 表示最早检验(一般只有根目录会配置为 1)， 2 也是要检验，不过1会比较早被检验啦！一般来说,根目录配置为1,其他的要检验的filesystem都配置为 2 就好了。</li>
+</ul>
+<h3 id="opts常用参数"><opts>常用参数：</h3>
+<ul>
+<li><code>noatime</code> 关闭atime特性，提高性能，这是一个很老的特性，放心关闭，还能减少loadcycle</li>
+<li><code>defaults</code> 使用默认设置。等于rw,suid,dev,exec,auto,nouser,async，具体含义看下面的解释。</li>
+<li>自动与手动挂载:
+<code>auto</code> 在启动或在终端中输入mount -a时自动挂载
+<code>noauto</code> 设备（分区）只能手动挂载</li>
+<li>读写权限:
+<code>ro</code> 挂载为只读权限
+<code>rw</code> 挂载为读写权限</li>
+<li>可执行:
+<code>exec</code> 是一个默认设置项，它使在那个分区中的可执行的二进制文件能够执行
+<code>noexec</code> 二进制文件不允许执行。千万不要在你的root分区中用这个选项！！！</li>
+<li>I/O同步:
+<code>sync</code> 所有的I/O将以同步方式进行
+<code>async</code> 所有的I/O将以非同步方式进行</li>
+<li>户挂载权限:
+<code>user</code> 允许任何用户挂载设备。 Implies noexec,nosuid,nodev unless overridden.
+<code>nouser</code> 只允许root用户挂载。这是默认设置。</li>
+<li>临时文件执行权限：
+<code>suid</code> Permit the operation of suid, and sgid bits. They are mostly used to allow users on a computer system to execute binary executables with temporarily elevated privileges in order to perform a specific task.
+<code>nosuid</code> Blocks the operation of suid, and sgid bits.</li>
+</ul>
+<h3 id="重启系统">重启系统</h3>
+<p>重启系统，或在终端中输入<code>mount -a</code>就可以看到修改后的效果了。</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">孤逐王</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2015-02-10
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/apps/">apps</a>
+          <a href="/tags/fstab/">fstab</a>
+          <a href="/tags/config/">config</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/apps-chroot/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Linux系统维护 -- chroot</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/gentoo-locale/">
+            <span class="next-text nav-default">Gentoo本地化中文设置--Locale系统介绍</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:wonux@qq.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/wonux" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.douban.com/people/wonux" class="iconfont icon-douban" title="douban"></a>
+  <a href="http://wonux.gitee.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2014 - 
+    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>wonux</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

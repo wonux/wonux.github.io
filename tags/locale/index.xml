@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>locale on Wonux - Bolg</title>
+    <link>http://wonux.gitee.io/tags/locale/</link>
+    <description>Recent content in locale on Wonux - Bolg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 20 Nov 2014 16:21:00 +0000</lastBuildDate><atom:link href="http://wonux.gitee.io/tags/locale/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gentoo本地化中文设置--Locale系统介绍</title>
+      <link>http://wonux.gitee.io/post/gentoo-locale/</link>
+      <pubDate>Thu, 20 Nov 2014 16:21:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/gentoo-locale/</guid>
+      <description>locale是什么？ 一份Locale是一组信息的集合，大多数程序利用它来确定特定的国家和语言设置。这些locale以及它们包含的数据是系统库</description>
+    </item>
+    
+    <item>
+      <title>Gentoo本地化设置--时区、时钟、字体、中文环境</title>
+      <link>http://wonux.gitee.io/post/gentoo-localization/</link>
+      <pubDate>Mon, 30 Jun 2014 11:21:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/gentoo-localization/</guid>
+      <description>时区 你需要选择时区让系统知道你的地理位置，以保持正确的时间。在/usr/share/zoneinfo中查找你的时区。然后在/etc/conf</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>torrent on Wonux - Bolg</title>
+    <link>http://wonux.gitee.io/tags/torrent/</link>
+    <description>Recent content in torrent on Wonux - Bolg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 16 Dec 2015 16:40:00 +0000</lastBuildDate><atom:link href="http://wonux.gitee.io/tags/torrent/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux BT下载软件 -- Rtorrent 配置使用</title>
+      <link>http://wonux.gitee.io/post/apps-rtorrent/</link>
+      <pubDate>Wed, 16 Dec 2015 16:40:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/apps-rtorrent/</guid>
+      <description>rtorrent介绍 rtorrent是Linux下的bt下载软件,由于支持DHT网络,可以很好的于迅雷和Bitcomet的用户进行资源共享,</description>
+    </item>
+    
+  </channel>
+</rss>

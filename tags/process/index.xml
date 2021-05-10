@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>process on Wonux - Bolg</title>
+    <link>http://wonux.gitee.io/tags/process/</link>
+    <description>Recent content in process on Wonux - Bolg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2015 13:17:00 +0000</lastBuildDate><atom:link href="http://wonux.gitee.io/tags/process/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>UNIX基础 -- 进程和守护进程</title>
+      <link>http://wonux.gitee.io/post/freebsd-process/</link>
+      <pubDate>Sun, 26 Apr 2015 13:17:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/freebsd-process/</guid>
+      <description>进程和守护进程 Processes and Daemons 进程（Processes） FreeBSD 是一个多任务操作系统。 这就意味着好像一次可以运行一个以上的程序。 每个占用一定时间运行的程序就</description>
+    </item>
+    
+  </channel>
+</rss>

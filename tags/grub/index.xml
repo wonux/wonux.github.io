@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>grub on Wonux - Bolg</title>
+    <link>http://wonux.gitee.io/tags/grub/</link>
+    <description>Recent content in grub on Wonux - Bolg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 20 Nov 2014 15:21:00 +0000</lastBuildDate><atom:link href="http://wonux.gitee.io/tags/grub/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gentoo启动菜单设置：使用官方LiveDVD Grub主题</title>
+      <link>http://wonux.gitee.io/post/gentoo-grub-theme/</link>
+      <pubDate>Thu, 20 Nov 2014 15:21:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/gentoo-grub-theme/</guid>
+      <description>设置Gentoo Grub启动主题 拷贝官方LiveDVD grub主题： 下载官方DVD，找到 /boot/grub/themes/GenGrub目</description>
+    </item>
+    
+  </channel>
+</rss>

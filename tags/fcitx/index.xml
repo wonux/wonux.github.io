@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>fcitx on Wonux - Bolg</title>
+    <link>http://wonux.gitee.io/tags/fcitx/</link>
+    <description>Recent content in fcitx on Wonux - Bolg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 11 Oct 2014 13:04:00 +0000</lastBuildDate><atom:link href="http://wonux.gitee.io/tags/fcitx/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Arch安装fcitx</title>
+      <link>http://wonux.gitee.io/post/arch-fcitx/</link>
+      <pubDate>Sat, 11 Oct 2014 13:04:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/arch-fcitx/</guid>
+      <description>安装fcitx,安装gtk、qt模块。 1 2 3 4 5 [root@Arctux ~]# pacman -S fcitx-im :: There are 4 members in group fcitx-im: :: Repository community 1) fcitx 2) fcitx-gtk2 3) fcitx-gtk3 4) fcitx-qt4 Enter a selection (default=all): 安装fcitx配置工具 1 [root@ARCH ~]# pacman -S fcitx-configtool .</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,734 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Wonux - Bolg</title>
+    <link>http://wonux.gitee.io/</link>
+    <description>Recent content on Wonux - Bolg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 09 May 2021 00:58:23 +0800</lastBuildDate><atom:link href="http://wonux.gitee.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git Hugo Even</title>
+      <link>http://wonux.gitee.io/post/git-hugo-even/</link>
+      <pubDate>Sun, 09 May 2021 00:58:23 +0800</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/git-hugo-even/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Git Hugo</title>
+      <link>http://wonux.gitee.io/post/git-hugo/</link>
+      <pubDate>Sun, 09 May 2021 00:58:18 +0800</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/git-hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hello</title>
+      <link>http://wonux.gitee.io/post/hello/</link>
+      <pubDate>Sun, 09 May 2021 00:43:17 +0800</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/hello/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Git创建空白新分支</title>
+      <link>http://wonux.gitee.io/post/git-empty-branch/</link>
+      <pubDate>Thu, 24 Mar 2016 15:38:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/git-empty-branch/</guid>
+      <description>有时候需要在项目中创建一个空白的新分支，来开发测试与当前分支内容无关的内容。向分支提交一个初始的空commit，保证完全复位。 创建并切换新分</description>
+    </item>
+    
+    <item>
+      <title>Git同时提交到多个远程仓库</title>
+      <link>http://wonux.gitee.io/post/git-remote/</link>
+      <pubDate>Sun, 06 Mar 2016 11:38:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/git-remote/</guid>
+      <description>在已经习惯使用git同步写代码，github无疑是最的托管平台，但是国内由于“你懂的”原因，速度很慢，有时无法访问，于是想把自己的代码同步到</description>
+    </item>
+    
+    <item>
+      <title>Shell终端收听音乐--豆瓣FM命令行版</title>
+      <link>http://wonux.gitee.io/post/apps-doubanfm/</link>
+      <pubDate>Mon, 29 Feb 2016 12:04:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/apps-doubanfm/</guid>
+      <description>douban.fm Terminal-based douban.fm inspired by douban.fm.该版本版基于Python2.* 安装Python2.* 1 2 pacman -S python2 pacman -S python2-pip 安装douban.fm 1 pip2 install douban.fm ###需要m</description>
+    </item>
+    
+    <item>
+      <title>Gentoo/Arch常用软件列表</title>
+      <link>http://wonux.gitee.io/post/gentoo-arch-apps/</link>
+      <pubDate>Wed, 24 Feb 2016 14:30:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/gentoo-arch-apps/</guid>
+      <description>1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70</description>
+    </item>
+    
+    <item>
+      <title>RSync实现文件备份同步</title>
+      <link>http://wonux.gitee.io/post/apps-rsync/</link>
+      <pubDate>Wed, 27 Jan 2016 15:07:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/apps-rsync/</guid>
+      <description>rsync介绍 rsync , Remote Synchronize 顾名思意它是一款实现远程同步功能的软件，可通过LAN/WAN快速同步多台主机间的文件。它在同步文件的同时，可以保持原来</description>
+    </item>
+    
+    <item>
+      <title>Arch安装KDE5</title>
+      <link>http://wonux.gitee.io/post/arch-kde/</link>
+      <pubDate>Mon, 25 Jan 2016 15:04:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/arch-kde/</guid>
+      <description>plasma desktop Install the plasma-meta meta-package or the plasma group. Alternatively, for a more minimal Plasma installation, install the plasma-desktop package. sddm The Simple Desktop Display Manager (SDDM) is the preferred display manager for KDE Plasma desktop. Install sddm 1 pacman -S sddm Configuration SDDM defaults to using systemd-logind for session management. 1 sddm --example-config &amp;gt; /etc/sddm.conf Loading sddm 1 2 systemctl start sddm systemctl enable sddm</description>
+    </item>
+    
+    <item>
+      <title>Shell终端收听音乐--网易云音乐命令行版</title>
+      <link>http://wonux.gitee.io/post/apps-musicbox/</link>
+      <pubDate>Mon, 18 Jan 2016 12:04:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/apps-musicbox/</guid>
+      <description>Musicbox：网易云音乐命令行版本 高品质网易云音乐命令行版本，简洁优雅，丝般顺滑，基于Python编写。 这款命令行的客户端使用 Python 构建，以</description>
+    </item>
+    
+    <item>
+      <title>Vim常用技巧</title>
+      <link>http://wonux.gitee.io/post/apps-vim/</link>
+      <pubDate>Thu, 07 Jan 2016 08:07:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/apps-vim/</guid>
+      <description>使用vim教程 1 vimtutor 它会复制一份教程文件,你可以放心练习,不用担心破坏原来的内容. 求助 :help :help + 相关内容 vim三种工作模式 Normal模式: Esc In</description>
+    </item>
+    
+    <item>
+      <title>firefox神器：vimperator插件</title>
+      <link>http://wonux.gitee.io/post/apps-firefox-vimperator/</link>
+      <pubDate>Sat, 26 Dec 2015 15:58:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/apps-firefox-vimperator/</guid>
+      <description>介绍 Vimperator是一个Firefox浏览器扩展，能够使Firefox浏览器像Vim一样高效工作。在安装上 Vimperator之后，无</description>
+    </item>
+    
+    <item>
+      <title>vi风格pdf阅读器推荐：Zathura</title>
+      <link>http://wonux.gitee.io/post/apps-zathura/</link>
+      <pubDate>Thu, 24 Dec 2015 08:02:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/apps-zathura/</guid>
+      <description>介绍 Zathura是一款新的 PDF 查看器 ，它相当轻巧，界面简约（与 Apvlv 很相似），且可以定制（如按键绑定、默认窗口大小等 ）,支持vim风格快捷键。除</description>
+    </item>
+    
+    <item>
+      <title>vi风格控制台文件管理器 -- vifm 配置使用</title>
+      <link>http://wonux.gitee.io/post/apps-vifm/</link>
+      <pubDate>Tue, 22 Dec 2015 08:40:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/apps-vifm/</guid>
+      <description>介绍 vifm是Linux下一个基于ncurses的控制台文件管理器，我很少使用文件管理器，要用一下，就拿出vifm来。图形界面的文件管理器我</description>
+    </item>
+    
+    <item>
+      <title>Linux BT下载软件 -- Rtorrent 配置使用</title>
+      <link>http://wonux.gitee.io/post/apps-rtorrent/</link>
+      <pubDate>Wed, 16 Dec 2015 16:40:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/apps-rtorrent/</guid>
+      <description>rtorrent介绍 rtorrent是Linux下的bt下载软件,由于支持DHT网络,可以很好的于迅雷和Bitcomet的用户进行资源共享,</description>
+    </item>
+    
+    <item>
+      <title>Gentoo解决windows txt文件中文乱码问题 -- 文件编码介绍</title>
+      <link>http://wonux.gitee.io/post/gentoo-file-encode/</link>
+      <pubDate>Thu, 10 Dec 2015 09:30:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/gentoo-file-encode/</guid>
+      <description>Linux与Windows系统语言编码区别 在Linux操作系统下，我们有时打开在windows下的txt文件，发现在windows下能正常显</description>
+    </item>
+    
+    <item>
+      <title>Gentoo双网卡同时启用上内外网</title>
+      <link>http://wonux.gitee.io/post/gentoo-dual-network/</link>
+      <pubDate>Tue, 16 Jun 2015 07:30:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/gentoo-dual-network/</guid>
+      <description>引言：本文配置网络通过 OpenRC/netifrc 方法（net.*scritps）配置。 1 2 3 4 5 6 7 8 9 10 外网网卡：enp3s4 内网网卡：enp2s0 - 外网地址（通</description>
+    </item>
+    
+    <item>
+      <title>Gentoo网络管理方法总结</title>
+      <link>http://wonux.gitee.io/post/gentoo-network-method/</link>
+      <pubDate>Mon, 15 Jun 2015 15:30:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/gentoo-network-method/</guid>
+      <description>OpenRC/netifrc Netifrc is a collection of modules created to configure and manage network interfaces via individual, per-interface scripts located in the /etc/init.d/ directory. Enable Gentoo&amp;rsquo;s network stack (net.* scripts). 检测网卡名字 1 2 3 ifconfig -a or ls /sys/class/net 添加网卡 通过net.lo链接 1 2 3 ln -s /etc/init.d/net.lo /etc/init.d/net.ifname /etc/init.d/net.ifname start rc-update add net.ifname default</description>
+    </item>
+    
+    <item>
+      <title>Pelican-Elegant Mac风格主题配置</title>
+      <link>http://wonux.gitee.io/post/git-pelican-elegant/</link>
+      <pubDate>Thu, 14 May 2015 18:38:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/git-pelican-elegant/</guid>
+      <description>简介 elegant是Mac风格的优秀主题，简单，专注文章本身。 A responsive, minimal, and stylish theme for Pelican：https://github.com/talha</description>
+    </item>
+    
+    <item>
+      <title>openbox设置透明效果</title>
+      <link>http://wonux.gitee.io/post/apps-openbox-tranparent/</link>
+      <pubDate>Wed, 13 May 2015 17:08:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/apps-openbox-tranparent/</guid>
+      <description>X窗口下的透明效果设置 使用 transset + devilspie + xcompmgr 设置透明效果。 X窗口下没有现成的工具，但可以借助于Xcompmgr和transset。 在运行Xcompm</description>
+    </item>
+    
+    <item>
+      <title>Pelican &#43; Github 搭建静态个人博客</title>
+      <link>http://wonux.gitee.io/post/git-pelican/</link>
+      <pubDate>Wed, 06 May 2015 16:45:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/git-pelican/</guid>
+      <description>前言 一直以来都希望拥有属于自己的个人博客，随性发点信息，写点技术感想，记录自己的生活，重要的是不受广告的影响、不被河蟹、不会担心有一天被莫名</description>
+    </item>
+    
+    <item>
+      <title>UNIX基础 -- 安装应用程序: Packages 和 Ports</title>
+      <link>http://wonux.gitee.io/post/freebsd-apps/</link>
+      <pubDate>Mon, 04 May 2015 09:37:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/freebsd-apps/</guid>
+      <description>Packages and Ports 概述 FreeBSD 将许多系统工具捆绑作为基本系统的一部分。另外，FreeBSD 提供了两种补充的技术来安装第三方软件：FreeBSD Ports Collect</description>
+    </item>
+    
+    <item>
+      <title>UNIX基础 -- Manual Pages</title>
+      <link>http://wonux.gitee.io/post/freebsd-man/</link>
+      <pubDate>Thu, 30 Apr 2015 16:37:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/freebsd-man/</guid>
+      <description>联机手册 Manual Pages 最详细的使用说明文档莫过于 FreeBSD 里的联机手册了。 几乎每一个程序都会附上一份简短说明， 以介绍这个程序的的基本功能以及参数的用法。 我们能</description>
+    </item>
+    
+    <item>
+      <title>UNIX基础--Shells</title>
+      <link>http://wonux.gitee.io/post/freebsd-shells/</link>
+      <pubDate>Sun, 26 Apr 2015 14:26:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/freebsd-shells/</guid>
+      <description>Shells Shell提供了一个和操作系统交互的命令行接口。shell的主要功能就是从输入取得命令然后去执行。FreeBSD内含了一些shell，包括</description>
+    </item>
+    
+    <item>
+      <title>UNIX基础 -- 进程和守护进程</title>
+      <link>http://wonux.gitee.io/post/freebsd-process/</link>
+      <pubDate>Sun, 26 Apr 2015 13:17:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/freebsd-process/</guid>
+      <description>进程和守护进程 Processes and Daemons 进程（Processes） FreeBSD 是一个多任务操作系统。 这就意味着好像一次可以运行一个以上的程序。 每个占用一定时间运行的程序就</description>
+    </item>
+    
+    <item>
+      <title>UNIX基础 -- 磁盘组织</title>
+      <link>http://wonux.gitee.io/post/freebsd-disk/</link>
+      <pubDate>Thu, 23 Apr 2015 17:19:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/freebsd-disk/</guid>
+      <description>磁盘组织 FreeBSD 查找文件的最小单位是文件名。 而文件名区分大小写，不凭文件扩展名去识别这个文件是 程序、 文档， 或是其他格式的数据。 在文件系统里目录和文</description>
+    </item>
+    
+    <item>
+      <title>UNIX基础 -- 权限</title>
+      <link>http://wonux.gitee.io/post/freebsd-permission/</link>
+      <pubDate>Thu, 23 Apr 2015 15:34:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/freebsd-permission/</guid>
+      <description>权限 Permissions FreeBSD使用传统的UNIX®系统的基本权限。在UNIX®系统中，基本权限分配了三种访问类型：读、写、执行。权限可以用字母r、w、</description>
+    </item>
+    
+    <item>
+      <title>UNIX基础 -- 用户和基本账户管理</title>
+      <link>http://wonux.gitee.io/post/freebsd-account/</link>
+      <pubDate>Wed, 22 Apr 2015 17:15:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/freebsd-account/</guid>
+      <description>账户类型 系统账户 系统账户运行服务。 系统用户是那些要使用诸如DNS、 邮件， web等服务的用户。 使用帐户的原因就是安全； 如果所有的用户都由超级用</description>
+    </item>
+    
+    <item>
+      <title>UNIX基础 -- 控制台和终端</title>
+      <link>http://wonux.gitee.io/post/freebsd-console/</link>
+      <pubDate>Tue, 21 Apr 2015 17:18:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/freebsd-console/</guid>
+      <description>虚拟控制台和终端 Virtual Consoles and Terminals: FreeBSD 虚拟控制台的默认配置为8个，但并不是硬性设置， 您可以很容易设置虚拟控制台的个数增多或减少。 虚拟控制台的的编号和设置</description>
+    </item>
+    
+    <item>
+      <title>Gentoo无线网络配置 -- wpa_supplicant</title>
+      <link>http://wonux.gitee.io/post/gentoo-wpa-supplicant/</link>
+      <pubDate>Sun, 04 Jan 2015 15:06:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/gentoo-wpa-supplicant/</guid>
+      <description>安装 安装net-wireless/wpa_supplicant包 1 emerge --ask wpa_supplicant 启动网络 为wpa_supplicant添加无线接口 在wpa_supp</description>
+    </item>
+    
+    <item>
+      <title>Linux系统维护 -- chroot</title>
+      <link>http://wonux.gitee.io/post/apps-chroot/</link>
+      <pubDate>Tue, 25 Nov 2014 16:08:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/apps-chroot/</guid>
+      <description>chroot简介 chroot，即 change root directory (更改 root 目录)。在 linux 系统中，系统默认的目录结构都是以 /，即是以根 (root) 开始的。而在使用 chroot 之后，系统的目录结</description>
+    </item>
+    
+    <item>
+      <title>文件系统配置启动挂载：fstab文件详解</title>
+      <link>http://wonux.gitee.io/post/apps-fstab/</link>
+      <pubDate>Tue, 25 Nov 2014 15:08:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/apps-fstab/</guid>
+      <description>fstab文件介绍 fstab文件包含了你的电脑上的存储设备及其文件系统的信息。它是决定一个硬盘（分区）被怎样使用或者说整合到整个系统中的文件</description>
+    </item>
+    
+    <item>
+      <title>Gentoo本地化中文设置--Locale系统介绍</title>
+      <link>http://wonux.gitee.io/post/gentoo-locale/</link>
+      <pubDate>Thu, 20 Nov 2014 16:21:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/gentoo-locale/</guid>
+      <description>locale是什么？ 一份Locale是一组信息的集合，大多数程序利用它来确定特定的国家和语言设置。这些locale以及它们包含的数据是系统库</description>
+    </item>
+    
+    <item>
+      <title>Gentoo启动菜单设置：使用官方LiveDVD Grub主题</title>
+      <link>http://wonux.gitee.io/post/gentoo-grub-theme/</link>
+      <pubDate>Thu, 20 Nov 2014 15:21:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/gentoo-grub-theme/</guid>
+      <description>设置Gentoo Grub启动主题 拷贝官方LiveDVD grub主题： 下载官方DVD，找到 /boot/grub/themes/GenGrub目</description>
+    </item>
+    
+    <item>
+      <title>Gentoo !!! existing preserved libs问题</title>
+      <link>http://wonux.gitee.io/post/gentoo-preserved-libs/</link>
+      <pubDate>Thu, 20 Nov 2014 12:21:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/gentoo-preserved-libs/</guid>
+      <description>问题描述 1 2 3 4 5 6 7 8 9 10 11 !!! existing preserved libs: &amp;gt;&amp;gt;&amp;gt; package: media-libs/libmng-2.0.2-r1 * - /usr/lib/libmng.so.1 * - /usr/lib/libmng.so.1.0.0 * used by /opt/kingsoft/wps-office/office6/qt/plugins/imageformats/libqmng.so (app-office/wps-office-9.1.0.4751_alpha15) &amp;gt;&amp;gt;&amp;gt; package: media-libs/lcms-1.19-r2 * - /usr/lib/liblcms.so.1 * - /usr/lib/liblcms.so.1.0.19 * used by /usr/lib/libmng.so.1 (preserved) * used by /usr/lib/libmng.so.1.0.0 (preserved) Use emerge @preserved-rebuild to rebuild packages using these libraries 解决方法 折腾过程：</description>
+    </item>
+    
+    <item>
+      <title>Gentoo挂载Windowntfs的NTFS分区</title>
+      <link>http://wonux.gitee.io/post/gentoo-ntfs/</link>
+      <pubDate>Thu, 20 Nov 2014 10:20:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/gentoo-ntfs/</guid>
+      <description>内核需要开启的选项 1 2 File systems ---&amp;gt; &amp;lt;*&amp;gt; FUSE (Filesystem in Userspace) support 使用NTFS-3G NTFS-3G是一个由Tuxera公司开发并维护的开源项目，目的是为Linux提供</description>
+    </item>
+    
+    <item>
+      <title>Gentoo网络配置</title>
+      <link>http://wonux.gitee.io/post/gentoo-network/</link>
+      <pubDate>Thu, 20 Nov 2014 10:07:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/gentoo-network/</guid>
+      <description>网卡识别配置 要开始配置你的网卡，你首先需要告诉Gentoo RC系统你的网卡。 可以用ifconfig命令查看自己网卡名字： 1 ifconfig -a 网卡名字（如e</description>
+    </item>
+    
+    <item>
+      <title>Gentoo/Funtoo USE标记介绍</title>
+      <link>http://wonux.gitee.io/post/gentoo-use/</link>
+      <pubDate>Thu, 20 Nov 2014 09:47:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/gentoo-use/</guid>
+      <description>Gentoo/Funtoo USE标记 USE的简单理解如下：一个软件不只包含软件本身，还包括其组件，如，文档，插件，GUI支持等。USE就是用来标记是否要安装软件的同</description>
+    </item>
+    
+    <item>
+      <title>Git子模块引用外部项目</title>
+      <link>http://wonux.gitee.io/post/git-git-submodule/</link>
+      <pubDate>Fri, 14 Nov 2014 13:38:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/git-git-submodule/</guid>
+      <description>Git子模块(submodule)简介 经常有这样的事情，当你在一个项目上工作时，你需要在其中使用另外一个项目。也许它是一个第三方开发的库或者</description>
+    </item>
+    
+    <item>
+      <title>Hexo &#43; Github 搭建静态个人博客</title>
+      <link>http://wonux.gitee.io/post/git-hexo/</link>
+      <pubDate>Wed, 12 Nov 2014 16:07:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/git-hexo/</guid>
+      <description>&lt;h2 id=&#34;hexo简介&#34;&gt;Hexo简介&lt;/h2&gt;
+&lt;p&gt;Github上托管博客是使用jekyll搭建的，官方的Github Pages同样推荐使用它。我之前体验了一下jekyll，没有达到我想要的效果。于是寻找替代方案，搜索同类博客程序，我认识了hexo，hexo出自台湾大学生tommy351之手,是由Node.js驱动的一款快速、简单且功能强大的博客框架。Node.js是一个可以快速构建网络服务及应用的平台 。该平台的构建是基于Chrome&amp;rsquo;s JavaScript runtime，也就是说，实际上它是对Google V8引擎（应用于Google Chrome浏览器)进行了封装。V8引擎执行Javascript的速度非常快，性能非常好。Node对一些特殊用例进行了优化，提供了替代的API，使得V8在非浏览器环境下运行得更好。它和jekyll相比，更快，更轻量。&lt;/p&gt;
+&lt;h2 id=&#34;hexo安装&#34;&gt;Hexo安装&lt;/h2&gt;
+&lt;h3 id=&#34;安装git&#34;&gt;安装git&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Linux
+大多数Linux发行版已经默认安装了git,如果没有直接使用包管理工具安装.&lt;/li&gt;
+&lt;li&gt;Windows:
+&lt;a href=&#34;http://git-scm.com/download/&#34;&gt;Git-Downloads&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;安装nodejs&#34;&gt;安装node.js&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Gentoo package: &lt;code&gt;net-libs/nodejs&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Arch: &lt;code&gt;nodejs&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Windows: &lt;a href=&#34;http://nodejs.org/download/&#34;&gt;node.js&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;安装hexo&#34;&gt;安装hexo&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;npm install hexo -g
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;配置hexo&#34;&gt;配置Hexo&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;初始化博客根目录&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;hexo init blog
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;安装依赖包&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;npm install
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;安装之后，项目目录下出现如下文件结构：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;.
+├── _config.yml     全局配置文件
+├── package.json
+├── scaffolds
+├── scripts
+├── source           文章存放位置
+| ├── _drafts        草稿
+| └── _posts         文章
+└── themes
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;插件和主题&#34;&gt;插件和主题&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;plugins: 插件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;添加插件的基本操作是：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;npm install &amp;lt;plugin-name&amp;gt; --save
+npm update
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;然后修改blog根目录下的_config.yml，添加：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;plugins:
+- plugin-name
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;themes:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;安装主题：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;git clone &amp;lt;repository&amp;gt; themes/&amp;lt;theme-name&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;无论是插件还是主题在安装后都需要在根目录下_config.yml中修改plugins和theme的值以启用他们。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;本博客使用&lt;a href=&#34;https://github.com/A-limon/pacman&#34;&gt;pacman&lt;/a&gt;主题，扁平化设计，响应速快，推荐使用。修改配置参考: &lt;a href=&#34;http://yangjian.me/workspace/introducing-pacman-theme/&#34;&gt;http://yangjian.me/workspace/introducing-pacman-theme/&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;写文章&#34;&gt;写文章&lt;/h3&gt;
+&lt;p&gt;使用Markdown语法编辑文章。使用hexo new命令生成文章或者直接在_posts目录下直接创建文件，打开后先编辑文章头部信息，如下所示是本文的头部信息，以&amp;mdash;结尾。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;title: 使用Hexo搭建个人静态博客  #文章页面上的显示名称，可以任意修改，不会出现在URL中
+layout: post
+date: 2014-11-10 10:07:43  #文章生成时间，一般不改，当然也可以任意修改
+updated: 2014-11-12 13:24
+comments: true
+categories: 
+- Blog
+tags: 
+- hexo
+- blog
+---
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id=&#34;文章摘要&#34;&gt;文章摘要&lt;/h4&gt;
+&lt;p&gt;在需要显示摘要的地方添加如下代码即可：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;</description>
+    </item>
+    
+    <item>
+      <title>Mplayer使用及快捷键</title>
+      <link>http://wonux.gitee.io/post/apps-mplayer/</link>
+      <pubDate>Wed, 29 Oct 2014 14:08:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/apps-mplayer/</guid>
+      <description>MPlayer 是我在 Linux 系统中用到的相当好的媒体播放程序，它因支持播放广泛的音／视频文件格式而著称。本文所要探讨的，除却一般的使用方法之外，更包括一些鲜为</description>
+    </item>
+    
+    <item>
+      <title>Gentoo Xorg:Failed to load module &#34;……&#34; 问题</title>
+      <link>http://wonux.gitee.io/post/gentoo-xorg-failed/</link>
+      <pubDate>Fri, 24 Oct 2014 09:32:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/gentoo-xorg-failed/</guid>
+      <description>错误描述： 安装完xorg-server后，startx启动桌面环境，出现缺少模块错误。 Xorg:Failed to load module &amp;ldquo;……&amp;rdquo; 查看log： 1</description>
+    </item>
+    
+    <item>
+      <title>RFKill软开关蓝牙及无线功能 -- 解决无线网络连接失败问题</title>
+      <link>http://wonux.gitee.io/post/apps-rfkill/</link>
+      <pubDate>Wed, 22 Oct 2014 15:07:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/apps-rfkill/</guid>
+      <description>介绍 ​​​​​​​多​​​​​​​计​​​​​​​算​​​​​​​机​​​​​​​系​​​​​​​统​​​​​​​包​​​​​​​含​​​​</description>
+    </item>
+    
+    <item>
+      <title>Arch无线网络网络管理</title>
+      <link>http://wonux.gitee.io/post/arch-wireless/</link>
+      <pubDate>Wed, 22 Oct 2014 15:04:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/arch-wireless/</guid>
+      <description>wifi-menu脚本 + dhcpcd</description>
+    </item>
+    
+    <item>
+      <title>Arch软件管理 -- Pacman常用命令</title>
+      <link>http://wonux.gitee.io/post/arch-pacman/</link>
+      <pubDate>Wed, 22 Oct 2014 13:04:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/arch-pacman/</guid>
+      <description>Pacman是Arch Linux 的包管理器。它将一个简单的二进制包格式和易用的构建系统结合了起来。不管软件包是来自官方的 Arch 库还是用户自己创建，Pac</description>
+    </item>
+    
+    <item>
+      <title>Arch声卡配置</title>
+      <link>http://wonux.gitee.io/post/arch-alsa/</link>
+      <pubDate>Sat, 11 Oct 2014 15:04:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/arch-alsa/</guid>
+      <description>ALSA Utilities Install the alsa-utils package. This contains (among other utilities) the alsamixer and amixer utilities. 1 pacman -S alsa-utils Unmuting the channels ALSA by default has all channels muted, all of which will need to be unmuted manually. This can be done using amixer: 1 amixer sset Master unmute This can alternatively be done using alsamixer: 1 alsamixer Test your changes 1 speaker-test -c 2 User privileges Usually, local</description>
+    </item>
+    
+    <item>
+      <title>Arch安装fcitx</title>
+      <link>http://wonux.gitee.io/post/arch-fcitx/</link>
+      <pubDate>Sat, 11 Oct 2014 13:04:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/arch-fcitx/</guid>
+      <description>安装fcitx,安装gtk、qt模块。 1 2 3 4 5 [root@Arctux ~]# pacman -S fcitx-im :: There are 4 members in group fcitx-im: :: Repository community 1) fcitx 2) fcitx-gtk2 3) fcitx-gtk3 4) fcitx-qt4 Enter a selection (default=all): 安装fcitx配置工具 1 [root@ARCH ~]# pacman -S fcitx-configtool .</description>
+    </item>
+    
+    <item>
+      <title>ArchLinux安装详解</title>
+      <link>http://wonux.gitee.io/post/arch-handbook/</link>
+      <pubDate>Fri, 10 Oct 2014 13:18:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/arch-handbook/</guid>
+      <description>选择安装方式 CD/USB Arch启动盘安装 使用Arch启动盘比较简单方便，没有额外设置，直接阅读下一步。 USB flash installation media 启动盘制作： USB flash installation media 从已经存在的Lin</description>
+    </item>
+    
+    <item>
+      <title>Arch下载官方镜像列表Official mirrors</title>
+      <link>http://wonux.gitee.io/post/arch-mirrors/</link>
+      <pubDate>Wed, 08 Oct 2014 13:29:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/arch-mirrors/</guid>
+      <description>Official mirrors The official Arch Linux mirror list is available from the pacman-mirrorlist package. To get an even more up-to-date list of mirrors, use the Pacman Mirror List Generator page on the main site. 手动下载镜像列表 有时因为系统镜像列表丢失或可读性不强，我们需要从官方网站</description>
+    </item>
+    
+    <item>
+      <title>直接粘贴代码到网络上:command-line pastebins</title>
+      <link>http://wonux.gitee.io/post/apps-pastebin/</link>
+      <pubDate>Tue, 16 Sep 2014 10:08:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/apps-pastebin/</guid>
+      <description>软件作用 直接把管道里面的文字内容传到网站上面，然后反馈一个地址可以读取内容。 同类软件 wgetpaste dpaste pastebin pasteie 用法 介绍wgetpaste为例： 1 2 GENTOO ~ # cat /etc/portage/make.conf |</description>
+    </item>
+    
+    <item>
+      <title>MPD&#43;MPC&#43;Conky 听音乐</title>
+      <link>http://wonux.gitee.io/post/apps-mpd/</link>
+      <pubDate>Tue, 09 Sep 2014 11:07:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/apps-mpd/</guid>
+      <description>MPD、MPC介绍： 为何选用MPD+MPC？ 在Linux下有很多不错的音乐播放器，强大的如amarok，简单的如bmp，而我更喜欢mpc（需</description>
+    </item>
+    
+    <item>
+      <title>gcc-config:Active gcc profile is invalid 解决办法</title>
+      <link>http://wonux.gitee.io/post/gentoo-gcc-invalid/</link>
+      <pubDate>Tue, 02 Sep 2014 16:32:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/gentoo-gcc-invalid/</guid>
+      <description>错误描述 Gentoo软件安装错误,提示： gcc-config: Active gcc profile is invalid 解决方法： 列出可用的profile 1 gcc-config -l gcc-config: Active gcc profile is invalid! [1] i686-pc-linux-gnu-4.6.3 显示当前使用的profile 1 gcc-config</description>
+    </item>
+    
+    <item>
+      <title>Gentoo本地化设置--时区、时钟、字体、中文环境</title>
+      <link>http://wonux.gitee.io/post/gentoo-localization/</link>
+      <pubDate>Mon, 30 Jun 2014 11:21:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/gentoo-localization/</guid>
+      <description>时区 你需要选择时区让系统知道你的地理位置，以保持正确的时间。在/usr/share/zoneinfo中查找你的时区。然后在/etc/conf</description>
+    </item>
+    
+    <item>
+      <title>Gentoo解决Udev升级的网卡重命名问题</title>
+      <link>http://wonux.gitee.io/post/gentoo-udev-netware/</link>
+      <pubDate>Mon, 30 Jun 2014 10:40:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/gentoo-udev-netware/</guid>
+      <description>问题描述： 配置网络时，很多新手运行ifconfig命令查看网卡时，会发现我们熟悉的eth0网卡没有了，或是发现一些不规则命名的东东，不错，那</description>
+    </item>
+    
+    <item>
+      <title>ArchLinux最小化安装LXDE桌面环境</title>
+      <link>http://wonux.gitee.io/post/arch-xorg-lxde/</link>
+      <pubDate>Tue, 10 Jun 2014 15:00:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/arch-xorg-lxde/</guid>
+      <description>安装最小化的LXDE桌面环境： 1 pacman -S lxde-common 安装LXDE Session： 1 2 pacman -S lxsession 不安装这个没法登录进桌面环境 安装LXDE面板： 1 pacman -S lxpanel 不安装这个</description>
+    </item>
+    
+    <item>
+      <title>Arch最小化安装X</title>
+      <link>http://wonux.gitee.io/post/arch-xorg/</link>
+      <pubDate>Tue, 10 Jun 2014 14:42:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/arch-xorg/</guid>
+      <description>Xorg xorg-server 安装xorg-server 1 pacman -S xorg-server 可选：xorg-server-utils 1 pacman -S xorg-server-utils Xorg-server-utils meta-package pulls in the most useful packages for certain configuration tasks, they are pointed out in the relevant sections. Driver installation 如果不知道</description>
+    </item>
+    
+    <item>
+      <title>Gentoo解决Windows双系统时间不同步的问题</title>
+      <link>http://wonux.gitee.io/post/gentoo-handbook-clock/</link>
+      <pubDate>Tue, 06 May 2014 17:21:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/gentoo-handbook-clock/</guid>
+      <description>升级后的gentoo不再使用/etc/conf.d/clock，而是使用/etc/conf.d/hwclock来设置和时间相关了。 在/etc</description>
+    </item>
+    
+    <item>
+      <title>Linux下截图工具：scrot 从入门到精通</title>
+      <link>http://wonux.gitee.io/post/apps-scrot/</link>
+      <pubDate>Tue, 06 May 2014 17:08:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/apps-scrot/</guid>
+      <description>简介： scrot 主要用在命令行下，它使用 imlib2 库来抓取并保存图像。scrot 的使用格式为：scrot [options] [file]。 一般用法： 就一般而言，使用 scrot 可以抓取</description>
+    </item>
+    
+    <item>
+      <title>Gentoo安装详解（五）--声卡设置</title>
+      <link>http://wonux.gitee.io/post/gentoo-handbook-alsa/</link>
+      <pubDate>Mon, 05 May 2014 15:40:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/gentoo-handbook-alsa/</guid>
+      <description>硬件检测 To choose the right driver, first detect the used audio controller. You can use lspci for this task: 1 lspci | grep -i audio 内核配置 You need to activate the following kernel options: 1 2 3 4 5 6 7 8 9 10 11 12 13 Device Drivers ---&amp;gt; Sound ---&amp;gt; &amp;lt;*&amp;gt; Sound card Support &amp;lt;*&amp;gt; Advanced Linux Sound Architecture ---&amp;gt; [*] PCI</description>
+    </item>
+    
+    <item>
+      <title>Gentoo安装详解（四）-- 安装X桌面环境</title>
+      <link>http://wonux.gitee.io/post/gentoo-handbook-xorg/</link>
+      <pubDate>Mon, 05 May 2014 10:20:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/gentoo-handbook-xorg/</guid>
+      <description>安装X桌面环境： 安装Xorg： 检测显卡信息： 1 2 dmesg | grep video lspci | grep -i VGA 配置INPUT_DEVICE、VIDEO_CARDS变量： 在安装Xorg之</description>
+    </item>
+    
+    <item>
+      <title>Gentoo安装详解（三）-- 配置系统</title>
+      <link>http://wonux.gitee.io/post/gentoo-handbook-configure/</link>
+      <pubDate>Sun, 04 May 2014 17:40:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/gentoo-handbook-configure/</guid>
+      <description>配置系统 系统信息： 文件系统信息： 创建/etc/fstab 1 nano -w /etc/fstab 网络信息： Host name, Domainname, etc 1 nano -w /etc/conf.d/hostname Configuring Network 1 nano -w /etc/conf.d/net 系统信息： Gentoo uses /etc/rc.conf to configure the services, startup, and shutdown of your system. 1</description>
+    </item>
+    
+    <item>
+      <title>Gentoo安装详解（二）-- 编译内核</title>
+      <link>http://wonux.gitee.io/post/gentoo-handbook-kernel/</link>
+      <pubDate>Sun, 04 May 2014 17:10:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/gentoo-handbook-kernel/</guid>
+      <description>编译内核： 安装内核源码： 选择内核：如gentoo-sources 1 2 emerge gentoo-sources ls -l /usr/src/linux 手动编译内核： 1 2 cd /usr/src/linux make menuconfig 必须启用的选项： Most information can be gathered by emerging sys-apps/pciutils which contains</description>
+    </item>
+    
+    <item>
+      <title>Gentoo安装详解（一）-- 安装基本系统</title>
+      <link>http://wonux.gitee.io/post/gentoo-handbook-base/</link>
+      <pubDate>Sun, 04 May 2014 16:48:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/gentoo-handbook-base/</guid>
+      <description>前期准备 远程登录： 开启ssh服务： 1 /etc/init.d/sshd start 设置密码： 1 passwd 以便使用putty、ssh client远程登录上传stage等（有时在线下载很慢，而局</description>
+    </item>
+    
+  </channel>
+</rss>

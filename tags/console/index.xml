@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>console on Wonux - Bolg</title>
+    <link>http://wonux.gitee.io/tags/console/</link>
+    <description>Recent content in console on Wonux - Bolg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 21 Apr 2015 17:18:00 +0000</lastBuildDate><atom:link href="http://wonux.gitee.io/tags/console/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>UNIX基础 -- 控制台和终端</title>
+      <link>http://wonux.gitee.io/post/freebsd-console/</link>
+      <pubDate>Tue, 21 Apr 2015 17:18:00 +0000</pubDate>
+      
+      <guid>http://wonux.gitee.io/post/freebsd-console/</guid>
+      <description>虚拟控制台和终端 Virtual Consoles and Terminals: FreeBSD 虚拟控制台的默认配置为8个，但并不是硬性设置， 您可以很容易设置虚拟控制台的个数增多或减少。 虚拟控制台的的编号和设置</description>
+    </item>
+    
+  </channel>
+</rss>
