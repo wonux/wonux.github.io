@@ -2,170 +2,170 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>apps on Wonux - Bolg</title>
-    <link>http://wonux.gitee.io/tags/apps/</link>
+    <link>https://wonux.gitee.io/tags/apps/</link>
     <description>Recent content in apps on Wonux - Bolg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 24 Mar 2016 15:38:00 +0000</lastBuildDate><atom:link href="http://wonux.gitee.io/tags/apps/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 24 Mar 2016 15:38:00 +0000</lastBuildDate><atom:link href="https://wonux.gitee.io/tags/apps/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Git创建空白新分支</title>
-      <link>http://wonux.gitee.io/post/git-empty-branch/</link>
+      <link>https://wonux.gitee.io/post/git-empty-branch/</link>
       <pubDate>Thu, 24 Mar 2016 15:38:00 +0000</pubDate>
       
-      <guid>http://wonux.gitee.io/post/git-empty-branch/</guid>
+      <guid>https://wonux.gitee.io/post/git-empty-branch/</guid>
       <description>有时候需要在项目中创建一个空白的新分支，来开发测试与当前分支内容无关的内容。向分支提交一个初始的空commit，保证完全复位。 创建并切换新分</description>
     </item>
     
     <item>
       <title>Git同时提交到多个远程仓库</title>
-      <link>http://wonux.gitee.io/post/git-remote/</link>
+      <link>https://wonux.gitee.io/post/git-remote/</link>
       <pubDate>Sun, 06 Mar 2016 11:38:00 +0000</pubDate>
       
-      <guid>http://wonux.gitee.io/post/git-remote/</guid>
+      <guid>https://wonux.gitee.io/post/git-remote/</guid>
       <description>在已经习惯使用git同步写代码，github无疑是最的托管平台，但是国内由于“你懂的”原因，速度很慢，有时无法访问，于是想把自己的代码同步到</description>
     </item>
     
     <item>
       <title>Shell终端收听音乐--豆瓣FM命令行版</title>
-      <link>http://wonux.gitee.io/post/apps-doubanfm/</link>
+      <link>https://wonux.gitee.io/post/apps-doubanfm/</link>
       <pubDate>Mon, 29 Feb 2016 12:04:00 +0000</pubDate>
       
-      <guid>http://wonux.gitee.io/post/apps-doubanfm/</guid>
+      <guid>https://wonux.gitee.io/post/apps-doubanfm/</guid>
       <description>douban.fm Terminal-based douban.fm inspired by douban.fm.该版本版基于Python2.* 安装Python2.* 1 2 pacman -S python2 pacman -S python2-pip 安装douban.fm 1 pip2 install douban.fm ###需要m</description>
     </item>
     
     <item>
       <title>Gentoo/Arch常用软件列表</title>
-      <link>http://wonux.gitee.io/post/gentoo-arch-apps/</link>
+      <link>https://wonux.gitee.io/post/gentoo-arch-apps/</link>
       <pubDate>Wed, 24 Feb 2016 14:30:00 +0000</pubDate>
       
-      <guid>http://wonux.gitee.io/post/gentoo-arch-apps/</guid>
+      <guid>https://wonux.gitee.io/post/gentoo-arch-apps/</guid>
       <description>1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70</description>
     </item>
     
     <item>
       <title>RSync实现文件备份同步</title>
-      <link>http://wonux.gitee.io/post/apps-rsync/</link>
+      <link>https://wonux.gitee.io/post/apps-rsync/</link>
       <pubDate>Wed, 27 Jan 2016 15:07:00 +0000</pubDate>
       
-      <guid>http://wonux.gitee.io/post/apps-rsync/</guid>
+      <guid>https://wonux.gitee.io/post/apps-rsync/</guid>
       <description>rsync介绍 rsync , Remote Synchronize 顾名思意它是一款实现远程同步功能的软件，可通过LAN/WAN快速同步多台主机间的文件。它在同步文件的同时，可以保持原来</description>
     </item>
     
     <item>
       <title>Shell终端收听音乐--网易云音乐命令行版</title>
-      <link>http://wonux.gitee.io/post/apps-musicbox/</link>
+      <link>https://wonux.gitee.io/post/apps-musicbox/</link>
       <pubDate>Mon, 18 Jan 2016 12:04:00 +0000</pubDate>
       
-      <guid>http://wonux.gitee.io/post/apps-musicbox/</guid>
+      <guid>https://wonux.gitee.io/post/apps-musicbox/</guid>
       <description>Musicbox：网易云音乐命令行版本 高品质网易云音乐命令行版本，简洁优雅，丝般顺滑，基于Python编写。 这款命令行的客户端使用 Python 构建，以</description>
     </item>
     
     <item>
       <title>Vim常用技巧</title>
-      <link>http://wonux.gitee.io/post/apps-vim/</link>
+      <link>https://wonux.gitee.io/post/apps-vim/</link>
       <pubDate>Thu, 07 Jan 2016 08:07:00 +0000</pubDate>
       
-      <guid>http://wonux.gitee.io/post/apps-vim/</guid>
+      <guid>https://wonux.gitee.io/post/apps-vim/</guid>
       <description>使用vim教程 1 vimtutor 它会复制一份教程文件,你可以放心练习,不用担心破坏原来的内容. 求助 :help :help + 相关内容 vim三种工作模式 Normal模式: Esc In</description>
     </item>
     
     <item>
       <title>firefox神器：vimperator插件</title>
-      <link>http://wonux.gitee.io/post/apps-firefox-vimperator/</link>
+      <link>https://wonux.gitee.io/post/apps-firefox-vimperator/</link>
       <pubDate>Sat, 26 Dec 2015 15:58:00 +0000</pubDate>
       
-      <guid>http://wonux.gitee.io/post/apps-firefox-vimperator/</guid>
+      <guid>https://wonux.gitee.io/post/apps-firefox-vimperator/</guid>
       <description>介绍 Vimperator是一个Firefox浏览器扩展，能够使Firefox浏览器像Vim一样高效工作。在安装上 Vimperator之后，无</description>
     </item>
     
     <item>
       <title>vi风格pdf阅读器推荐：Zathura</title>
-      <link>http://wonux.gitee.io/post/apps-zathura/</link>
+      <link>https://wonux.gitee.io/post/apps-zathura/</link>
       <pubDate>Thu, 24 Dec 2015 08:02:00 +0000</pubDate>
       
-      <guid>http://wonux.gitee.io/post/apps-zathura/</guid>
+      <guid>https://wonux.gitee.io/post/apps-zathura/</guid>
       <description>介绍 Zathura是一款新的 PDF 查看器 ，它相当轻巧，界面简约（与 Apvlv 很相似），且可以定制（如按键绑定、默认窗口大小等 ）,支持vim风格快捷键。除</description>
     </item>
     
     <item>
       <title>vi风格控制台文件管理器 -- vifm 配置使用</title>
-      <link>http://wonux.gitee.io/post/apps-vifm/</link>
+      <link>https://wonux.gitee.io/post/apps-vifm/</link>
       <pubDate>Tue, 22 Dec 2015 08:40:00 +0000</pubDate>
       
-      <guid>http://wonux.gitee.io/post/apps-vifm/</guid>
+      <guid>https://wonux.gitee.io/post/apps-vifm/</guid>
       <description>介绍 vifm是Linux下一个基于ncurses的控制台文件管理器，我很少使用文件管理器，要用一下，就拿出vifm来。图形界面的文件管理器我</description>
     </item>
     
     <item>
       <title>Linux BT下载软件 -- Rtorrent 配置使用</title>
-      <link>http://wonux.gitee.io/post/apps-rtorrent/</link>
+      <link>https://wonux.gitee.io/post/apps-rtorrent/</link>
       <pubDate>Wed, 16 Dec 2015 16:40:00 +0000</pubDate>
       
-      <guid>http://wonux.gitee.io/post/apps-rtorrent/</guid>
+      <guid>https://wonux.gitee.io/post/apps-rtorrent/</guid>
       <description>rtorrent介绍 rtorrent是Linux下的bt下载软件,由于支持DHT网络,可以很好的于迅雷和Bitcomet的用户进行资源共享,</description>
     </item>
     
     <item>
       <title>Pelican-Elegant Mac风格主题配置</title>
-      <link>http://wonux.gitee.io/post/git-pelican-elegant/</link>
+      <link>https://wonux.gitee.io/post/git-pelican-elegant/</link>
       <pubDate>Thu, 14 May 2015 18:38:00 +0000</pubDate>
       
-      <guid>http://wonux.gitee.io/post/git-pelican-elegant/</guid>
+      <guid>https://wonux.gitee.io/post/git-pelican-elegant/</guid>
       <description>简介 elegant是Mac风格的优秀主题，简单，专注文章本身。 A responsive, minimal, and stylish theme for Pelican：https://github.com/talha</description>
     </item>
     
     <item>
       <title>openbox设置透明效果</title>
-      <link>http://wonux.gitee.io/post/apps-openbox-tranparent/</link>
+      <link>https://wonux.gitee.io/post/apps-openbox-tranparent/</link>
       <pubDate>Wed, 13 May 2015 17:08:00 +0000</pubDate>
       
-      <guid>http://wonux.gitee.io/post/apps-openbox-tranparent/</guid>
+      <guid>https://wonux.gitee.io/post/apps-openbox-tranparent/</guid>
       <description>X窗口下的透明效果设置 使用 transset + devilspie + xcompmgr 设置透明效果。 X窗口下没有现成的工具，但可以借助于Xcompmgr和transset。 在运行Xcompm</description>
     </item>
     
     <item>
       <title>Pelican &#43; Github 搭建静态个人博客</title>
-      <link>http://wonux.gitee.io/post/git-pelican/</link>
+      <link>https://wonux.gitee.io/post/git-pelican/</link>
       <pubDate>Wed, 06 May 2015 16:45:00 +0000</pubDate>
       
-      <guid>http://wonux.gitee.io/post/git-pelican/</guid>
+      <guid>https://wonux.gitee.io/post/git-pelican/</guid>
       <description>前言 一直以来都希望拥有属于自己的个人博客，随性发点信息，写点技术感想，记录自己的生活，重要的是不受广告的影响、不被河蟹、不会担心有一天被莫名</description>
     </item>
     
     <item>
       <title>Linux系统维护 -- chroot</title>
-      <link>http://wonux.gitee.io/post/apps-chroot/</link>
+      <link>https://wonux.gitee.io/post/apps-chroot/</link>
       <pubDate>Tue, 25 Nov 2014 16:08:00 +0000</pubDate>
       
-      <guid>http://wonux.gitee.io/post/apps-chroot/</guid>
+      <guid>https://wonux.gitee.io/post/apps-chroot/</guid>
       <description>chroot简介 chroot，即 change root directory (更改 root 目录)。在 linux 系统中，系统默认的目录结构都是以 /，即是以根 (root) 开始的。而在使用 chroot 之后，系统的目录结</description>
     </item>
     
     <item>
       <title>文件系统配置启动挂载：fstab文件详解</title>
-      <link>http://wonux.gitee.io/post/apps-fstab/</link>
+      <link>https://wonux.gitee.io/post/apps-fstab/</link>
       <pubDate>Tue, 25 Nov 2014 15:08:00 +0000</pubDate>
       
-      <guid>http://wonux.gitee.io/post/apps-fstab/</guid>
+      <guid>https://wonux.gitee.io/post/apps-fstab/</guid>
       <description>fstab文件介绍 fstab文件包含了你的电脑上的存储设备及其文件系统的信息。它是决定一个硬盘（分区）被怎样使用或者说整合到整个系统中的文件</description>
     </item>
     
     <item>
       <title>Git子模块引用外部项目</title>
-      <link>http://wonux.gitee.io/post/git-git-submodule/</link>
+      <link>https://wonux.gitee.io/post/git-git-submodule/</link>
       <pubDate>Fri, 14 Nov 2014 13:38:00 +0000</pubDate>
       
-      <guid>http://wonux.gitee.io/post/git-git-submodule/</guid>
+      <guid>https://wonux.gitee.io/post/git-git-submodule/</guid>
       <description>Git子模块(submodule)简介 经常有这样的事情，当你在一个项目上工作时，你需要在其中使用另外一个项目。也许它是一个第三方开发的库或者</description>
     </item>
     
     <item>
       <title>Hexo &#43; Github 搭建静态个人博客</title>
-      <link>http://wonux.gitee.io/post/git-hexo/</link>
+      <link>https://wonux.gitee.io/post/git-hexo/</link>
       <pubDate>Wed, 12 Nov 2014 16:07:00 +0000</pubDate>
       
-      <guid>http://wonux.gitee.io/post/git-hexo/</guid>
+      <guid>https://wonux.gitee.io/post/git-hexo/</guid>
       <description>&lt;h2 id=&#34;hexo简介&#34;&gt;Hexo简介&lt;/h2&gt;
 &lt;p&gt;Github上托管博客是使用jekyll搭建的，官方的Github Pages同样推荐使用它。我之前体验了一下jekyll，没有达到我想要的效果。于是寻找替代方案，搜索同类博客程序，我认识了hexo，hexo出自台湾大学生tommy351之手,是由Node.js驱动的一款快速、简单且功能强大的博客框架。Node.js是一个可以快速构建网络服务及应用的平台 。该平台的构建是基于Chrome&amp;rsquo;s JavaScript runtime，也就是说，实际上它是对Google V8引擎（应用于Google Chrome浏览器)进行了封装。V8引擎执行Javascript的速度非常快，性能非常好。Node对一些特殊用例进行了优化，提供了替代的API，使得V8在非浏览器环境下运行得更好。它和jekyll相比，更快，更轻量。&lt;/p&gt;
 &lt;h2 id=&#34;hexo安装&#34;&gt;Hexo安装&lt;/h2&gt;
@@ -327,46 +327,46 @@ tags:
     
     <item>
       <title>Mplayer使用及快捷键</title>
-      <link>http://wonux.gitee.io/post/apps-mplayer/</link>
+      <link>https://wonux.gitee.io/post/apps-mplayer/</link>
       <pubDate>Wed, 29 Oct 2014 14:08:00 +0000</pubDate>
       
-      <guid>http://wonux.gitee.io/post/apps-mplayer/</guid>
+      <guid>https://wonux.gitee.io/post/apps-mplayer/</guid>
       <description>MPlayer 是我在 Linux 系统中用到的相当好的媒体播放程序，它因支持播放广泛的音／视频文件格式而著称。本文所要探讨的，除却一般的使用方法之外，更包括一些鲜为</description>
     </item>
     
     <item>
       <title>RFKill软开关蓝牙及无线功能 -- 解决无线网络连接失败问题</title>
-      <link>http://wonux.gitee.io/post/apps-rfkill/</link>
+      <link>https://wonux.gitee.io/post/apps-rfkill/</link>
       <pubDate>Wed, 22 Oct 2014 15:07:00 +0000</pubDate>
       
-      <guid>http://wonux.gitee.io/post/apps-rfkill/</guid>
+      <guid>https://wonux.gitee.io/post/apps-rfkill/</guid>
       <description>介绍 ​​​​​​​多​​​​​​​计​​​​​​​算​​​​​​​机​​​​​​​系​​​​​​​统​​​​​​​包​​​​​​​含​​​​</description>
     </item>
     
     <item>
       <title>直接粘贴代码到网络上:command-line pastebins</title>
-      <link>http://wonux.gitee.io/post/apps-pastebin/</link>
+      <link>https://wonux.gitee.io/post/apps-pastebin/</link>
       <pubDate>Tue, 16 Sep 2014 10:08:00 +0000</pubDate>
       
-      <guid>http://wonux.gitee.io/post/apps-pastebin/</guid>
+      <guid>https://wonux.gitee.io/post/apps-pastebin/</guid>
       <description>软件作用 直接把管道里面的文字内容传到网站上面，然后反馈一个地址可以读取内容。 同类软件 wgetpaste dpaste pastebin pasteie 用法 介绍wgetpaste为例： 1 2 GENTOO ~ # cat /etc/portage/make.conf |</description>
     </item>
     
     <item>
       <title>MPD&#43;MPC&#43;Conky 听音乐</title>
-      <link>http://wonux.gitee.io/post/apps-mpd/</link>
+      <link>https://wonux.gitee.io/post/apps-mpd/</link>
       <pubDate>Tue, 09 Sep 2014 11:07:00 +0000</pubDate>
       
-      <guid>http://wonux.gitee.io/post/apps-mpd/</guid>
+      <guid>https://wonux.gitee.io/post/apps-mpd/</guid>
       <description>MPD、MPC介绍： 为何选用MPD+MPC？ 在Linux下有很多不错的音乐播放器，强大的如amarok，简单的如bmp，而我更喜欢mpc（需</description>
     </item>
     
     <item>
       <title>Linux下截图工具：scrot 从入门到精通</title>
-      <link>http://wonux.gitee.io/post/apps-scrot/</link>
+      <link>https://wonux.gitee.io/post/apps-scrot/</link>
       <pubDate>Tue, 06 May 2014 17:08:00 +0000</pubDate>
       
-      <guid>http://wonux.gitee.io/post/apps-scrot/</guid>
+      <guid>https://wonux.gitee.io/post/apps-scrot/</guid>
       <description>简介： scrot 主要用在命令行下，它使用 imlib2 库来抓取并保存图像。scrot 的使用格式为：scrot [options] [file]。 一般用法： 就一般而言，使用 scrot 可以抓取</description>
     </item>
     

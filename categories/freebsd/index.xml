@@ -2,80 +2,80 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>FreeBSD on Wonux - Bolg</title>
-    <link>http://wonux.gitee.io/categories/freebsd/</link>
+    <link>https://wonux.gitee.io/categories/freebsd/</link>
     <description>Recent content in FreeBSD on Wonux - Bolg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 04 May 2015 09:37:00 +0000</lastBuildDate><atom:link href="http://wonux.gitee.io/categories/freebsd/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 04 May 2015 09:37:00 +0000</lastBuildDate><atom:link href="https://wonux.gitee.io/categories/freebsd/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>UNIX基础 -- 安装应用程序: Packages 和 Ports</title>
-      <link>http://wonux.gitee.io/post/freebsd-apps/</link>
+      <link>https://wonux.gitee.io/post/freebsd-apps/</link>
       <pubDate>Mon, 04 May 2015 09:37:00 +0000</pubDate>
       
-      <guid>http://wonux.gitee.io/post/freebsd-apps/</guid>
+      <guid>https://wonux.gitee.io/post/freebsd-apps/</guid>
       <description>Packages and Ports 概述 FreeBSD 将许多系统工具捆绑作为基本系统的一部分。另外，FreeBSD 提供了两种补充的技术来安装第三方软件：FreeBSD Ports Collect</description>
     </item>
     
     <item>
       <title>UNIX基础 -- Manual Pages</title>
-      <link>http://wonux.gitee.io/post/freebsd-man/</link>
+      <link>https://wonux.gitee.io/post/freebsd-man/</link>
       <pubDate>Thu, 30 Apr 2015 16:37:00 +0000</pubDate>
       
-      <guid>http://wonux.gitee.io/post/freebsd-man/</guid>
+      <guid>https://wonux.gitee.io/post/freebsd-man/</guid>
       <description>联机手册 Manual Pages 最详细的使用说明文档莫过于 FreeBSD 里的联机手册了。 几乎每一个程序都会附上一份简短说明， 以介绍这个程序的的基本功能以及参数的用法。 我们能</description>
     </item>
     
     <item>
       <title>UNIX基础--Shells</title>
-      <link>http://wonux.gitee.io/post/freebsd-shells/</link>
+      <link>https://wonux.gitee.io/post/freebsd-shells/</link>
       <pubDate>Sun, 26 Apr 2015 14:26:00 +0000</pubDate>
       
-      <guid>http://wonux.gitee.io/post/freebsd-shells/</guid>
+      <guid>https://wonux.gitee.io/post/freebsd-shells/</guid>
       <description>Shells Shell提供了一个和操作系统交互的命令行接口。shell的主要功能就是从输入取得命令然后去执行。FreeBSD内含了一些shell，包括</description>
     </item>
     
     <item>
       <title>UNIX基础 -- 进程和守护进程</title>
-      <link>http://wonux.gitee.io/post/freebsd-process/</link>
+      <link>https://wonux.gitee.io/post/freebsd-process/</link>
       <pubDate>Sun, 26 Apr 2015 13:17:00 +0000</pubDate>
       
-      <guid>http://wonux.gitee.io/post/freebsd-process/</guid>
+      <guid>https://wonux.gitee.io/post/freebsd-process/</guid>
       <description>进程和守护进程 Processes and Daemons 进程（Processes） FreeBSD 是一个多任务操作系统。 这就意味着好像一次可以运行一个以上的程序。 每个占用一定时间运行的程序就</description>
     </item>
     
     <item>
       <title>UNIX基础 -- 磁盘组织</title>
-      <link>http://wonux.gitee.io/post/freebsd-disk/</link>
+      <link>https://wonux.gitee.io/post/freebsd-disk/</link>
       <pubDate>Thu, 23 Apr 2015 17:19:00 +0000</pubDate>
       
-      <guid>http://wonux.gitee.io/post/freebsd-disk/</guid>
+      <guid>https://wonux.gitee.io/post/freebsd-disk/</guid>
       <description>磁盘组织 FreeBSD 查找文件的最小单位是文件名。 而文件名区分大小写，不凭文件扩展名去识别这个文件是 程序、 文档， 或是其他格式的数据。 在文件系统里目录和文</description>
     </item>
     
     <item>
       <title>UNIX基础 -- 权限</title>
-      <link>http://wonux.gitee.io/post/freebsd-permission/</link>
+      <link>https://wonux.gitee.io/post/freebsd-permission/</link>
       <pubDate>Thu, 23 Apr 2015 15:34:00 +0000</pubDate>
       
-      <guid>http://wonux.gitee.io/post/freebsd-permission/</guid>
+      <guid>https://wonux.gitee.io/post/freebsd-permission/</guid>
       <description>权限 Permissions FreeBSD使用传统的UNIX®系统的基本权限。在UNIX®系统中，基本权限分配了三种访问类型：读、写、执行。权限可以用字母r、w、</description>
     </item>
     
     <item>
       <title>UNIX基础 -- 用户和基本账户管理</title>
-      <link>http://wonux.gitee.io/post/freebsd-account/</link>
+      <link>https://wonux.gitee.io/post/freebsd-account/</link>
       <pubDate>Wed, 22 Apr 2015 17:15:00 +0000</pubDate>
       
-      <guid>http://wonux.gitee.io/post/freebsd-account/</guid>
+      <guid>https://wonux.gitee.io/post/freebsd-account/</guid>
       <description>账户类型 系统账户 系统账户运行服务。 系统用户是那些要使用诸如DNS、 邮件， web等服务的用户。 使用帐户的原因就是安全； 如果所有的用户都由超级用</description>
     </item>
     
     <item>
       <title>UNIX基础 -- 控制台和终端</title>
-      <link>http://wonux.gitee.io/post/freebsd-console/</link>
+      <link>https://wonux.gitee.io/post/freebsd-console/</link>
       <pubDate>Tue, 21 Apr 2015 17:18:00 +0000</pubDate>
       
-      <guid>http://wonux.gitee.io/post/freebsd-console/</guid>
+      <guid>https://wonux.gitee.io/post/freebsd-console/</guid>
       <description>虚拟控制台和终端 Virtual Consoles and Terminals: FreeBSD 虚拟控制台的默认配置为8个，但并不是硬性设置， 您可以很容易设置虚拟控制台的个数增多或减少。 虚拟控制台的的编号和设置</description>
     </item>
     

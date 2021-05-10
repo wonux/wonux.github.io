@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>file-manager on Wonux - Bolg</title>
-    <link>http://wonux.gitee.io/tags/file-manager/</link>
+    <link>https://wonux.gitee.io/tags/file-manager/</link>
     <description>Recent content in file-manager on Wonux - Bolg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 22 Dec 2015 08:40:00 +0000</lastBuildDate><atom:link href="http://wonux.gitee.io/tags/file-manager/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 22 Dec 2015 08:40:00 +0000</lastBuildDate><atom:link href="https://wonux.gitee.io/tags/file-manager/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>vi风格控制台文件管理器 -- vifm 配置使用</title>
-      <link>http://wonux.gitee.io/post/apps-vifm/</link>
+      <link>https://wonux.gitee.io/post/apps-vifm/</link>
       <pubDate>Tue, 22 Dec 2015 08:40:00 +0000</pubDate>
       
-      <guid>http://wonux.gitee.io/post/apps-vifm/</guid>
+      <guid>https://wonux.gitee.io/post/apps-vifm/</guid>
       <description>介绍 vifm是Linux下一个基于ncurses的控制台文件管理器，我很少使用文件管理器，要用一下，就拿出vifm来。图形界面的文件管理器我</description>
     </item>
     

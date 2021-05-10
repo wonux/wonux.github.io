@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>account on Wonux - Bolg</title>
-    <link>http://wonux.gitee.io/tags/account/</link>
+    <link>https://wonux.gitee.io/tags/account/</link>
     <description>Recent content in account on Wonux - Bolg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 22 Apr 2015 17:15:00 +0000</lastBuildDate><atom:link href="http://wonux.gitee.io/tags/account/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 22 Apr 2015 17:15:00 +0000</lastBuildDate><atom:link href="https://wonux.gitee.io/tags/account/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>UNIX基础 -- 用户和基本账户管理</title>
-      <link>http://wonux.gitee.io/post/freebsd-account/</link>
+      <link>https://wonux.gitee.io/post/freebsd-account/</link>
       <pubDate>Wed, 22 Apr 2015 17:15:00 +0000</pubDate>
       
-      <guid>http://wonux.gitee.io/post/freebsd-account/</guid>
+      <guid>https://wonux.gitee.io/post/freebsd-account/</guid>
       <description>账户类型 系统账户 系统账户运行服务。 系统用户是那些要使用诸如DNS、 邮件， web等服务的用户。 使用帐户的原因就是安全； 如果所有的用户都由超级用</description>
     </item>
     

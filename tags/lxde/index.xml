@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>lxde on Wonux - Bolg</title>
-    <link>http://wonux.gitee.io/tags/lxde/</link>
+    <link>https://wonux.gitee.io/tags/lxde/</link>
     <description>Recent content in lxde on Wonux - Bolg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 10 Jun 2014 15:00:00 +0000</lastBuildDate><atom:link href="http://wonux.gitee.io/tags/lxde/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 10 Jun 2014 15:00:00 +0000</lastBuildDate><atom:link href="https://wonux.gitee.io/tags/lxde/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ArchLinux最小化安装LXDE桌面环境</title>
-      <link>http://wonux.gitee.io/post/arch-xorg-lxde/</link>
+      <link>https://wonux.gitee.io/post/arch-xorg-lxde/</link>
       <pubDate>Tue, 10 Jun 2014 15:00:00 +0000</pubDate>
       
-      <guid>http://wonux.gitee.io/post/arch-xorg-lxde/</guid>
+      <guid>https://wonux.gitee.io/post/arch-xorg-lxde/</guid>
       <description>安装最小化的LXDE桌面环境： 1 pacman -S lxde-common 安装LXDE Session： 1 2 pacman -S lxsession 不安装这个没法登录进桌面环境 安装LXDE面板： 1 pacman -S lxpanel 不安装这个</description>
     </item>
     

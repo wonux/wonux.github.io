@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>permission on Wonux - Bolg</title>
-    <link>http://wonux.gitee.io/tags/permission/</link>
+    <link>https://wonux.gitee.io/tags/permission/</link>
     <description>Recent content in permission on Wonux - Bolg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 23 Apr 2015 15:34:00 +0000</lastBuildDate><atom:link href="http://wonux.gitee.io/tags/permission/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 23 Apr 2015 15:34:00 +0000</lastBuildDate><atom:link href="https://wonux.gitee.io/tags/permission/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>UNIX基础 -- 权限</title>
-      <link>http://wonux.gitee.io/post/freebsd-permission/</link>
+      <link>https://wonux.gitee.io/post/freebsd-permission/</link>
       <pubDate>Thu, 23 Apr 2015 15:34:00 +0000</pubDate>
       
-      <guid>http://wonux.gitee.io/post/freebsd-permission/</guid>
+      <guid>https://wonux.gitee.io/post/freebsd-permission/</guid>
       <description>权限 Permissions FreeBSD使用传统的UNIX®系统的基本权限。在UNIX®系统中，基本权限分配了三种访问类型：读、写、执行。权限可以用字母r、w、</description>
     </item>
     

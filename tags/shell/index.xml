@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>shell on Wonux - Bolg</title>
-    <link>http://wonux.gitee.io/tags/shell/</link>
+    <link>https://wonux.gitee.io/tags/shell/</link>
     <description>Recent content in shell on Wonux - Bolg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 26 Apr 2015 14:26:00 +0000</lastBuildDate><atom:link href="http://wonux.gitee.io/tags/shell/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 26 Apr 2015 14:26:00 +0000</lastBuildDate><atom:link href="https://wonux.gitee.io/tags/shell/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>UNIX基础--Shells</title>
-      <link>http://wonux.gitee.io/post/freebsd-shells/</link>
+      <link>https://wonux.gitee.io/post/freebsd-shells/</link>
       <pubDate>Sun, 26 Apr 2015 14:26:00 +0000</pubDate>
       
-      <guid>http://wonux.gitee.io/post/freebsd-shells/</guid>
+      <guid>https://wonux.gitee.io/post/freebsd-shells/</guid>
       <description>Shells Shell提供了一个和操作系统交互的命令行接口。shell的主要功能就是从输入取得命令然后去执行。FreeBSD内含了一些shell，包括</description>
     </item>
     

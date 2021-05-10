@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>pdf on Wonux - Bolg</title>
-    <link>http://wonux.gitee.io/tags/pdf/</link>
+    <link>https://wonux.gitee.io/tags/pdf/</link>
     <description>Recent content in pdf on Wonux - Bolg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 24 Dec 2015 08:02:00 +0000</lastBuildDate><atom:link href="http://wonux.gitee.io/tags/pdf/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 24 Dec 2015 08:02:00 +0000</lastBuildDate><atom:link href="https://wonux.gitee.io/tags/pdf/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>vi风格pdf阅读器推荐：Zathura</title>
-      <link>http://wonux.gitee.io/post/apps-zathura/</link>
+      <link>https://wonux.gitee.io/post/apps-zathura/</link>
       <pubDate>Thu, 24 Dec 2015 08:02:00 +0000</pubDate>
       
-      <guid>http://wonux.gitee.io/post/apps-zathura/</guid>
+      <guid>https://wonux.gitee.io/post/apps-zathura/</guid>
       <description>介绍 Zathura是一款新的 PDF 查看器 ，它相当轻巧，界面简约（与 Apvlv 很相似），且可以定制（如按键绑定、默认窗口大小等 ）,支持vim风格快捷键。除</description>
     </item>
     
